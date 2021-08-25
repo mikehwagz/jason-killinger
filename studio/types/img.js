@@ -1,20 +1,18 @@
 export default {
   title: 'Image',
-  name: 'asset',
-  type: 'object',
+  name: 'img',
+  type: 'image',
   fields: [
     {
-      title: 'Image',
-      name: 'image',
-      type: 'image',
-    },
-    {
-      title: 'Alt Text',
       name: 'alt',
-      type: 'string',
+      title: 'Alt Text',
       description:
         'A short description of the image that is important for accessibility and SEO',
+      type: 'string',
       validation: (Rule) => Rule.required(),
+      options: {
+        isHighlighted: true,
+      },
     },
   ],
 }
