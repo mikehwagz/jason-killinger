@@ -7,6 +7,7 @@ export default {
       name: 'type',
       title: 'Type',
       type: 'string',
+      initialValue: 'image',
       options: {
         list: [
           { title: 'Image', value: 'image' },
@@ -15,7 +16,6 @@ export default {
         layout: 'radio',
         direction: 'horizontal',
       },
-      initialValue: 'image',
     },
     {
       name: 'image',

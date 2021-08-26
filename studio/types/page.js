@@ -18,5 +18,32 @@ export default {
       },
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: 'isDarkModeEnabled',
+      title: 'Enable Dark Mode?',
+      description: '(White text on black background)',
+      type: 'boolean',
+      initialValue: false,
+      options: {
+        layout: 'checkbox',
+      },
+    },
+    {
+      name: 'modules',
+      title: 'Modules',
+      type: 'array',
+      of: [
+        { type: 'hero' },
+        { type: 'postGrid' },
+        { type: 'bio' },
+        { type: 'list' },
+        { type: 'contact' },
+        { type: 'oneUpMedia' },
+        { type: 'twoUpMedia' },
+        { type: 'twoUpTextAndMedia' },
+        { type: 'threeUpMedia' },
+        { type: 'editorialText' },
+      ],
+    },
   ],
 }
