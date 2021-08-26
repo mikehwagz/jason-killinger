@@ -1091,30 +1091,30 @@
   resolved "https://registry.npmjs.org/@sanity/asset-utils/-/asset-utils-1.1.5.tgz#dada8644757462c89be2b1e74e1bdb5d70e0d3d5"
   integrity sha512-cghhQZTOFaa0HiBQnf3UF6Nm1DnuS3cS0RZeSUFsC9KmIDwE/DmU7LDfXiZ7xI7dm/RuNa8WSRGfFJBE+KX02g==
 
-"@sanity/base@2.15.3-conditional-fields.39", "@sanity/base@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/base/-/base-2.15.3-conditional-fields.39.tgz#f038a256f45bc0ed64e26f67f5b57cbf2ab75f20"
-  integrity sha512-72fpsmiS3M3gd2JiY7DBSf5UC4yuW5V/rMSeMlzDYSZFfeNSKoH3i7E2KstnUwlDNv9SSHBbOilz83lzz2liPQ==
+"@sanity/base@2.17.0", "@sanity/base@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/base/-/base-2.17.0.tgz#43b26efd7b9492b7a7f9d91e4334997e3ad8530d"
+  integrity sha512-c6/e8rVF4BMXPCweVb2APbkBaII+DDCF+BULJyQmqz7g+WXkNmoIYvwXlXwjXS1J5mUOKAIvphPJTry5rP7X3g==
   dependencies:
     "@juggle/resize-observer" "^3.3.0"
     "@popperjs/core" "^2.5.4"
     "@reach/auto-id" "^0.13.2"
     "@sanity/bifur-client" "^0.0.8"
-    "@sanity/client" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/client" "2.16.0"
     "@sanity/color" "^2.1.4"
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/generate-help-url" "2.15.0"
     "@sanity/icons" "^1.1.4"
     "@sanity/image-url" "^0.140.19"
-    "@sanity/initial-value-templates" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/mutator" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/schema" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/state-router" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/structure" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/transaction-collator" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/initial-value-templates" "2.17.0"
+    "@sanity/mutator" "2.15.0"
+    "@sanity/schema" "2.16.0"
+    "@sanity/state-router" "2.17.0"
+    "@sanity/structure" "2.17.0"
+    "@sanity/transaction-collator" "2.17.0"
+    "@sanity/types" "2.17.0"
     "@sanity/ui" "^0.36.0"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/validation" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/util" "2.17.0"
+    "@sanity/validation" "2.17.0"
     boundless-arrow-key-navigation "^1.1.0"
     chance "^1.0.4"
     circular-at "^1.0.3"
@@ -1160,26 +1160,26 @@
     nanoid "^3.1.12"
     rxjs "^6.4.0"
 
-"@sanity/block-tools@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/block-tools/-/block-tools-2.15.3-conditional-fields.39.tgz#35bb092186b8c282d0b22129b1fc772eec2bda07"
-  integrity sha512-NLJ4p5bTzgVhxOX2ohn4IMZnZ2QpEgDQI0QOwgNaMzDzdmokSqp3hJ4nlJcoewv036KsVWUCb8vc0E4VolecCA==
+"@sanity/block-tools@2.16.0":
+  version "2.16.0"
+  resolved "https://registry.npmjs.org/@sanity/block-tools/-/block-tools-2.16.0.tgz#020fe2cdca736a0606a4862e4bdd9df22953083b"
+  integrity sha512-DsIF99rK6cFZpmgEMBo/5Xe2im75pzAyeMOsAYd0hRAPstETq8jb/nfMXi6XI6ZNNVrJyX0azZ+NLzlTU/H7sA==
   dependencies:
     get-random-values "^1.2.2"
     lodash "^4.17.15"
 
-"@sanity/cli@2.15.3-conditional-fields.39":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/cli/-/cli-2.15.3-conditional-fields.39.tgz#b191e41bb0fedaa46e4b962b7050108b4b865d7c"
-  integrity sha512-8FlvczRAniwFTksAeoLhufapgl95EBiQGCoD02O3GcOARVdR95BDirQ7otroQU4v0Skt4qEcQet7zXYtOOkgAg==
+"@sanity/cli@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/cli/-/cli-2.17.0.tgz#64272bb4dd63b8723ad4728f95156d2ed5e6df1f"
+  integrity sha512-p11jAUyvdREJZkn7+264hRL6soM7ruRYtRfuSsj5N0rCjzW3Cd+o/QuTQr5YQoz4fBLm4Oh6W/o8xVXPy6SO6Q==
 
-"@sanity/client@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/client/-/client-2.15.3-conditional-fields.39.tgz#2e16e79868feb9484951be7b9003f44ee0f05c5a"
-  integrity sha512-uVmZq9HD+HBwgEzC2Q7WFGyYG3Pq+2dNl3QJccasc+C50SYjd5lmpd9QT10xpeqSa4ea3kSQ8qMO+/vJ7/cPuA==
+"@sanity/client@2.16.0":
+  version "2.16.0"
+  resolved "https://registry.npmjs.org/@sanity/client/-/client-2.16.0.tgz#0d2beeb5d4fd1f7b6dbfee18556fc4490290d848"
+  integrity sha512-tc4iuPL3NBBys6rJAL1+C2YnPfEOzscR1M/SgJ81V12QxMUqWa6b8WxYC18NCQTAXCLtkzlsoLUz3zCqnhPwPQ==
   dependencies:
-    "@sanity/eventsource" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/eventsource" "2.14.0"
+    "@sanity/generate-help-url" "2.15.0"
     "@sanity/observable" "2.0.9"
     deep-assign "^2.0.0"
     get-it "^5.0.3"
@@ -1196,27 +1196,27 @@
   resolved "https://registry.npmjs.org/@sanity/components/-/components-2.15.3-conditional-fields.39.tgz#7ebad60ad2d8b9017d2ad1b558acb9a93956d689"
   integrity sha512-Mm1RP5C/G5sp6tu6QzX5LbBcpcrIjB/OMZ0HOwmDnnRmShXkcVuqOFt3UIJki3Td4uyz+UWVxGsUNQNUkD5xZQ==
 
-"@sanity/core@2.15.3-conditional-fields.39":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/core/-/core-2.15.3-conditional-fields.39.tgz#18cae11215773f81ddcd97add41bca8cfcd4b49e"
-  integrity sha512-UWOOHLj0lVuBYs8K6P286XdJnw0G0aWD5VKb8HzM67Pro0XvC8eGYW+wJwLwGhvUfM66z83zIVNhLgpI+BDTHA==
+"@sanity/core@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/core/-/core-2.17.0.tgz#11d4e67266407004d789272ce7c39c82621ae77b"
+  integrity sha512-gQ43auUCS01dp8FUulHjL7DcWRFMRS6FsQg9b5r5yCKc9s10ew5d0hv/FI0OocSOOLHEw1MCXY/BXHotRmQtLQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.10.4"
     "@babel/preset-env" "^7.11.5"
     "@babel/preset-react" "^7.10.4"
     "@babel/preset-typescript" "^7.10.4"
     "@babel/register" "^7.7.4"
-    "@sanity/eventsource" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/export" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/import" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/plugin-loader" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/resolver" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/schema" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/server" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/eventsource" "2.14.0"
+    "@sanity/export" "2.15.0"
+    "@sanity/generate-help-url" "2.15.0"
+    "@sanity/import" "2.16.0"
+    "@sanity/plugin-loader" "2.17.0"
+    "@sanity/resolver" "2.17.0"
+    "@sanity/schema" "2.16.0"
+    "@sanity/server" "2.17.0"
+    "@sanity/util" "2.17.0"
     "@sanity/uuid" "^3.0.1"
-    "@sanity/webpack-integration" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/webpack-integration" "2.17.0"
     chalk "^2.4.2"
     chokidar "^3.0.0"
     configstore "^5.0.1"
@@ -1268,38 +1268,38 @@
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
 
-"@sanity/dashboard@2.15.3-conditional-fields.39":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/dashboard/-/dashboard-2.15.3-conditional-fields.39.tgz#fe1123599d04df3958eee54043aa73de3e02f327"
-  integrity sha512-nJm2W4+jV1GDjG+S+Y4wLCj/AvYKYphF0VUJ0asOMvO2D1AHqOjPFBrANUqyvis6aZHejYSf+3cI+ewH6xk+QA==
+"@sanity/dashboard@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/dashboard/-/dashboard-2.17.0.tgz#ee2aa9be2966d3dcf67e0a4de66a63083f765d67"
+  integrity sha512-xBvBsuRyyU+mJSn/Oo/9dvPcQCNVt3p03FX5kIS3Q6e3OOQ8nl4NAa9eiRgHxx/0fXPwoPuzv1Z/Xe1aoF0iWg==
   dependencies:
     "@sanity/icons" "^1.1.4"
     "@sanity/image-url" "^0.140.19"
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/types" "2.17.0"
     "@sanity/ui" "^0.36.0"
     lodash "^4.17.15"
     rxjs "^6.5.3"
     styled-components "^5.2.1"
 
-"@sanity/data-aspects@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/data-aspects/-/data-aspects-2.15.3-conditional-fields.39.tgz#5d54a088292bbb7fecba479a5e6f676fa2073dd8"
-  integrity sha512-QYE4NLYn0G+lPrDrg/41SIqi32srNLJ+ObkPUqOTiJAWiRsCILu9zTL9wT1OdeHU0ZnjjmsaPaHWZzzYhV2bZg==
+"@sanity/data-aspects@2.15.0":
+  version "2.15.0"
+  resolved "https://registry.npmjs.org/@sanity/data-aspects/-/data-aspects-2.15.0.tgz#be0873a27aa56ddc98edf7ea35fded345d695e61"
+  integrity sha512-CA8FskeZxw/OcQ0LFmkWUwgVjhlTnv7WsKbmYo1VaM/J62RdD04+fesJ1psFZOtbRpDmgmGg4kdiLFv0qZUhEQ==
   dependencies:
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/generate-help-url" "2.15.0"
     lodash "^4.17.15"
 
-"@sanity/default-layout@2.15.3-conditional-fields.39":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/default-layout/-/default-layout-2.15.3-conditional-fields.39.tgz#1e14da1973867afa75135007fdc42a3a0613021d"
-  integrity sha512-o9c21fgyp4OzCibpGQN5EsWJ8TxBzBw5xPyDbg/S/qrL735AnnTCPS34rpMUXBa4nXdfx+lDSWyegiNUB4ATiw==
+"@sanity/default-layout@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/default-layout/-/default-layout-2.17.0.tgz#df52435f1d390fc33acbc6a70754b0443819ba30"
+  integrity sha512-vLORv4aLJUeQcvXGN1nJIHf2VeSl+/rRFjluzZ5vXD4BZ5CBcUJo+wMfIg6uxi8hvrP7YRROBrhcUPtYyf8+ww==
   dependencies:
     "@reach/auto-id" "^0.13.2"
-    "@sanity/base" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/client" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/base" "2.17.0"
+    "@sanity/client" "2.16.0"
+    "@sanity/generate-help-url" "2.15.0"
     "@sanity/ui" "^0.36.0"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/util" "2.17.0"
     classnames "^2.2.5"
     is-hotkey "^0.1.6"
     lodash "^4.17.15"
@@ -1308,38 +1308,38 @@
     rxjs "^6.5.3"
     styled-components "^5.2.1"
 
-"@sanity/default-login@2.15.3-conditional-fields.39":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/default-login/-/default-login-2.15.3-conditional-fields.39.tgz#cf5b0df13675e63ccea2000c6e7bc06f7a7b8edf"
-  integrity sha512-2CYHfNJOo56hdo0eLhFjU8v55/2IxteR6To6bZk80DaRPbTieiXacagnQ3IoRA7X4MLN56dRikwddsYr0iE0sg==
+"@sanity/default-login@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/default-login/-/default-login-2.17.0.tgz#22d1f7d8e1270c2ddc399abf4d6ff666b25c3770"
+  integrity sha512-BijPCsDZbAWYqkq2t5AXN0NrnISOJkrCtkOqixGp6a9deu9qXALzcRJYn92q/9UruvjFxMfYODuxwZjERWHRHg==
   dependencies:
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/generate-help-url" "2.15.0"
     "@sanity/logos" "^1.1.4"
     "@sanity/ui" "^0.36.0"
     prop-types "^15.6.0"
     rxjs "^6.5.3"
     styled-components "^5.2.1"
 
-"@sanity/desk-tool@2.15.3-conditional-fields.39":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-2.15.3-conditional-fields.39.tgz#4079e1ccd306e6c9541a1dd89f4eeb0c4aed474c"
-  integrity sha512-OsxDej5gPlMd74kOCFIATvyLcUsVgkJQgYsEZvh0IXuPR3Qk4QwB0YekLmCj+9upAiNHMXKPOGCQRUzfcJOXig==
+"@sanity/desk-tool@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/desk-tool/-/desk-tool-2.17.0.tgz#4ac58a95870b2020e4c98c6423495448a90e4f0b"
+  integrity sha512-jtEVUDH970grnnT+smv2BVDC/hDXMad7Ilt9Tb71LgWK/cZkBJxntDEYkVGnUnhouB6f9Gz5kDRgXgU6RH03yQ==
   dependencies:
     "@popperjs/core" "^2.5.4"
     "@reach/auto-id" "^0.13.2"
-    "@sanity/base" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/client" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/data-aspects" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/diff" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/field" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/form-builder" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/base" "2.17.0"
+    "@sanity/client" "2.16.0"
+    "@sanity/data-aspects" "2.15.0"
+    "@sanity/diff" "2.15.0"
+    "@sanity/field" "2.17.0"
+    "@sanity/form-builder" "2.17.0"
+    "@sanity/generate-help-url" "2.15.0"
     "@sanity/icons" "^1.1.4"
-    "@sanity/react-hooks" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/structure" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/react-hooks" "2.17.0"
+    "@sanity/structure" "2.17.0"
+    "@sanity/types" "2.17.0"
     "@sanity/ui" "^0.36.0"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/util" "2.17.0"
     "@sanity/uuid" "^3.0.1"
     classnames "^2.2.5"
     element-resize-detector "^1.1.14"
@@ -1357,25 +1357,25 @@
     shallow-equals "^1.0.0"
     styled-components "^5.2.1"
 
-"@sanity/diff@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/diff/-/diff-2.15.3-conditional-fields.39.tgz#02946035a6ddaceba9176556c5f67510481597c6"
-  integrity sha512-6ZDtpL7BsZTSOVaxjvjjRsg8PyeAJLXUgtFas/GUgmEQ76Q09vCDhteuKpDzpZT3M4dFj4vN6PZOrJpnmlU2+g==
+"@sanity/diff@2.15.0":
+  version "2.15.0"
+  resolved "https://registry.npmjs.org/@sanity/diff/-/diff-2.15.0.tgz#1097cfa5130f53c7ce358a7e82dcc7936648f441"
+  integrity sha512-0/+R3shJelri4FiIB9e2ttdbh4dtviN/EynL1MKVNXOIuyxniao943HtUHQABNocO7SaIaIvovmJiwuT8vlTnQ==
   dependencies:
     diff-match-patch "^1.0.4"
 
-"@sanity/eventsource@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/eventsource/-/eventsource-2.15.3-conditional-fields.39.tgz#cb7b1aef28abcc79497e78e99aaab0eb78f41ad6"
-  integrity sha512-vJUEkdEp8jUpwzdNbeuPIhYpaWCAM8e1O8oX2OAyq0tFRSFwkXJtt3nMR1aNrGv3V0B65Z4CBncrYLUWVS1mTg==
+"@sanity/eventsource@2.14.0":
+  version "2.14.0"
+  resolved "https://registry.npmjs.org/@sanity/eventsource/-/eventsource-2.14.0.tgz#977a79ae1d454f5e2b6239f308f14ec6d8ffaadf"
+  integrity sha512-U1FgPUwB9//bGT5OO1VgtamSCM2Z3vpWP3mCgN8vPmEUJ0cofAWO+turDbOILahuicH8u7Xnmd+GSB33p4Mg9A==
   dependencies:
     "@rexxars/eventsource-polyfill" "^1.0.0"
     eventsource "^1.0.6"
 
-"@sanity/export@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/export/-/export-2.15.3-conditional-fields.39.tgz#d655e7059d148affa02350f54082056d75ed419b"
-  integrity sha512-229XDMunr8W8yV8JN2qfSKgFq6zJNJ4fq8cvBwl6za/CakRCb//e5iL1WjJ+eIIdScs+Gk8/dk3eBI7yqKnKxA==
+"@sanity/export@2.15.0":
+  version "2.15.0"
+  resolved "https://registry.npmjs.org/@sanity/export/-/export-2.15.0.tgz#734e6237a39ec3e2d4dae94f37349a253d68afd0"
+  integrity sha512-V3m1iMo2KpLngdTZbtoPv4xnGbXpR3ziSMjI+wLXPk2XKuXl6cPO0WszMm51zE3mgnS2zAhTb1889TYgGT7+PA==
   dependencies:
     agentkeepalive "^4.1.0"
     archiver "^5.0.0"
@@ -1387,47 +1387,47 @@
     simple-get "^4.0.0"
     split2 "^3.2.2"
 
-"@sanity/field@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/field/-/field-2.15.3-conditional-fields.39.tgz#4acae0d9479c8e0bb34cb3b0cec509e2571dfd88"
-  integrity sha512-AU9BVDZf/9akHv5eDdzqtbJ4dYfZ6ifB7WOXnc9LeTL8wu67k1ruUvx4N6ee8f1VuACU78cG+Fho3/fHAq6RKw==
+"@sanity/field@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/field/-/field-2.17.0.tgz#5d9093dc2fe5251fcff3c4f04af1ec6e20f7d69a"
+  integrity sha512-dmTIdqxJukUGmMrXtpjJCewju6OLwBlTnwWCnO0bOfPBSP66g6cxXl3dZQjThD0jQzOKcwXKduPCmI/5sGLNKg==
   dependencies:
     "@sanity/asset-utils" "^1.1.2"
-    "@sanity/base" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/client" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/base" "2.17.0"
+    "@sanity/client" "2.16.0"
     "@sanity/color" "^2.1.4"
-    "@sanity/diff" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/diff" "2.15.0"
     "@sanity/icons" "^1.1.4"
     "@sanity/image-url" "^0.140.19"
-    "@sanity/react-hooks" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/react-hooks" "2.17.0"
+    "@sanity/types" "2.17.0"
     "@sanity/ui" "^0.36.0"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/util" "2.17.0"
     diff-match-patch "^1.0.4"
     lodash "^4.17.15"
     sanity-diff-patch "^1.0.9"
     styled-components "^5.2.1"
 
-"@sanity/form-builder@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/form-builder/-/form-builder-2.15.3-conditional-fields.39.tgz#70e7cd4945ab8defc9d0229973d42d7f569ca15c"
-  integrity sha512-FIsM9SKR0wG6n5sSYy9Lg5LZYN4XMEnBn6snfBGb12G8tmDiY4UldI/EXgZDiu20R+zBxOt6xaHMrxQsT5UFow==
+"@sanity/form-builder@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/form-builder/-/form-builder-2.17.0.tgz#6e6e99ab13e69a416bcf146870f2cf7e088c32bb"
+  integrity sha512-JoCBXqpyUJEdmYj5Emx68+goCZFCK3oeZTPr3zQlM4U3VVuNtg+iIq1pMU9kL6mfR35R46P5bVo1HEmS9GQjbg==
   dependencies:
     "@reach/auto-id" "^0.13.2"
-    "@sanity/base" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/block-tools" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/client" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/base" "2.17.0"
+    "@sanity/block-tools" "2.16.0"
+    "@sanity/client" "2.16.0"
     "@sanity/color" "^2.1.4"
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/generate-help-url" "2.15.0"
     "@sanity/icons" "^1.1.4"
-    "@sanity/imagetool" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/initial-value-templates" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/mutator" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/portable-text-editor" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/schema" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/imagetool" "2.17.0"
+    "@sanity/initial-value-templates" "2.17.0"
+    "@sanity/mutator" "2.15.0"
+    "@sanity/portable-text-editor" "2.17.0"
+    "@sanity/schema" "2.16.0"
+    "@sanity/types" "2.17.0"
     "@sanity/ui" "^0.36.0"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/util" "2.17.0"
     "@sanity/uuid" "^3.0.1"
     attr-accept "^1.1.0"
     classnames "^2.2.5"
@@ -1451,10 +1451,10 @@
     speakingurl "^13.0.0"
     styled-components "^5.2.1"
 
-"@sanity/generate-help-url@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/generate-help-url/-/generate-help-url-2.15.3-conditional-fields.39.tgz#c26955f554f0638cb3dbee0959541642ab55c8a4"
-  integrity sha512-m1z/1WEHnM0rCPsR4tzlfIa/8GeaYj5XBdC56ob3aBwA9NhsfUagKojbSJwg498Rc2YOXF8p/n5PEdiuDZCfzA==
+"@sanity/generate-help-url@2.15.0":
+  version "2.15.0"
+  resolved "https://registry.npmjs.org/@sanity/generate-help-url/-/generate-help-url-2.15.0.tgz#63e0c49979aeb7bea7ed22242609f2c4578ccc3b"
+  integrity sha512-a28hvBov4t52a96gsRAv12ifhAjAu20KE+HHq2+bWAtbFXIwVI+Y0alDlkVsx7/5GfJPte8xuFaxFYQz2Zquaw==
 
 "@sanity/icons@^1.1.4", "@sanity/icons@^1.1.5":
   version "1.1.5"
@@ -1466,21 +1466,21 @@
   resolved "https://registry.npmjs.org/@sanity/image-url/-/image-url-0.140.22.tgz#7a65f56bb751f7b1c5dfacfadd34ee10fc4f0fde"
   integrity sha512-CAmQZnj+KM7FSEYiWlIGDit072syicYuAw0w7R2ctMzHiZ4p9mE/g6dBnYqrqFUrw2J+GpJgPt+RVspKP8vdqA==
 
-"@sanity/imagetool@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/imagetool/-/imagetool-2.15.3-conditional-fields.39.tgz#e0347bfee4243338279e46dcfa2abd80352cf272"
-  integrity sha512-tcCuVq2Wh/qYq5GjbNnd3IL+Pp5xeFX/F1ZSeGOKe5otVIBYwGl19JYZzArmnPq6tTxPWgUIUrHLbViTLcmwjA==
+"@sanity/imagetool@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/imagetool/-/imagetool-2.17.0.tgz#c67c71c224a5aa61a05e4c2a7be6cc766b875ec6"
+  integrity sha512-tTh5PHGDGNwX9spDj28BLIgT8bfVET33KwnQKMdByC3uMSvt4TgHZ01bpBlQdB3gOt3xbL4fU7jDtUlMfwIEtw==
   dependencies:
     debug "^3.2.7"
     lodash "^4.17.15"
 
-"@sanity/import@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/import/-/import-2.15.3-conditional-fields.39.tgz#31fd4d2b312023f97a80f5906012e801375e44af"
-  integrity sha512-TzKbufTs2kGxy+ZWTQ3A8/tJuZjyxeGFhmHhFb360xsqFBjKhzhabSW7WyN/TtQ4elylXAs6sTr+vuKQRo6UwA==
+"@sanity/import@2.16.0":
+  version "2.16.0"
+  resolved "https://registry.npmjs.org/@sanity/import/-/import-2.16.0.tgz#4c5c8a97ab27ff4491f3b7087d8d1af0478f4623"
+  integrity sha512-oF71JIf0NJ+wa//tP5HgnFTxCwcYEAyabBsx1QFabJoCaBJhdeT99wfSWp1VyXhUyXxUtA+2bqLzyMOJY2EwEw==
   dependencies:
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/mutator" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/generate-help-url" "2.15.0"
+    "@sanity/mutator" "2.15.0"
     "@sanity/uuid" "^3.0.1"
     debug "^3.2.7"
     file-url "^2.0.2"
@@ -1498,12 +1498,12 @@
     tempy "^0.3.0"
     whatwg-url "^7.0.0"
 
-"@sanity/initial-value-templates@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/initial-value-templates/-/initial-value-templates-2.15.3-conditional-fields.39.tgz#2ea1a28388bd69fb0f6ae533828b9b7530752b5f"
-  integrity sha512-y0NQ+7B7PZ0zwra6l9WiXA7H7lUpnyv7aoPYF4skjw2c1SEQL0xuwIYHGxdPquGRNkq7cgnYDosZREIrS2/fcA==
+"@sanity/initial-value-templates@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/initial-value-templates/-/initial-value-templates-2.17.0.tgz#9e1690d87d08e424c5ec95a8675d9cd5bd83ab0f"
+  integrity sha512-X4bYN0TJ/GBMccwbjezdU2qEySLnwe/NNsytt0dTyQRBWhja+BaIR3sN+0G+fp0lWL717fWf251m4MgH/Idw2Q==
   dependencies:
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/util" "2.17.0"
     "@types/lodash" "^4.14.149"
     lodash "^4.17.15"
     oneline "^1.0.3"
@@ -1513,10 +1513,10 @@
   resolved "https://registry.npmjs.org/@sanity/logos/-/logos-1.1.4.tgz#ef23ca3c59d8154ff2cd68298c6127adaa84f9d0"
   integrity sha512-rdUekjkFJgtRaI6nociPtXLAYqier0DiW91PouqW5XykScNDiDdyORiHK73lM1VUMOVNKkkDMsUGwuxP2oom+g==
 
-"@sanity/mutator@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/mutator/-/mutator-2.15.3-conditional-fields.39.tgz#e729b66dbad9c00d93f7ccad1d3f952be7d11794"
-  integrity sha512-C3A7pPlZiXjr0HEwSeoyUY/rypktjJzVjDucLw1QKR9buQctXYyZd837xoCp6o27svJ0P2WwsZjoULs4AKpTHg==
+"@sanity/mutator@2.15.0":
+  version "2.15.0"
+  resolved "https://registry.npmjs.org/@sanity/mutator/-/mutator-2.15.0.tgz#7114a4de9758c79e1f1e6d7292e966e0feeb0c2e"
+  integrity sha512-vRxcRhJYzUyh/jYQZXXrZ43tR6q6C9lh+bXr/prf+BGFepOYcDCXcUE5RItT94TCkW4k8lxlsqOl3YxIoBG53w==
   dependencies:
     "@types/diff-match-patch" "^1.0.32"
     debug "^3.2.7"
@@ -1531,70 +1531,70 @@
     object-assign "^4.1.1"
     rxjs "^6.5.3"
 
-"@sanity/plugin-loader@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/plugin-loader/-/plugin-loader-2.15.3-conditional-fields.39.tgz#e5236f29a5770026ef5358752679b664f9c4e08c"
-  integrity sha512-He0TpbACC6LNkGrGrcF/dk9ZYnhZtxsbcG7wI1Y5dVIAvZviMG5SiTGF1OkrUn3Np8ZQQ5TBsMYohvvwOnH6Lg==
+"@sanity/plugin-loader@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/plugin-loader/-/plugin-loader-2.17.0.tgz#719032733f4909ac32f166f7c315c3178dcc2495"
+  integrity sha512-CJIEca7I0VDafN5Yd2AHRNfEx0Co4saKMLiAIQn0zbCBLvUws4rintu6iDc8oI/17AgP6CX88hrOAyReMaQCPA==
   dependencies:
-    "@sanity/resolver" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/webpack-integration" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/resolver" "2.17.0"
+    "@sanity/util" "2.17.0"
+    "@sanity/webpack-integration" "2.17.0"
     css-modules-require-hook "4.1.0"
     interop-require "^1.0.0"
 
-"@sanity/portable-text-editor@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/portable-text-editor/-/portable-text-editor-2.15.3-conditional-fields.39.tgz#623a312aed0d89c5c2ec5dc2c1d663a7be86a9cb"
-  integrity sha512-Nt7YAzi1jP8V9x8v5L0o788T4yaARgumblYJNnFWnZFycSBgNkY2RhxzSQnXqVBmIBP9CEQGEJ66piVCra2O9Q==
+"@sanity/portable-text-editor@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/portable-text-editor/-/portable-text-editor-2.17.0.tgz#b0c7b26b5e742ae915003ae83f26998b07692a7b"
+  integrity sha512-Ut8JAtsTD3W/Op2x8Wp/xAF7nSn2wxIOaH50A1yVsUmMQyd4ckn63RmUQTOHmhQ4qmVKqqrA6FC9cR28Y45acg==
   dependencies:
-    "@sanity/block-tools" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/schema" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/slate-react" "0.58.6"
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/block-tools" "2.16.0"
+    "@sanity/schema" "2.16.0"
+    "@sanity/slate-react" "0.58.7"
+    "@sanity/types" "2.17.0"
+    "@sanity/util" "2.17.0"
     debug "^3.2.7"
     is-hotkey "^0.1.6"
     lodash "^4.17.15"
     slate "^0.58.4"
     styled-components "^5.2.1"
 
-"@sanity/react-hooks@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/react-hooks/-/react-hooks-2.15.3-conditional-fields.39.tgz#1633e9554c3c51cc0e9257f5aea3562bdd30be31"
-  integrity sha512-IFK0B4XbIcq3v9OcfBfZCQuQCS8p5FW46qQ2jlQRSAxFrjgfbQie6wl0i/kszs+0VZSsoWptbWTPlNdCLfnhBQ==
+"@sanity/react-hooks@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/react-hooks/-/react-hooks-2.17.0.tgz#97e929777807400ec5138f937a6501eb66818072"
+  integrity sha512-DclfVAIRk7vyZrX5AyYtTyD1HvPO6MImfoUlLcuwlK7iBrhrQ+iAw5LxQ1QfnqnVZoV+E20V1J0XQbtUM7ZTzw==
   dependencies:
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/types" "2.17.0"
     react-rx "^1.0.0-beta.6"
     rxjs "^6.5.3"
 
-"@sanity/resolver@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/resolver/-/resolver-2.15.3-conditional-fields.39.tgz#78fe9a5f2bbc781077aa1531a686d97a09a3bd12"
-  integrity sha512-XD5Zw4jvXg0sMMSnIfu15qsqXVQDU91BVPyTLDTgqp8NmndKYDS3cGRpTtaCLfaVAMGzTmewf5/z3J6hFU9v3Q==
+"@sanity/resolver@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/resolver/-/resolver-2.17.0.tgz#85043171f5f5f27ab5654cebe3231e5c87537b81"
+  integrity sha512-VicgADhkLezyZwmag9wSOW7wKS1Z4IHe5EJLBbIUsLvrnZ8ArfoiLXxnY7EEYOmSTIQsxlL4/2Myt3tw/sY5DA==
   dependencies:
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/generate-help-url" "2.15.0"
+    "@sanity/util" "2.17.0"
     fs-extra "^6.0.1"
     lodash "^4.17.15"
     path-exists "^3.0.0"
     promise-props-recursive "^1.0.0"
 
-"@sanity/schema@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/schema/-/schema-2.15.3-conditional-fields.39.tgz#6d697951a5b80c3c2bd2dd6a805bcee52e7c0b0f"
-  integrity sha512-mfIJHJIgQTNQ6yikDtkfJQvd8qZiKoWDUB1tR1MFQwKzT8dBNEmXllo/JrxeCaTb2V7XJCYwDdrMJHpEUqrgxw==
+"@sanity/schema@2.16.0":
+  version "2.16.0"
+  resolved "https://registry.npmjs.org/@sanity/schema/-/schema-2.16.0.tgz#f622a33b7288bea838c71528268b4f182f41cd27"
+  integrity sha512-yEGxffDyxz9MGjRvcoPfa5vIcQP0cAU1UIz2oT8BYt7Rq1t/gg1kL47y1plMFilakTXSekruSK1YBnpkmW1Unw==
   dependencies:
-    "@sanity/generate-help-url" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/generate-help-url" "2.15.0"
     arrify "^1.0.1"
     humanize-list "^1.0.1"
     leven "^2.1.0"
     lodash "^4.17.15"
     object-inspect "^1.6.0"
 
-"@sanity/server@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/server/-/server-2.15.3-conditional-fields.39.tgz#e01b5c7817aead919c768c094f195ac45d2dac9a"
-  integrity sha512-EwUyheCQYFVpFVwwDp6suZqC1q8qgxUXHWqTX149Go2mGLVUOHn0MrSrR/177N8oQ4mKIC45IXbZ7He71/b1sA==
+"@sanity/server@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/server/-/server-2.17.0.tgz#3e73e6f0cfaaaa00dafd46b1b079264465ce86c5"
+  integrity sha512-jijr5oXAdupYhT02AFlp/UveJO9Qdk1Y+IyJGw74/PzyYvzKFERfIrMijEakMuf8nwE8I0raBVjz4/JhS7G4VQ==
   dependencies:
     "@babel/core" "^7.11.6"
     "@babel/plugin-proposal-class-properties" "^7.10.4"
@@ -1604,10 +1604,10 @@
     "@babel/register" "^7.7.4"
     "@hot-loader/react-dom" "^16.9.0-4.12.11"
     "@sanity/css-loader" "^0.28.12"
-    "@sanity/eventsource" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/resolver" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/webpack-integration" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/eventsource" "2.14.0"
+    "@sanity/resolver" "2.17.0"
+    "@sanity/util" "2.17.0"
+    "@sanity/webpack-integration" "2.17.0"
     babel-loader "^8.0.6"
     eventsource-polyfill "^0.9.6"
     express "^4.16.1"
@@ -1629,10 +1629,10 @@
     webpack-dev-middleware "^2.0.5"
     webpack-hot-middleware "2.25.0"
 
-"@sanity/slate-react@0.58.6":
-  version "0.58.6"
-  resolved "https://registry.npmjs.org/@sanity/slate-react/-/slate-react-0.58.6.tgz#ed4080b02a7f8183302fa802df168e7761c2f7ca"
-  integrity sha512-h1Jf5ktMRKh9gwlZeD7cV25GX+p4ZqOm0T7UaWNLD+j98znosbJeAJnJX+xXlm70L2BfS/i3V6vvJvv2AzFLZQ==
+"@sanity/slate-react@0.58.7":
+  version "0.58.7"
+  resolved "https://registry.npmjs.org/@sanity/slate-react/-/slate-react-0.58.7.tgz#4177663712a7437a3bdbc869429ebb38c2c0b910"
+  integrity sha512-vCqNTLo5vkq3U7Lw6lELKfRN2ef5mEkMFKijUru4IbGzksPM/AQuM6cSGeLm9KlrlCxzQ14e+T8vU6kOwzrxyA==
   dependencies:
     "@types/is-hotkey" "^0.1.1"
     "@types/lodash" "^4.14.149"
@@ -1642,22 +1642,22 @@
     lodash "^4.17.4"
     scroll-into-view-if-needed "^2.2.20"
 
-"@sanity/state-router@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/state-router/-/state-router-2.15.3-conditional-fields.39.tgz#8d4d2a9138b4966086f9a32ca44ca852092f4cfa"
-  integrity sha512-ZizMcZ+PQpmaVocC8hDaY+//So4l6Z16rg+hUEOLI0WHs7E92+W2t6MNssnP5Y1ApvuGD7VIPUqTg0ghJw8kPg==
+"@sanity/state-router@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/state-router/-/state-router-2.17.0.tgz#23b893eb42219d840e3752611862c8d8cca48ef3"
+  integrity sha512-uI1XCmsFmSIeXxC/avJrpDWG0vffX8941/L4IhonM0DIiP55oncAMy+rhXnaNeR4VddOiacO+Z5AALDhxDlakw==
   dependencies:
     debug "^3.2.7"
     lodash "^4.17.15"
     nano-pubsub "^2.0.0"
 
-"@sanity/structure@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/structure/-/structure-2.15.3-conditional-fields.39.tgz#3d53630874f8f510c73a429f9e29aeebe7c70345"
-  integrity sha512-8fnDJbgxHyT6YmKnu4DVJ7SVPhJmo1Ij3Pg/w44SbuuoybMHtdzm9otrFzWHoNifB/hul/CpfKcBvUND0eZmkg==
+"@sanity/structure@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/structure/-/structure-2.17.0.tgz#24f7088681e3f0bbc71010bafc1419c2dcab120b"
+  integrity sha512-cX2X4vrHagokfp+hDLthMndhpqPwnDGw7M6D+Av9xALq1iuUIfl6NZLaXypATGfLIkAzxbPCXSf94HkVk9cXCw==
   dependencies:
-    "@sanity/client" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/initial-value-templates" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/client" "2.16.0"
+    "@sanity/initial-value-templates" "2.17.0"
     "@types/lodash" "^4.14.149"
     "@types/memoize-one" "^3.1.1"
     lodash "^4.17.15"
@@ -1668,20 +1668,20 @@
   resolved "https://registry.npmjs.org/@sanity/timed-out/-/timed-out-4.0.2.tgz#c9f61f9a1609baa1eb3e4235a24ea2a775022cdf"
   integrity sha512-NBDKGj14g9Z+bopIvZcQKWCzJq5JSrdmzRR1CS+iyA3Gm8SnIWBfZa7I3mTg2X6Nu8LQXG0EPKXdOGozLS4i3w==
 
-"@sanity/transaction-collator@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/transaction-collator/-/transaction-collator-2.15.3-conditional-fields.39.tgz#2728af8fff7d262d4dcbb7bd575578d5c51b5a84"
-  integrity sha512-7QUC3PpkyrCt+4oEuunLHLAbdldnIKp09f0AB1o89YCFmQoSbMAYqi1WVEsTXFs/MsAsSwb1sH8tMg8B9+Tk3g==
+"@sanity/transaction-collator@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/transaction-collator/-/transaction-collator-2.17.0.tgz#f56a2abd4675a955d87dcdeb813cb994d611141a"
+  integrity sha512-eVHHeaIfmgbDFU09L8vy2Ls44/VlrjVMWJFD+5MnKc8S05OpNfif5kqrngY8c+GRJkqEHRu+aUfFuuu8dLYPcg==
   dependencies:
     "@types/lodash" "^4.14.149"
     lodash "^4.17.15"
 
-"@sanity/types@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/types/-/types-2.15.3-conditional-fields.39.tgz#93c054457e04cf7a2f0e0659aca47b100df54099"
-  integrity sha512-TLd6SD6CuRfZwQyAo20ZmHxiQEzLJetkw6lp8iP03wxfyCsXevJmJ+FTVOUTm29ljiz4NEcHiTjaxREeU0zVxg==
+"@sanity/types@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/types/-/types-2.17.0.tgz#ffcba6af505dd871b69ece3e2a06a59eaa23a989"
+  integrity sha512-uS+Zg4F0CX8pes0MENjuur1s59DxFIj+L/Am7K5wlCQwymuWjluB4NEXBXICvlc1hT2DUvOLwfFyh0ksgcROSw==
   dependencies:
-    "@sanity/client" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/client" "2.16.0"
     "@sanity/color" "^2.1.4"
     "@types/react" "^17.0.0"
     react "17.0.1"
@@ -1703,12 +1703,12 @@
     react-popper "^2.2.5"
     react-refractor "^2.1.4"
 
-"@sanity/util@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/util/-/util-2.15.3-conditional-fields.39.tgz#bc23b3a743b3b9860fabcc504e86ec6d9d3f1a18"
-  integrity sha512-ik13grS+vY0fd3KrksBWT33KnBsWMv7OHmg0cMOdRpWeQRzfwXwLpy9COp26S4EXLzVPG9+FQ2GN9Te7nKQ3+g==
+"@sanity/util@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/util/-/util-2.17.0.tgz#194ec74c1c98dbfd477440000de4e6e859760636"
+  integrity sha512-WsnfoBJFtgncAmIeEYXB8vxC6zVp2s265Y80BBfMZSt/u7QbO2T00Rrcp8eyv8f7a7s7pQ4cOGbzfSxBdaPlOg==
   dependencies:
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/types" "2.17.0"
     dotenv "^8.2.0"
     fs-extra "^6.0.1"
     get-random-values "^1.2.2"
@@ -1724,20 +1724,20 @@
     "@types/uuid" "^8.0.0"
     uuid "^8.0.0"
 
-"@sanity/validation@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/validation/-/validation-2.15.3-conditional-fields.39.tgz#66a4b1f6336598f2e29065f5f7d2b0e351ab8dac"
-  integrity sha512-O9FzD4gqXfr7n+rpTuAVpwijNvuTLv3h/kMFUH1U59AMWasNFnCPb6llGix+z0xG609a8PBlXlfYVi2aGq/I0Q==
+"@sanity/validation@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/validation/-/validation-2.17.0.tgz#2bf65c90456ef80eb598e4c016a03ccc94eba9ff"
+  integrity sha512-Ih27tuttUHLIN0Fb/gdLJ+sh5XZTZkBC8EISAFHXfYDWzzLG9Le9P23psD/mb4mH0g+y/dzuYozzasjl3tQWlA==
   dependencies:
-    "@sanity/client" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/types" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/client" "2.16.0"
+    "@sanity/types" "2.17.0"
     date-fns "^2.16.1"
     lodash "^4.17.15"
 
-"@sanity/vision@2.15.3-conditional-fields.39":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/vision/-/vision-2.15.3-conditional-fields.39.tgz#1b99dcd23184700c314c0a53b25a4526a64a739f"
-  integrity sha512-PAaZXbUxDHelWrqdI1fqimg5I/L67wh/xtMmZJCJ2PZw8XI9eszcenPfUoif6WOHlP0mj26SljoApGLLwag6LA==
+"@sanity/vision@^2.15.0":
+  version "2.15.0"
+  resolved "https://registry.npmjs.org/@sanity/vision/-/vision-2.15.0.tgz#05eb75373ba5ca17fb1ee44849d9e574adf9660b"
+  integrity sha512-9VKrns7b3YT77Ial4iJJWA4P4+H/vdmtEgOaFBgwxvPOvaOzXXPzvWBNNtBJjdveyzEw3JOOdWuu0FjxCbAAVQ==
   dependencies:
     "@sanity/icons" "^1.1.4"
     "@sanity/ui" "^0.36.0"
@@ -1750,13 +1750,13 @@
     react-spinner "^0.2.6"
     react-split-pane "^0.1.84"
 
-"@sanity/webpack-integration@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/webpack-integration/-/webpack-integration-2.15.3-conditional-fields.39.tgz#13c4fa636a6d54d61ff2c55f3cc95f7df234db6f"
-  integrity sha512-TzXeCQpC8PPSuxoTFh3p2NT93ypUEp2gmnutar0+hD+yHN/O85BKtUzfiHdRhQs8AsLdS/GrrnsT7lNhzK3BDw==
+"@sanity/webpack-integration@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/webpack-integration/-/webpack-integration-2.17.0.tgz#4a57cc9473399e941f7b4929a10629472d2090b0"
+  integrity sha512-2jSKR0GwbivQdk4WvZO6NrZ4nSRfbjy0EoIcSJ2a6KH/587oTFxMUCTEMlGYnuBWhLbl7RfX/Uzu3QgoHIa2bQ==
   dependencies:
-    "@sanity/resolver" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/webpack-loader" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/resolver" "2.17.0"
+    "@sanity/webpack-loader" "2.17.0"
     css-color-function "^1.3.3"
     dotenv "^8.2.0"
     fs.realpath "^1.0.0"
@@ -1770,13 +1770,13 @@
     postcss-url "^7.3.1"
     resolve "^1.3.3"
 
-"@sanity/webpack-loader@2.15.3-conditional-fields.39+0d82c21215":
-  version "2.15.3-conditional-fields.39"
-  resolved "https://registry.npmjs.org/@sanity/webpack-loader/-/webpack-loader-2.15.3-conditional-fields.39.tgz#93fab40476d5200e097819f0040bd7ff0e190d9f"
-  integrity sha512-1/ELPhUv12Q4QeYL7LZr+YY9JC2LYH4pdPjR2NOY3I8Zm2f4ctoFlt0p9Y+yE3IXk16t5qh6w0NVOmFELWYylw==
+"@sanity/webpack-loader@2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/webpack-loader/-/webpack-loader-2.17.0.tgz#a06d1ece1e03952f8fa92ca9c80390c893a2e965"
+  integrity sha512-wBE1ojyrsvtyU5kdZzTt/JqkpLpEht1jJBOiIswO//JLeVtDQGB3RATg+B8weZvKWgGd4SJAhXZKxmFVkJ+wLA==
   dependencies:
-    "@sanity/resolver" "2.15.3-conditional-fields.39+0d82c21215"
-    "@sanity/util" "2.15.3-conditional-fields.39+0d82c21215"
+    "@sanity/resolver" "2.17.0"
+    "@sanity/util" "2.17.0"
     loader-utils "1.1.0"
 
 "@types/diff-match-patch@^1.0.32":
@@ -1830,9 +1830,9 @@
   integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
 
 "@types/node@*":
-  version "16.7.1"
-  resolved "https://registry.npmjs.org/@types/node/-/node-16.7.1.tgz#c6b9198178da504dfca1fd0be9b2e1002f1586f0"
-  integrity sha512-ncRdc45SoYJ2H4eWU9ReDfp3vtFqDYhjOsKlFFUDEn8V1Bgr2RjYal8YT5byfadWIRluhPFU6JiDOl0H6Sl87A==
+  version "16.7.2"
+  resolved "https://registry.npmjs.org/@types/node/-/node-16.7.2.tgz#0465a39b5456b61a04d98bd5545f8b34be340cb7"
+  integrity sha512-TbG4TOx9hng8FKxaVrCisdaxKxqEwJ3zwHoCWXZ0Jw6mnvTInpaB99/2Cy4+XxpXtjNv9/TgfGSvZFyfV/t8Fw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -2570,7 +2570,7 @@ browserslist@^2.0.0, browserslist@^2.11.3:
     caniuse-lite "^1.0.30000792"
     electron-to-chromium "^1.3.30"
 
-browserslist@^4.0.0, browserslist@^4.16.6, browserslist@^4.16.7:
+browserslist@^4.0.0, browserslist@^4.16.6, browserslist@^4.16.8:
   version "4.16.8"
   resolved "https://registry.npmjs.org/browserslist/-/browserslist-4.16.8.tgz#cb868b0b554f137ba6e33de0ecff2eda403c4fb0"
   integrity sha512-sc2m9ohR/49sWEbPj14ZSSZqp+kbi16aLao42Hmn3Z8FpjuMaq2xCA2l4zl9ITfyzvnvyE0hcg62YkIGKxgaNQ==
@@ -2736,9 +2736,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30001251:
-  version "1.0.30001251"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001251.tgz#6853a606ec50893115db660f82c094d18f096d85"
-  integrity sha512-HOe1r+9VkU4TFmnU70z+r7OLmtR+/chB1rdcJUeQlAinjEeb0cKL20tlAtOagNZhbrtLnCvV19B4FmF1rgzl6A==
+  version "1.0.30001252"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001252.tgz#cb16e4e3dafe948fc4a9bb3307aea054b912019a"
+  integrity sha512-I56jhWDGMtdILQORdusxBOH+Nl/KgQSdDmpJezYddnAkVOmnoU8zwjTV9xAjMIYxr0iPreEAVylCGcmHCjfaOw==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -3137,11 +3137,11 @@ copy-descriptor@^0.1.0:
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
 core-js-compat@^3.14.0, core-js-compat@^3.16.0:
-  version "3.16.2"
-  resolved "https://registry.npmjs.org/core-js-compat/-/core-js-compat-3.16.2.tgz#442ef1d933ca6fc80859bd5a1db7a3ba716aaf56"
-  integrity sha512-4lUshXtBXsdmp8cDWh6KKiHUg40AjiuPD3bOWkNVsr1xkAhpUqCjaZ8lB1bKx9Gb5fXcbRbFJ4f4qpRIRTuJqQ==
+  version "3.16.3"
+  resolved "https://registry.npmjs.org/core-js-compat/-/core-js-compat-3.16.3.tgz#ae12a6e20505a1d79fbd16b6689dfc77fc989114"
+  integrity sha512-A/OtSfSJQKLAFRVd4V0m6Sep9lPdjD8bpN8v3tCCGwE0Tmh0hOiVDm9tw6mXmWOKOSZIyr3EkywPo84cJjGvIQ==
   dependencies:
-    browserslist "^4.16.7"
+    browserslist "^4.16.8"
     semver "7.0.0"
 
 core-js@^2.4.0, core-js@^2.5.0:
@@ -3790,9 +3790,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.30, electron-to-chromium@^1.3.811:
-  version "1.3.816"
-  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.816.tgz#ab6488b126de92670a6459fe3e746050e0c6276f"
-  integrity sha512-/AvJPIJldO0NkwkfpUD7u1e4YEGRFBQpFuvl9oGCcVgWOObsZB1loxVGeVUJB9kmvfsBUUChPYdgRzx6+AKNyg==
+  version "1.3.818"
+  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.818.tgz#32ed024fa8316e5d469c96eecbea7d2463d80085"
+  integrity sha512-c/Z9gIr+jDZAR9q+mn40hEc1NharBT+8ejkarjbCDnBNFviI6hvcC5j2ezkAXru//bTnQp5n6iPi0JA83Tla1Q==
 
 element-resize-detector@^1.1.14:
   version "1.2.3"

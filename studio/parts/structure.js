@@ -18,12 +18,7 @@ export default () =>
         .icon(emoji('🗂'))
         .child(S.documentTypeList('collection').title('Collections')),
       S.listItem()
-        .title('Settings')
+        .title('Site')
         .icon(emoji('🌎'))
-        .child(
-          S.editor()
-            .title('Settings')
-            .schemaType('settings')
-            .documentId('settings'),
-        ),
+        .child(S.editor().title('Site').schemaType('site').documentId('site')),
     ])

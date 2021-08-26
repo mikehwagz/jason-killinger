@@ -17,7 +17,7 @@ import twoUpTextAndMedia from './types/twoUpTextAndMedia'
 import threeUpMedia from './types/threeUpMedia'
 import editorialText from './types/editorialText'
 
-import settings from './types/settings'
+import site from './types/site'
 import post from './types/post'
 import collection from './types/collection'
 import page from './types/page'
@@ -42,7 +42,7 @@ export default createSchema({
     threeUpMedia,
     editorialText,
     // Documents
-    settings,
+    site,
     post,
     collection,
     page,

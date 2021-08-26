@@ -1,6 +1,6 @@
 export default {
-  name: 'twoUp',
-  title: '2-Up',
+  name: 'twoUpTextAndMedia',
+  title: '2-Up Text & Media',
   type: 'object',
   fields: [
     {

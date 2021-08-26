@@ -47,6 +47,6 @@ export default {
     },
   ],
   blockEditor: {
-    icon: emoji('🔗'),
+    icon: emoji('🔗', 16),
   },
 }
