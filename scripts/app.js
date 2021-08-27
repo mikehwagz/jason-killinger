@@ -1,26 +1,24 @@
 import { picoapp } from 'picoapp'
-import { size, qs } from 'martha'
+import { size } from 'martha'
 
 import lazy from './components/lazy'
-import scroll from './components/scroll'
-import sticky from './components/sticky'
+import header from './components/header'
 
-const components = { lazy, scroll, sticky }
+const components = { lazy, header }
 
 const sizes = size()
 const state = {
   ...sizes,
   mx: sizes.ww / 2,
   my: sizes.wh / 2,
+  isOpen: false,
   dom: {
     html: document.documentElement,
     body: document.body,
-    scrollProxy: qs('.js-scroll-proxy'),
   },
   fonts: [
-    // { family: 'GT Walsheim' },
-    // { family: 'GT Walsheim', options: { weight: 300 } },
-    // { family: 'GT Walsheim', options: { weight: 300, style: 'italic' } },
+    { family: 'Akzidenz Grotesk Pro' },
+    { family: 'Neue Montreal Medium' },
   ],
 }
 

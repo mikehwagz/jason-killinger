@@ -4,13 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "eleventy:serve": "eleventy --serve",
+    "eleventy:dev": "eleventy --serve",
     "eleventy:build": "eleventy",
     "clean": "rm -rf ./build",
-    "debug": "DEBUG=Eleventy* NODE_ENV=development npm-run-all clean eleventy:serve",
-    "serve": "NODE_ENV=development npm-run-all clean eleventy:serve",
-    "build": "NODE_ENV=production npm-run-all clean eleventy:build",
-    "dev": "netlify dev"
+    "debug": "DEBUG=Eleventy* NODE_ENV=development npm-run-all clean eleventy:dev",
+    "dev": "NODE_ENV=development npm-run-all clean eleventy:dev",
+    "build": "NODE_ENV=production npm-run-all clean eleventy:build"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -37,6 +36,7 @@
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",
     "choozy": "^1.0.0",
+    "focus-trap": "^6.6.1",
     "focus-visible": "^5.2.0",
     "fontfaceobserver": "^2.1.0",
     "gsap": "^3.7.1",

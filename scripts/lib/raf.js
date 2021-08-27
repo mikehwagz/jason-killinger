@@ -3,6 +3,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import { rect, qs, on, round, lerp } from 'martha'
 
 gsap.registerPlugin(ScrollToPlugin)
+gsap.config({ force3D: true })
 
 export default function raf(app) {
   let target = 0

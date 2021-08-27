@@ -1,6 +1,6 @@
-# sane-eleventy ![Prerequisite](https://img.shields.io/badge/node-12.18.2-red.svg) ![Prerequisite](https://img.shields.io/badge/yarn-1.22.4-blue.svg)
+# Jason Killinger
 
-> Repo template for [Sanity](https://sanity.io) + [Eleventy](https://11ty.dev) projects at [Self Aware](https://selfaware.studio)
+Made with [sane-eleventy](https://github.com/selfawarestudio/sane-eleventy) ![Prerequisite](https://img.shields.io/badge/node-12.18.2-red.svg) ![Prerequisite](https://img.shields.io/badge/yarn-1.22.4-blue.svg)
 
 ## 📖 About
 
@@ -9,7 +9,6 @@
 - Styles are authored using Tailwind and the entry point lives in [`styles`](styles/index.css). We **always** leverage Tailwind utilities before resorting to adding custom styles.
 - JavaScript lives in [`scripts`](scripts)
 - Place any static files in the [`public`](public) folder
-- Netlify serverless functions are authored in [`api`](api)
 - Place any eleventy related utilities in [`lib`](lib)
 - Sanity Studio lives in the [`studio`](studio) directory
 
@@ -36,7 +35,7 @@ To set up with Sanity, you will need to set your Sanity `projectId` and `dataset
 ### Development
 
 ```sh
-# Start Netlify dev server
+# Start eleventy dev server
 yarn dev
 
 # Start Sanity dev server
@@ -52,25 +51,4 @@ yarn build
 
 ### Deployment
 
-Deploy the front-end using Netlify
-
-```sh
-# Deploy Sanity Studio
-cd studio && yarn deploy
-```
-
-## 🖼️ Showcase
-
-The following sites are powered by sane-eleventy:
-
-- [Off Season](https://offseasoncreative.com)
-- [MIT Digital Humanities](https://digitalhumanities.mit.edu)
-- [Rosaluna](https://mezcalrosaluna.com)
-
-## 💡 Inspiration
-
-Thanks to [sane-shopify](https://github.com/good-idea/sane-shopify) for the name inspiration 🙂
-
-## 🧾 License
-
-MIT
+Deploy the front-end using Netlify by pushing to the `main` branch.

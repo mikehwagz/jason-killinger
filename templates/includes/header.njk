@@ -1,7 +1,38 @@
-<header class="flex justify-between p-10 border-b-2 text-24">
-  <a class="inline-block p-5" href="/">Sane Eleventy</a>
-  <nav>
-    <a class="inline-block p-5" href="/">Home</a>
-    <a class="inline-block p-5" href="/about/">About</a>
-  </nav>
-</header>
+{% macro headerBar() %}
+  <div class="absolute top-0 left-0 w-full h-65 m:h-100 flex items-center justify-between px-10 m:px-40">
+    <a class="font-nm text-26 m:text-40 leading-100" href="/">Jason Killinger</a>
+    <nav class="hidden m:flex gap-x-25">
+      {% for link in site.navigation %}
+        <a class="font-nm text-26 m:text-40 leading-100" href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}">{{ link.title }}</a>
+      {% endfor %}
+    </nav>
+    <button class="m:hidden w-50 h-50 js:header-burger" data-initial-focus>
+      <div class="w-30 relative ml-auto">
+        <div class="space-y-5 js:header-openIcon">
+          <div class="h-3 bg-current js:header-topBun"></div>
+          <div class="h-3 bg-current js:header-patty"></div>
+          <div class="h-3 bg-current js:header-bottomBun"></div>
+        </div>
+        <div class="w-24 h-24 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div class="js:header-closeIcon" style="opacity: 0;">
+            {% include 'x-icon.njk' %}
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+{% endmacro %}
+
+<div class="absolute top-0 left-0 w-full" data-component="header">
+  {{ headerBar() }}
+  <div class="m:hidden fixed inset-0 w-full h-full overflow-hidden js:header-outer">
+    <div class="relative w-full h-full text-white bg-black px-10 z-10 js:header-inner">
+      {{ headerBar() }}
+      <nav class="absolute bottom-30 w-full flex flex-col gap-y-20">
+        {% for link in site.navigation %}
+          <a class="text-80 leading-100 font-nm" href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}">{{ link.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</div>

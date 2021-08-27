@@ -2,6 +2,10 @@
 layout: base.njk
 title: Home
 ---
-<div class="px-10" data-router-view="default">
-  <h1 class="font-sans text-100 mb-20">Home</h1>
+<div class="px-10 m:px-40" data-router-view="default">
+  {% include 'header.njk' %}
+  <div class="min-h-screen pt-150">
+    <h1 class="font-nm text-100">{{ site.homepage.title }}</h1>
+  </div>
+  {% include 'footer.njk' %}
 </div>

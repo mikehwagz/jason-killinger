@@ -13,9 +13,8 @@ module.exports = {
   darkMode: false,
   theme: {
     fontFamily: {
-      sans: 'sans-serif',
-      serif: 'serif',
-      mono: 'monospace',
+      ag: ['Akzidenz Grotesk Pro', 'sans-serif'],
+      nm: ['Neue Montreal Medium', 'sans-serif'],
     },
     screens: {
       '2xs': '375px',
@@ -27,8 +26,10 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      white: '#FFF',
-      black: '#000',
+      white: '#f9f9f9',
+      black: '#181818',
+      'gray-light': '#909090',
+      'gray-dark': '#696969',
       current: 'currentColor',
       transparent: 'transparent',
     },
