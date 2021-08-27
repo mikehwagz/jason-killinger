@@ -1,5 +1,5 @@
 {% macro headerBar() %}
-  <div class="absolute top-0 left-0 w-full h-65 m:h-100 flex items-center justify-between px-10 m:px-40">
+  <div class="h-65 m:h-100 flex items-center justify-between">
     <a class="font-nm text-26 m:text-40 leading-100" href="/">Jason Killinger</a>
     <nav class="hidden m:flex gap-x-25">
       {% for link in site.navigation %}
@@ -23,12 +23,14 @@
   </div>
 {% endmacro %}
 
-<div class="absolute top-0 left-0 w-full" data-component="header">
+<div class="fixed top-0 left-0 w-full px-10 m:px-40 z-10" data-component="header">
   {{ headerBar() }}
-  <div class="m:hidden fixed inset-0 w-full h-full overflow-hidden js:header-outer">
-    <div class="relative w-full h-full text-white bg-black px-10 z-10 js:header-inner">
-      {{ headerBar() }}
-      <nav class="absolute bottom-30 w-full flex flex-col gap-y-20">
+  <div class="m:hidden fixed inset-0 w-full h-full overflow-hidden z-1 js:header-outer" style="opacity: 0; visibility: hidden;">
+    <div class="relative w-full h-full text-white bg-black px-10 js:header-inner">
+      <div class="relative z-1">
+        {{ headerBar() }}
+      </div>
+      <nav class="absolute inset-0 flex flex-col justify-end gap-y-20 px-10 pb-30 js:header-nav">
         {% for link in site.navigation %}
           <a class="text-80 leading-100 font-nm" href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}">{{ link.title }}</a>
         {% endfor %}

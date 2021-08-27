@@ -5,11 +5,20 @@ import gsap from 'gsap'
 import * as focusTrap from 'focus-trap'
 
 export default component((node, ctx) => {
-  let { burger, openIcon, closeIcon, topBun, bottomBun, patty, outer, inner } =
-    choozy(node, 'js:header-')
+  let {
+    burger,
+    openIcon,
+    closeIcon,
+    topBun,
+    bottomBun,
+    patty,
+    outer,
+    inner,
+    nav,
+  } = choozy(node, 'js:header-')
 
-  gsap.set([outer, inner], {
-    yPercent: gsap.utils.wrap([-100, 100]),
+  gsap.set([outer, inner, nav], {
+    yPercent: gsap.utils.wrap([-101, 101]),
   })
 
   let trap = focusTrap.createFocusTrap(outer, {
@@ -46,8 +55,8 @@ export default component((node, ctx) => {
     let { dom } = ctx.getState()
 
     tl.clear()
+      .set(outer, { autoAlpha: 1 })
       .add(() => add(dom.body, 'overflow-hidden'), 0)
-      .add(() => trap.activate(), 0)
       .to(
         [openIcon, closeIcon],
         {
@@ -84,12 +93,13 @@ export default component((node, ctx) => {
       )
       // open overlay
       .to(
-        [outer, inner],
+        [outer, inner, nav],
         {
           yPercent: 0,
         },
         0,
       )
+      .add(() => trap.activate())
       .restart()
   }
 
@@ -97,7 +107,7 @@ export default component((node, ctx) => {
     let { dom } = ctx.getState()
 
     tl.clear()
-      .add(() => trap.deactivate(), 0)
+      .add(() => trap.deactivate())
       .add(() => remove(dom.body, 'overflow-hidden'), 0)
       // x to burger
       .to(
@@ -133,12 +143,13 @@ export default component((node, ctx) => {
       )
       // close overlay
       .to(
-        [outer, inner],
+        [outer, inner, nav],
         {
-          yPercent: gsap.utils.wrap([-100, 100]),
+          yPercent: gsap.utils.wrap([-101, 101]),
         },
         0,
       )
+      .set(outer, { autoAlpha: 0 })
       .restart()
   }
 
