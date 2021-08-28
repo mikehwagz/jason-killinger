@@ -59,4 +59,16 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .h-header {
+    @apply h-60 s:h-65 m:h-80 l:h-90 xl:h-100;
+  }
+
+  .px {
+    @apply px-10 s:px-15 m:px-25 l:px-35 xl:px-40;
+  }
+
+  .text-26\/40 {
+    @apply text-26 s:text-28 m:text-32 l:text-36 xl:text-40;
+  }
 }
