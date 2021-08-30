@@ -4,26 +4,31 @@ export default {
   type: 'object',
   fields: [
     {
-      name: 'defaultCollection',
-      title: 'Default Collection',
-      type: 'reference',
-      to: [{ type: 'collection' }],
-    },
-    {
-      name: 'isNavigationEnabled',
-      title: 'Enable navigation between collections',
-      type: 'boolean',
-      initialValue: false,
-      options: {
-        layout: 'checkbox',
-      },
-    },
-    {
       name: 'collections',
       title: 'Collections',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'collection' }] }],
-      hidden: ({ parent }) => !parent?.isNavigationEnabled,
     },
   ],
+  preview: {
+    select: {
+      ...new Array(4).fill().reduce((acc, _, i) => {
+        acc[`collection${i}`] = `collections.${i}.title`
+        return acc
+      }, {}),
+    },
+    prepare(selection) {
+      const collections = Object.keys(selection)
+        .filter((key) => key.includes('collection'))
+        .map((key) => selection[key])
+        .filter(Boolean)
+
+      return {
+        title: 'Post Grid',
+        subtitle: `${collections.slice(0, 3).join(', ')}${
+          collections.length > 3 ? ` + ${collections.length - 3} more` : ''
+        }`,
+      }
+    },
+  },
 }
