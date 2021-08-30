@@ -31,6 +31,16 @@ export default {
               fieldset: '3up',
             },
           ],
+          preview: {
+            select: {
+              word1: 'word1',
+              word2: 'word2',
+              word3: 'word3',
+            },
+            prepare: ({ word1, word2, word3 }) => ({
+              title: joinTitleCarouselWords(word1, word2, word3),
+            }),
+          },
         },
       ],
     },
@@ -38,9 +48,31 @@ export default {
       name: 'illustration',
       title: 'Illustration',
       type: 'image',
-      options: {
-        accept: 'svg',
-      },
+      // options: {
+      //   accept: 'svg',
+      // },
     },
   ],
+  preview: {
+    select: {
+      titleCarousel: 'titleCarousel',
+      media: 'illustration',
+    },
+    prepare: ({ titleCarousel, ...selection }) => ({
+      title: 'Hero',
+      subtitle: titleCarousel
+        .map(({ word1, word2, word3 }) =>
+          joinTitleCarouselWords(word1, word2, word3),
+        )
+        .join(', '),
+      ...selection,
+    }),
+  },
+}
+
+function joinTitleCarouselWords(...words) {
+  return words
+    .filter((word) => !!word)
+    .filter((word) => word.trim().length)
+    .join(' ')
 }

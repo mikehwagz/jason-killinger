@@ -1,5 +1,8 @@
 {% macro headerBar() %}
-  <div class="h-header flex items-center justify-between font-nm text-26/40 leading-100 pointer-events-none">
+  <div
+    class="h-header flex items-center justify-between font-nm text-26/40 leading-100 pointer-events-none"
+    data-scroll-padding-top
+  >
     <a
       class="pointer-events-auto"
       href="/"
@@ -29,7 +32,7 @@
   </div>
 {% endmacro %}
 
-<div
+<header
   class="fixed top-0 left-0 w-full px z-10"
   data-component="header"
 >
@@ -49,4 +52,4 @@
       </nav>
     </div>
   </div>
-</div>
+</header>
