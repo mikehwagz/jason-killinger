@@ -1,3 +1,4 @@
+import React from 'react'
 import linkAnnotation from '../lib/linkAnnotation'
 
 export default {
@@ -151,4 +152,38 @@ export default {
       hidden: ({ parent }) => parent?.type !== 'media',
     },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'subtitle',
+      type: 'type',
+      thumbnail: 'thumbnail',
+      media: 'media',
+      thumbnailVideo: 'thumbnail.video.asset.url',
+      mediaVideo: 'media.video.asset.url',
+    },
+    prepare({
+      type,
+      media,
+      thumbnail,
+      mediaVideo,
+      thumbnailVideo,
+      ...selection
+    }) {
+      let asset = type === 'media' ? media : thumbnail
+      let videoSrc = type === 'media' ? mediaVideo : thumbnailVideo
+      return {
+        ...selection,
+        media:
+          asset?.type === 'video'
+            ? () => (
+                <video
+                  src={`${videoSrc}#t=0.1`}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                ></video>
+              )
+            : asset?.image,
+      }
+    },
+  },
 }

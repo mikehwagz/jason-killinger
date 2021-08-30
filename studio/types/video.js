@@ -2,9 +2,6 @@ export default {
   title: 'Video',
   name: 'video',
   type: 'file',
-  options: {
-    accept: 'mp4',
-  },
   fields: [
     {
       name: 'alt',
