@@ -3,8 +3,9 @@ import { size } from 'martha'
 
 import lazy from './components/lazy'
 import header from './components/header'
+import hero from './components/hero'
 
-const components = { lazy, header }
+const components = { lazy, header, hero }
 
 const sizes = size()
 const state = {

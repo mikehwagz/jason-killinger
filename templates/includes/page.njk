@@ -1,0 +1,15 @@
+<div class="min-h-screen pt-150 px">
+  {% for module in p.modules %}
+    {% set type = module._type %}
+    {% set moduleTemplate %}
+      {% include type + '.njk' ignore missing %}
+    {% endset %}
+    {% if moduleTemplate | trim | length %}
+      <div class="mb-100">
+        {{ moduleTemplate | safe }}
+      </div>
+    {% else %}
+      <p class="text-40 my-100 text text-gray-light">{{ type }}<p>
+    {% endif %}
+  {% endfor %}
+</div>

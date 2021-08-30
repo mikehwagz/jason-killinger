@@ -1,11 +1,29 @@
 const groq = require('groq')
 const client = require('../lib/sanity.js')
+const queries = require('../lib/queries.js')
 
 module.exports = async function () {
   const data = await client.fetch(groq`*[_type == 'site'][0] {
     homepage-> {
       title,
       'slug': slug.current,
+      isDarkModeEnabled,
+      'isHomepage': *[_type == 'site'][0].homepage->slug.current == slug.current,
+      modules[] {
+        _type,
+        _key,
+        _type == 'hero' => {
+          titleCarousel[] {
+            _key,
+            word1,
+            word2,
+            word3,
+          },
+          illustration {
+            asset->,
+          },
+        },
+      },
     },
     navigation[]-> {
       title,
@@ -14,20 +32,7 @@ module.exports = async function () {
     },
     footer {
       copyright,
-      link {
-        title,
-        openInNewTab,
-        type,
-        type == 'external' => {
-          url,
-        },
-        type == 'internal' => {
-          reference-> {
-            _type,
-            'slug': slug.current,
-          },
-        },
-      },
+      link ${queries.link},
     },
   }`)
 

@@ -1,0 +1,17 @@
+<div class="grid grid-cols-12 gap-x-40 items-center" data-component="hero">
+  <div class="relative text-center font-nm leading-100 text-[10vw] col-start-1 col-span-6">
+    {% for slide in module.titleCarousel %}
+      <h2 class="{% classList
+        'js-slides',
+        'absolute inset-0 pointer-events-none' if loop.index > 1
+      %}">
+        <div class="{% classList 'hidden' if loop.index > 1 %}">{{ slide.word1 }}</div>
+        <div class="{% classList 'hidden' if loop.index > 1 %}">{{ slide.word2 }}</div>
+        <div class="{% classList 'hidden' if loop.index > 1 %}">{{ slide.word3 }}</div>
+      </h2>
+    {% endfor %}
+  </div>
+  <div class="col-start-7 col-span-5">
+    <img class="mix-blend-exclusion" src="{{ module.illustration.asset.url }}" alt="" />
+  </div>
+</div>
