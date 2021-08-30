@@ -2,9 +2,7 @@ import choozy from 'choozy'
 import gsap from 'gsap'
 import { remove, wrap } from 'martha'
 import { component } from 'picoapp'
-
 import signal from '../lib/signal'
-import poll from '../lib/poll'
 
 export default component((node, ctx) => {
   let { slides } = choozy(node)
@@ -18,14 +16,9 @@ export default component((node, ctx) => {
     }
   })
 
-  let offPoll = poll(
-    4000,
-    (done) => {
-      setIndex(wrap(index() + 1, slides.length))
-      done()
-    },
-    false,
-  )
+  let tl = gsap
+    .timeline({ repeat: -1 })
+    .add(() => setIndex(wrap(index() + 1, slides.length)), 4)
 
   function inc(i) {
     let previous = slides[wrap(i - 1, slides.length)]
@@ -50,6 +43,6 @@ export default component((node, ctx) => {
   }
 
   return () => {
-    offPoll()
+    tl.clear()
   }
 })
