@@ -33,6 +33,34 @@ export default {
       type: 'array',
       of: [
         {
+          name: 'spacer',
+          title: 'Spacer',
+          type: 'object',
+          fields: [
+            {
+              name: 'width',
+              title: 'Width',
+              type: 'number',
+              initialValue: 1,
+              options: {
+                list: new Array(6).fill().map((_, i) => i + 1),
+                layout: 'radio',
+              },
+            },
+          ],
+          preview: {
+            select: {
+              width: 'width',
+            },
+            prepare({ width }) {
+              return {
+                title: 'Spacer',
+                subtitle: `Width: ${width}`,
+              }
+            },
+          },
+        },
+        {
           name: 'item',
           title: 'Item',
           type: 'object',
@@ -49,12 +77,20 @@ export default {
               type: 'number',
               initialValue: 6,
               options: {
+                list: [4, 5, 6, 7, 8, 9],
+                layout: 'radio',
+              },
+            },
+            {
+              name: 'verticalAlignment',
+              title: 'Vertical Alignment',
+              type: 'string',
+              initialValue: 'start',
+              options: {
                 list: [
-                  { title: 'XS', value: 4 },
-                  { title: 'S', value: 5 },
-                  { title: 'M', value: 6 },
-                  { title: 'L', value: 8 },
-                  { title: 'XL', value: 9 },
+                  { title: 'Top', value: 'start' },
+                  { title: 'Center', value: 'center' },
+                  { title: 'Bottom', value: 'end' },
                 ],
                 layout: 'radio',
               },

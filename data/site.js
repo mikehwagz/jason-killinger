@@ -28,7 +28,9 @@ module.exports = async function () {
             title,
             'slug': slug.current,
             items[] {
+              _type,
               width,
+              verticalAlignment,
               post-> {
                 title,
                 subtitle,

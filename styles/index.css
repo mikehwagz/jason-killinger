@@ -68,6 +68,10 @@
     @apply px-10 s:px-15 m:px-25 l:px-35 xl:px-40;
   }
 
+  .grid-template {
+    @apply grid-cols-12 gap-x-[calc(40/1536*100vw)];
+  }
+
   .text-26\/40 {
     @apply text-26 s:text-28 m:text-32 l:text-36 xl:text-40;
   }

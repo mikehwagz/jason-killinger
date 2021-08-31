@@ -31,61 +31,6 @@ module.exports = (config) => {
     }
   })
 
-  config.addFilter('postGridRows', (items) => {
-    let rows = []
-    let index = 0
-    let acc = 0
-    let pattern = ['col-end-12', 'col-end-13', '', 'col-start-2']
-    let doubleRowCount = 1
-
-    for (let i = 0; i < items.length; i++) {
-      let item = items[i]
-
-      acc += item.width
-
-      if (acc > 10) {
-        index += 1
-        acc = 0
-      }
-
-      let currentRow = rows[index]
-
-      if (!currentRow) {
-        rows[index] = {
-          cx: pattern[wrap(index, pattern.length)],
-          items: [item],
-        }
-      } else {
-        currentRow.items.push(item)
-
-        currentRow.cx = cx([
-          currentRow.cx,
-          doubleRowCount % 2 ? 'items-end' : 'items-start',
-        ])
-
-        doubleRowCount += 1
-      }
-
-      if (item.width >= 8) {
-        index += 1
-        acc = 0
-      }
-    }
-
-    rows.forEach((row) => {
-      let span = row.items.reduce((total, item, i) => {
-        total += item.width
-        if (i) total += 1
-        return total
-      }, 0)
-
-      row.span = span
-      row.cx = cx([row.cx, `col-span-${span}`])
-    })
-
-    return rows
-  })
-
   config.addWatchTarget('./tailwind.config.js')
   config.addWatchTarget('./lib')
   config.addWatchTarget('./styles')
