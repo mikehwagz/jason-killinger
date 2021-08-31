@@ -6,7 +6,9 @@ pagination:
   data: pages
   size: 1
 ---
-<div data-router-view="default">
+{% from 'theme.njk' import theme %}
+
+<div data-router-view="default" {{ theme(p.isDarkModeEnabled) }}>
   {% include 'header.njk' %}
   {% include 'page.njk' %}
   {% include 'footer.njk' %}

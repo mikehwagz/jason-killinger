@@ -1,0 +1,9 @@
+{% macro theme(isDarkModeEnabled) %}
+  class="text-fg bg-bg"
+  style="
+    --color-fg: {{ '#f9f9f9' if isDarkModeEnabled else '#181818' }};
+    --color-bg: {{ '#181818' if isDarkModeEnabled else '#f9f9f9' }};
+    --color-muted-light: {{ '#575757' if isDarkModeEnabled else '#909090' }};
+    --color-muted-dark: {{ '#575757' if isDarkModeEnabled else '#696969' }};
+  "
+{% endmacro %}

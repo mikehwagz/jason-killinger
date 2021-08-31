@@ -1,10 +1,10 @@
 {% if module.collections | length > 1 %}
-  <div class="pb-15 border-b-2 border-black mb-60 flex gap-x-30">
+  <div class="pb-15 border-b-2 border-fg mb-60 flex gap-x-30">
     {% for collection in module.collections %}
       <a
         class="{% classList
           'text-24 leading-115',
-          'text-black pointer-events-none' if collection.slug == p.collectionSlug or p.isHomepage and loop.index == 1 and not p.collectionSlug else 'text-gray-light hover:text-black'
+          'text-fg pointer-events-none' if collection.slug == p.collectionSlug or p.isHomepage and loop.index == 1 and not p.collectionSlug else 'text-muted-light hover:text-fg'
         %}"
         href="{% if not p.isHomepage %}/{{ p.slug }}{% endif %}{% if loop.index > 1 %}/{{ collection.slug }}{% endif %}/"
       >{{ collection.title }}</a>
@@ -22,7 +22,11 @@
   {% endif %}
   {% for item in collection.items %}
     {% if item._type == 'item' %}
-      <a class="block col-span-{{ item.width }} self-{{ item.verticalAlignment }}" href="/post/{{ item.post.slug }}">
+      <a
+        class="block col-span-{{ item.width }}"
+        href="/post/{{ item.post.slug }}"
+        style="height: fit-content; align-self: {{ item.verticalAlignment }};"
+      >
         {% set media = item.post.media if item.post.type == 'media' else item.post.thumbnail %}
         {% if media.type == 'image' %}
           {% set image = media.image %}
@@ -40,7 +44,7 @@
             {{ item.post.title }}
           </h3>
           {% if item.post.subtitle %}
-            <p class="text-24 leading-138 mt-8 text-gray-dark">{{ item.post.subtitle }}</p>
+            <p class="text-24 leading-138 mt-8 text-muted-dark">{{ item.post.subtitle }}</p>
           {% endif %}
         </div>
       </a>

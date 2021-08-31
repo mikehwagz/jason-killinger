@@ -33,6 +33,10 @@ module.exports = {
       'gray-dark': '#696969',
       current: 'currentColor',
       transparent: 'transparent',
+      fg: 'var(--color-fg)',
+      bg: 'var(--color-bg)',
+      'muted-light': 'var(--color-muted-light)',
+      'muted-dark': 'var(--color-muted-dark)',
     },
     fontSize: {
       ...new Array(201)

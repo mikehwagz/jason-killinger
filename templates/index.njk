@@ -2,9 +2,11 @@
 layout: base.njk
 title: Home
 ---
+{% from 'theme.njk' import theme %}
+
 {% set p = site.homepage %}
 
-<div data-router-view="default">
+<div data-router-view="default" {{ theme(p.isDarkModeEnabled) }}>
   {% include 'header.njk' %}
   {% include 'page.njk' %}
   {% include 'footer.njk' %}

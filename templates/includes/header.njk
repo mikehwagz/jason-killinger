@@ -1,6 +1,6 @@
 {% macro headerBar() %}
   <div
-    class="h-header flex items-center justify-between font-nm text-26/40 leading-100 pointer-events-none"
+    class="h-header flex items-center justify-between font-nm text-26/40 leading-100"
     data-scroll-padding-top
   >
     <a
@@ -33,15 +33,15 @@
 {% endmacro %}
 
 <header
-  class="fixed top-0 left-0 w-full px z-10"
+  class="fixed top-0 left-0 w-full px z-10 pointer-events-none"
   data-component="header"
 >
   {{ headerBar() }}
   <div
-    class="m:hidden fixed inset-0 w-full h-full overflow-hidden z-1 js:header-outer"
+    class="m:hidden fixed inset-0 w-full h-full overflow-hidden z-1 pointer-events-auto js:header-outer"
     style="opacity: 0; visibility: hidden;"
   >
-    <div class="relative w-full h-full text-white bg-black px-10 js:header-inner">
+    <div class="relative w-full h-full text-bg bg-fg px-10 js:header-inner">
       <div class="relative z-1">
         {{ headerBar() }}
       </div>
