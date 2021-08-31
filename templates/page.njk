@@ -1,0 +1,13 @@
+---
+layout: base.njk
+permalink: /{% if not p.isHomepage %}{{ p.slug }}/{% endif %}{% if p.collectionSlug %}{{ p.collectionSlug }}/{% endif %}
+pagination:
+  alias: p
+  data: pages
+  size: 1
+---
+<div data-router-view="default">
+  {% include 'header.njk' %}
+  {% include 'page.njk' %}
+  {% include 'footer.njk' %}
+</div>

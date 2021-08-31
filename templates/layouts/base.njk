@@ -8,20 +8,7 @@
       <main data-router-wrapper>
         {{ content | safe }}
       </main>
-      <div id="g" class="fixed inset-0 grid grid-template px pointer-events-none">
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-        <div class="h-screen w-full" style="background: rgba(255, 0, 0, 0.1)"></div>
-      </div>
+      {% include 'grid.njk' %}
     </div>
     <script src="/app.js"></script>
   </body>

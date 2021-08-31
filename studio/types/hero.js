@@ -44,14 +44,6 @@ export default {
         },
       ],
     },
-    {
-      name: 'illustration',
-      title: 'Illustration',
-      type: 'image',
-      // options: {
-      //   accept: 'svg',
-      // },
-    },
   ],
   preview: {
     select: {

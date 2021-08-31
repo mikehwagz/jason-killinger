@@ -4,50 +4,7 @@ const queries = require('../lib/queries.js')
 
 module.exports = async function () {
   const data = await client.fetch(groq`*[_type == 'site'][0] {
-    homepage-> {
-      title,
-      'slug': slug.current,
-      isDarkModeEnabled,
-      'isHomepage': *[_type == 'site'][0].homepage->slug.current == slug.current,
-      modules[] {
-        _type,
-        _key,
-        _type == 'hero' => {
-          titleCarousel[] {
-            _key,
-            word1,
-            word2,
-            word3,
-          },
-          illustration {
-            asset->,
-          },
-        },
-        _type == 'postGrid' => {
-          collections[]-> {
-            title,
-            'slug': slug.current,
-            items[] {
-              _type,
-              width,
-              verticalAlignment,
-              post-> {
-                title,
-                subtitle,
-                'slug': slug.current,
-                type,
-                type == 'media' => {
-                  media ${queries.media},
-                },
-                type == 'caseStudy' => {
-                  thumbnail ${queries.media},
-                },
-              },
-            },
-          },
-        },
-      },
-    },
+    homepage-> ${queries.page},
     navigation[]-> {
       title,
       'slug': slug.current,

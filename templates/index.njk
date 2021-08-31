@@ -2,9 +2,10 @@
 layout: base.njk
 title: Home
 ---
+{% set p = site.homepage %}
+
 <div data-router-view="default">
   {% include 'header.njk' %}
-  {% set p = site.homepage %}
   {% include 'page.njk' %}
   {% include 'footer.njk' %}
 </div>
