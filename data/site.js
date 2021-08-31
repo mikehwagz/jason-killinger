@@ -23,6 +23,27 @@ module.exports = async function () {
             asset->,
           },
         },
+        _type == 'postGrid' => {
+          collections[]-> {
+            title,
+            'slug': slug.current,
+            items[] {
+              width,
+              post-> {
+                title,
+                subtitle,
+                'slug': slug.current,
+                type,
+                type == 'media' => {
+                  media ${queries.media},
+                },
+                type == 'caseStudy' => {
+                  thumbnail ${queries.media},
+                },
+              },
+            },
+          },
+        },
       },
     },
     navigation[]-> {

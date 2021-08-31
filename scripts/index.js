@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import app from './app'
 import raf from './lib/raf'
 import loadFonts from './lib/loadFonts'
-import { on, once, size, remove } from 'martha'
+import { on, once, size, remove, toggle, qs } from 'martha'
 import Fade from './transitions/Fade'
 
 class Base extends Highway.Renderer {
@@ -70,4 +70,10 @@ const H = new Highway.Core({
     default: Fade,
     contextual: {},
   },
+})
+
+on(window, 'keyup', ({ key }) => {
+  if (key.toLowerCase() === 'g') {
+    toggle(qs('#g'), 'opacity-0')
+  }
 })

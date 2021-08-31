@@ -8,6 +8,7 @@ module.exports = {
       './scripts/**/*.js',
       './.eleventy.js',
       './lib/serializers.js',
+      './safelist.txt',
     ],
   },
   darkMode: false,

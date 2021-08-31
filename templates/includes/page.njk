@@ -1,11 +1,11 @@
-<div class="min-h-screen pt-100 m:pt-150 px">
+<div class="min-h-screen pt-100 m:pt-150 pb-80 m:pb-200 px">
   {% for module in p.modules %}
     {% set type = module._type %}
     {% set moduleTemplate %}
       {% include type + '.njk' ignore missing %}
     {% endset %}
     {% if moduleTemplate | trim | length %}
-      <div class="mb-100">
+      <div class="mb-100 last:mb-0">
         {{ moduleTemplate | safe }}
       </div>
     {% else %}

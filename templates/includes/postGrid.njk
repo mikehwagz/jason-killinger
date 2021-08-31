@@ -1,0 +1,35 @@
+  {% set rows = module.collections[0].items | postGridRows %}  
+  {% for row in rows %}
+    <div class="grid grid-cols-12 gap-x-40 mb-155 last:mb-0">
+      <div class="{% classList
+        row.cx,
+        'flex gap-x-[calc((100vw-13*4rem)/12+8rem)]'
+      %}">
+        {% for item in row.items %}
+          <a class="block" style="width: {{ item.width / row.span * 100 }}%" href="/post/{{ item.post.slug }}">
+            {% set media = item.post.media if item.post.type == 'media' else item.post.thumbnail %}
+            {% if media.type == 'image' %}
+              {% set image = media.image %}
+              <div class="relative">
+                <div style="padding-top: {{ 1 / image.asset.metadata.dimensions.aspectRatio * 100 }}%"></div>
+                <img
+                  class="absolute inset-0 w-full h-full object-cover"
+                  src="{{ image.asset.url }}"
+                  alt="{{ image.alt }}"
+                ></img>
+              </div>
+            {% endif %}
+            <div class="mt-20">
+              <h3 class="font-nm text-26/40 leading-115">
+                {{ item.post.title }}
+              </h3>
+              {% if item.post.subtitle %}
+                <p class="text-24 leading-138 mt-8 text-gray-dark">{{ item.post.subtitle }}</p>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
