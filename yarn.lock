@@ -7288,6 +7288,11 @@ markdown-it@^10.0.0:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
+martha@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/martha/-/martha-2.2.0.tgz#be79198ec2d3e84d69ed19e84be2183f88cb1724"
+  integrity sha512-MVD9BweCA+R5osKk3c8OOSVoMTwSqjj5CrXOrVMHF8YYvePlc/pf+dv/obl0GjG1jYxiuZyIF2wWbKVrzbg74w==
+
 martha@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/martha/-/martha-3.0.3.tgz#3506327c69db40b05cc866f8a58320e64da40005"
@@ -10155,6 +10160,11 @@ slugify@^1.4.7:
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.0.tgz#6bdf8ed01dabfdc46425b67e3320b698832ff893"
   integrity sha512-FkMq+MQc5hzYgM86nLuHI98Acwi3p4wX+a5BO9Hhw4JdK4L7WueIiZ4tXEobImPqBz2sVcV0+Mu3GRB30IGang==
 
+smitter@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/smitter/-/smitter-0.0.4.tgz#d27650b73db9bd76e0bda39720caffe811e9d8ca"
+  integrity sha512-MPXkozMxjBzhRr2ishFxc6kgZxTRCSxYBZ70DwLmUZuL64TZSb4jNXf7WFh6HW0+vkETFUUM5B3ItByCFke7mw==
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -10351,6 +10361,14 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
+
+sqzbx@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/sqzbx/-/sqzbx-0.0.5.tgz#bb0abd8dcea5577824054979c33cba957492cac5"
+  integrity sha512-zQBOICG7STYrcHlhqjb749Me3/d5SYB35z0FUO08BQBBNj8Zn+e128U7UPl6Hsjx2vxu1xk1gIldDufxZZkLGw==
+  dependencies:
+    martha "^2.2.0"
+    smitter "^0.0.4"
 
 stable@^0.1.8:
   version "0.1.8"

@@ -4,6 +4,11 @@ export default {
   type: 'object',
   fields: [
     {
+      name: 'navLabel',
+      title: 'Nav Label',
+      type: 'string',
+    },
+    {
       name: 'collections',
       title: 'Collections',
       type: 'array',
