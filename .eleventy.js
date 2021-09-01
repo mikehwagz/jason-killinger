@@ -1,8 +1,7 @@
 const cx = require('nanoclass')
 const blocksToHtml = require('@sanity/block-content-to-html')
 const htmlmin = require('html-minifier')
-const getSerializers = require('./lib/serializers')
-const { wrap } = require('martha')
+const serializers = require('./lib/serializers')
 
 module.exports = (config) => {
   config.setUseGitIgnore(false)
@@ -19,11 +18,11 @@ module.exports = (config) => {
       )}</pre>`,
   )
 
-  config.addFilter('blocksToHtml', (blocks, type, theme) => {
+  config.addFilter('blocksToHtml', (blocks, type) => {
     try {
       return blocksToHtml({
         blocks,
-        serializers: getSerializers(theme)[type],
+        serializers: serializers[type],
       })
     } catch (e) {
       console.log('Error converting blocks to HTML in blocksToHtml filter:', e)

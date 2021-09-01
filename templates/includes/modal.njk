@@ -1,0 +1,26 @@
+<div class="fixed inset-0 w-full h-full">
+  <div class="w-full h-full bg-black/95"></div>
+  <div class="absolute top-35 bottom-70 inset-x-35 cursor-none" data-component="lazy">
+    {% if p.media.type == 'image' %}
+      <img
+        class="w-full h-full object-contain opacity-0 transition ease-out-cubic duration-500 js-img"
+        data-src="{{ p.media.image.asset.url }}"
+        alt="{{ p.media.image.alt }}"
+        draggable="false"
+      >
+    {% endif %}
+  </div>
+  <div class="absolute inset-x-0 bottom-32 text-center text-16 text-white leading-100">
+    {{ p.caption | blocksToHtml('caption') | safe }}
+  </div>
+  <div
+    class="absolute top-0 left-0 pointer-events-none"
+    data-component="modalCursor"
+    style="opacity: 0; visibility: hidden;"
+  >
+    <div class="w-50 h-50 rotate-45">
+      <div class="sr-only">Close</div>
+      {% include 'plusCursorIcon.njk' %}
+    </div>
+  </div>
+</div>

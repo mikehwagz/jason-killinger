@@ -1,0 +1,19 @@
+---
+layout: base.njk
+permalink: /post/{{ p.slug }}/
+pagination:
+  alias: p
+  data: posts
+  size: 1
+---
+{% from 'theme.njk' import theme %}
+
+<div data-router-view="default" {{ theme() }}>
+  {% if p.type == 'caseStudy' %}
+    {% include 'header.njk' %}
+    {% include 'caseStudy.njk' %}
+    {% include 'footer.njk' %}
+  {% elif p.type == 'media' %}
+    {% include 'modal.njk' %}
+  {% endif %}
+</div>

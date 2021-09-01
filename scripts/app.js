@@ -6,8 +6,16 @@ import header from './components/header'
 import hero from './components/hero'
 import dropdown from './components/dropdown'
 import thumbnailCursor from './components/thumbnailCursor'
+import modalCursor from './components/modalCursor'
 
-const components = { lazy, header, hero, dropdown, thumbnailCursor }
+const components = {
+  lazy,
+  header,
+  hero,
+  dropdown,
+  thumbnailCursor,
+  modalCursor,
+}
 
 const sizes = size()
 const state = {

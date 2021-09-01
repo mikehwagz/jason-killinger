@@ -33,4 +33,6 @@ export default component((node, ctx) => {
       cursor: autoAlpha ? 'none' : 'auto',
     })
   })
+
+  return () => {}
 })
