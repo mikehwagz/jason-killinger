@@ -5,14 +5,16 @@ import lazy from './components/lazy'
 import header from './components/header'
 import hero from './components/hero'
 import dropdown from './components/dropdown'
+import thumbnailCursor from './components/thumbnailCursor'
 
-const components = { lazy, header, hero, dropdown }
+const components = { lazy, header, hero, dropdown, thumbnailCursor }
 
 const sizes = size()
 const state = {
   ...sizes,
-  mx: sizes.ww / 2,
-  my: sizes.wh / 2,
+  mx: 0,
+  my: 0,
+  isAutoScrolling: false,
   isOpen: false,
   dom: {
     html: document.documentElement,

@@ -16,14 +16,20 @@ export default function raf(app) {
   on(window, 'scroll', scroll)
   app.on('scroll:to', scrollTo)
   app.on('scroll:reset', reset)
-  app.on('resize:reset', resize)
+  app.on('resize', resize)
 
   function tick() {
     current =
       app.getState().ww >= 768
         ? round(lerp(current, target, ease), 100)
         : target
-    app.emit('tick', { scroll: current })
+
+    app.emit('tick', {
+      scroll: {
+        current,
+        target,
+      },
+    })
   }
 
   function scroll() {
@@ -34,11 +40,22 @@ export default function raf(app) {
     const top = target.offsetTop
     const offset = top === 0 ? target.parentNode.offsetTop : top
     const padding = rect(qs('[data-scroll-padding-top]'))?.bottom ?? 0
+    const temp = { y: current }
 
-    gsap.to(window, {
-      scrollTo: offset - padding,
+    gsap.to(temp, {
+      y: offset - padding,
       duration: 0.5,
       ease: 'expo.inOut',
+      onStart() {
+        app.hydrate({ isAutoScrolling: true })
+      },
+      onUpdate() {
+        window.scroll(0, temp.y)
+        target = current = temp.y
+      },
+      onComplete() {
+        app.hydrate({ isAutoScrolling: false })
+      },
     })
   }
 
