@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 export default {
   name: 'media',
   title: 'Media',
@@ -30,4 +32,26 @@ export default {
       hidden: ({ parent }) => parent?.type !== 'video',
     },
   ],
+  preview: {
+    select: {
+      type: 'type',
+      image: 'image',
+      video: 'video',
+      videoUrl: 'video.asset.url',
+    },
+    prepare({ type, image, video, videoUrl }) {
+      return {
+        title: type === 'image' ? image.alt : video.alt,
+        media:
+          type === 'image'
+            ? image
+            : () => (
+                <video
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  src={`${videoUrl}#t=0.1`}
+                ></video>
+              ),
+      }
+    },
+  },
 }

@@ -1,3 +1,5 @@
+import blocksToString from '../lib/blocksToString'
+import emoji from '../lib/emoji'
 import linkAnnotation from '../lib/linkAnnotation'
 
 export default {
@@ -25,4 +27,16 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      content: 'content',
+    },
+    prepare({ content, selection }) {
+      return {
+        title: 'Editorial Text',
+        subtitle: blocksToString(content),
+        media: emoji('📝'),
+      }
+    },
+  },
 }

@@ -48,8 +48,14 @@ export default {
       hidden: ({ parent }) => parent?.type !== 'caseStudy',
     },
     {
-      name: 'heroImage',
-      title: 'Hero Image',
+      name: 'heroImageDesktop',
+      title: 'Hero Image (Desktop)',
+      type: 'img',
+      hidden: ({ parent }) => parent?.type !== 'caseStudy',
+    },
+    {
+      name: 'heroImageMobile',
+      title: 'Hero Image (Mobile)',
       type: 'img',
       hidden: ({ parent }) => parent?.type !== 'caseStudy',
     },

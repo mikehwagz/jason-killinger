@@ -1,4 +1,6 @@
+import * as React from 'react'
 import linkAnnotation from '../lib/linkAnnotation'
+import blocksToString from '../lib/blocksToString'
 
 export default {
   name: 'oneUpMedia',
@@ -37,4 +39,27 @@ export default {
       },
     },
   ],
+  preview: {
+    select: {
+      type: 'media.type',
+      image: 'media.image',
+      videoUrl: 'media.video.asset.url',
+      caption: 'caption',
+    },
+    prepare({ type, image, videoUrl, caption }) {
+      return {
+        title: '1-Up Media',
+        subtitle: blocksToString(caption),
+        media:
+          type === 'image'
+            ? image
+            : () => (
+                <video
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  src={`${videoUrl}#t=0.1`}
+                ></video>
+              ),
+      }
+    },
+  },
 }
