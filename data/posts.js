@@ -48,6 +48,20 @@ module.exports = async function () {
         _type == 'editorialText' => {
           content[] ${queries.block},
         },
+      },
+      related {
+        title,
+        posts[]-> {
+          title,
+          'slug': slug.current,
+          type,
+          type == 'media' => {
+            media ${queries.media},
+          },
+          type == 'caseStudy' => {
+            thumbnail ${queries.media},
+          },
+        },
       }
     },
   }`)
