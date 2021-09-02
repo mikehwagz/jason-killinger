@@ -24,7 +24,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sanity-plugin-dashboard-widget-netlify": "^1.1.0"
+    "sanity-plugin-dashboard-widget-netlify": "^1.1.0",
+    "sanity-plugin-goth-vimeo-input": "^1.0.3"
   },
   "devDependencies": {}
 }

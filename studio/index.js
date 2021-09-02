@@ -16,6 +16,7 @@ import twoUpMedia from './types/twoUpMedia'
 import twoUpTextAndMedia from './types/twoUpTextAndMedia'
 import threeUpMedia from './types/threeUpMedia'
 import editorialText from './types/editorialText'
+import vimeoEmbed from './types/vimeoEmbed'
 
 import site from './types/site'
 import post from './types/post'
@@ -41,6 +42,7 @@ export default createSchema({
     twoUpTextAndMedia,
     threeUpMedia,
     editorialText,
+    vimeoEmbed,
     // Documents
     site,
     post,

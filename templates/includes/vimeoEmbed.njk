@@ -1,0 +1,7 @@
+<div class="px my-80 m:my-115 l:my-150">
+  {% set embed = module.vimeoVideo.oEmbedData %}
+  <div class="iframe relative w-full max-w-[960px] mx-auto">
+    <div style="padding-top: {{ embed.height / embed.width * 100 }}%"></div>
+    {{ embed.html | safe }}
+  </div>
+</div>
