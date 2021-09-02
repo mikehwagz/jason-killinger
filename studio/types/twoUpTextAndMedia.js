@@ -1,5 +1,4 @@
 import * as React from 'react'
-import blocksToString from '../lib/blocksToString'
 
 export default {
   name: 'twoUpTextAndMedia',

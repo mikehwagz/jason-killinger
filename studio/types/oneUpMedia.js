@@ -10,7 +10,9 @@ export default {
     {
       name: 'media',
       title: 'Media',
-      type: 'media',
+      description: 'Multiple media assets will show up as a carousel.',
+      type: 'array',
+      of: [{ type: 'media' }],
     },
     {
       name: 'caption',
@@ -41,9 +43,9 @@ export default {
   ],
   preview: {
     select: {
-      type: 'media.type',
-      image: 'media.image',
-      videoUrl: 'media.video.asset.url',
+      type: 'media.0.type',
+      image: 'media.0.image',
+      videoUrl: 'media.0.video.asset.url',
       caption: 'caption',
     },
     prepare({ type, image, videoUrl, caption }) {
