@@ -12,7 +12,7 @@ export default component((node, ctx) => {
     node.rect = rect(node)
   })
 
-  ctx.on('tick', ({ mx, my, scroll }) => {
+  ctx.on('tick', ({ ww, mx, my, scroll }) => {
     thumb.rect = rect(thumb)
 
     const autoAlpha =
@@ -23,11 +23,13 @@ export default component((node, ctx) => {
         ? 1
         : 0
 
-    gsap.set(node, {
-      x: mx,
-      y: my + scroll.target,
-      autoAlpha,
-    })
+    if (ww >= 768) {
+      gsap.set(node, {
+        x: mx,
+        y: my + scroll.target,
+        autoAlpha,
+      })
+    }
 
     gsap.set(thumb, {
       cursor: autoAlpha ? 'none' : 'auto',
