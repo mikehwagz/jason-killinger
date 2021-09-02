@@ -1,14 +1,44 @@
-<div class="mb-60 px">
-  <h2 class="font-nm text-28 m:text-40 l:text-50 leading-115 pb-10 border-b-2 border-fg mb-70">
+<div class="mb-50 m:mb-60 last:mb-0 px">
+  <h2 class="font-nm text-28 m:text-40 l:text-50 leading-115 pb-10 border-b-2 border-fg mb-20 m:mb-[calc(70/1536*100vw)]">
     Contact
   </h2>
-  <div class="grid grid-template" data-component="contact">
-    <div class="col-span-6 font-nm text-135 leading-100">
-      <a class="block mb-20 js-links" href="mailto:info@jasonkillinger.com">Email</a>
-      <a class="block text-muted-light mb-20 js-links" href="tel:2158162962">Phone</a>
-      <a class="block text-muted-light js-links" href="https://instagram.com/jasonkillinger">Instagram</a>
+  <div class="m:grid grid-template" data-component="contact">
+    <div class="col-span-6 font-nm text-50 m:text-[calc(135/1536*100vw)] leading-100">
+      <a
+        class="flex m:block justify-between items-center mb-10 m:mb-20 js-links"
+        href="mailto:info@jasonkillinger.com"
+      >
+        <div class="w-9/12 m:w-auto m:inline">
+          Email
+        </div>
+        <div class="text-white w-20 m:w-[calc(70/1536*100vw)] h-20 m:h-[calc(70/1536*100vw)] m:inline-block ml-0 m:ml-25 mr-10 m:mr-0 js-arrows">
+          {% include 'arrowCursorIcon.njk' %}
+        </div>
+      </a>
+      <a
+        class="flex m:block justify-between items-center text-muted-light mb-10 m:mb-20 js-links"
+        href="tel:2158162962"
+      >
+        <div class="w-9/12 m:w-auto m:inline">
+          Phone
+        </div>
+        <div class="text-white w-20 m:w-[calc(70/1536*100vw)] h-20 m:h-[calc(70/1536*100vw)] m:inline-block ml-0 m:ml-25 opacity-0 mr-10 m:mr-0 js-arrows">
+          {% include 'arrowCursorIcon.njk' %}
+        </div>
+      </a>
+      <a
+        class="flex m:block justify-between items-center text-muted-light js-links"
+        href="https://instagram.com/jasonkillinger"
+      >
+        <div class="w-9/12 m:w-auto m:inline">
+          Instagram
+        </div>
+        <div class="text-white w-20 m:w-[calc(70/1536*100vw)] h-20 m:h-[calc(70/1536*100vw)] m:inline-block ml-0 m:ml-25 opacity-0 mr-10 m:mr-0 js-arrows">
+          {% include 'arrowCursorIcon.njk' %}
+        </div>
+      </a>
     </div>
-    <div class="col-span-6">
+    <div class="col-span-6 pt-60 m:pt-0 px-30 m:px-0">
       {% include 'lockup.njk' %}
     </div>
   </div>
