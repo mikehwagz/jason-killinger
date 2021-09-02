@@ -9,6 +9,7 @@ import thumbnailCursor from './components/thumbnailCursor'
 import modalCursor from './components/modalCursor'
 import carousel from './components/carousel'
 import related from './components/related'
+import contact from './components/contact'
 
 const components = {
   lazy,
@@ -19,6 +20,7 @@ const components = {
   modalCursor,
   carousel,
   related,
+  contact,
 }
 
 const sizes = size()

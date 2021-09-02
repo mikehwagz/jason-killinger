@@ -75,6 +75,14 @@
   .text-26\/40 {
     @apply text-26 s:text-28 m:text-32 l:text-36 xl:text-40;
   }
+
+  .fill-fg {
+    fill: var(--color-fg);
+  }
+
+  .fill-muted-light {
+    fill: var(--color-muted-light);
+  }
 }
 
 [data-sqzbx-button][aria-expanded='true'] div {

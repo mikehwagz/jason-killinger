@@ -1,0 +1,17 @@
+<div class="mb-60 px">
+  <h2 class="font-nm text-28 m:text-40 l:text-50 leading-115 pb-10 border-b-2 border-fg mb-20">
+    {{ module.title }}
+  </h2>
+  <ul class="grid grid-template gap-x-[calc(40/1536*100vw)] gap-y-10">
+    {% set cls = cycler('odd', 'even') %}
+    {% for item in module.listItems %}
+      <li class="{% classList
+        'text-18 m:text-20 l:text-28 leading-138',
+        'col-span-4' if module.isTwoColumns else 'col-span-8',
+        'col-start-5' if module.isTwoColumns and cls.next() == 'odd' or not module.isTwoColumns
+      %}">
+        {{ item.content | blocksToHtml('caption') | safe }}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

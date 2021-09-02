@@ -22,32 +22,7 @@ module.exports = async function () {
       year,
       modules[] {
         _type,
-        _type == 'oneUpMedia' => {
-          media ${queries.media},
-          caption[] ${queries.block},
-          isFullBleed,
-        },
-        _type == 'twoUpMedia' => {
-          media[] ${queries.media},
-          caption[] ${queries.block},
-          isFullBleed,
-          shouldStackOnMobile,
-        },
-        _type == 'twoUpTextAndMedia' => {
-          text,
-          media[] ${queries.media},
-          layout,
-          mobileLayout,
-        },
-        _type == 'threeUpMedia' => {
-          media[] ${queries.media},
-          caption[] ${queries.block},
-          isFullBleed,
-          shouldStackOnMobile,
-        },
-        _type == 'editorialText' => {
-          content[] ${queries.block},
-        },
+        ${queries.postModules},
       },
       related {
         title,

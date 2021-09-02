@@ -1,3 +1,5 @@
+import emoji from '../lib/emoji'
+
 export default {
   name: 'contact',
   title: 'Contact',
@@ -11,4 +13,12 @@ export default {
       initialValue: true,
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Contact',
+        media: emoji('☎️', 23),
+      }
+    },
+  },
 }

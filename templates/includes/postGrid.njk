@@ -1,87 +1,89 @@
-{% if module.collections | length > 1 %}
-  <div
-    class="border-b-2 border-fg mb-60"
-    data-component="dropdown"
-  >
-    <button
-      class="m:hidden text-20 leading-115 tracking-[0.01em] flex items-center gap-x-6 pb-12"
-      data-sqzbx-button
+<div class="mb-100 last:mb-0 px">
+  {% if module.collections | length > 1 %}
+    <div
+      class="border-b-2 border-fg mb-60"
+      data-component="dropdown"
     >
-      {{ module.navLabel }}
-      <div class="w-12 mt-3 transition ease-out-cubic duration-300">
-        {% include 'chevronIcon.njk' %}
-      </div>
-    </button>
-    <div class="overflow-hidden m:overflow-visible max-h-0 m:max-h-[unset] transform-none transition-all ease-out-cubic duration-300" data-sqzbx-panel>
-      <div class="grid grid-cols-2 grid-flow-row m:flex gap-y-15 m:gap-y-0 gap-x-10 m:gap-x-25 xl:gap-x-30 pt-8 pb-20 m:pt-0 m:pb-15">
-        {% for collection in module.collections %}
-          <a
-            class="{% classList
-              'text-20 xl:text-24 leading-115 tracking-[0.01em] col-span-1',
-              'text-fg pointer-events-none' if collection.slug == p.collectionSlug or p.isHomepage and loop.index == 1 and not p.collectionSlug else 'text-muted-light hover:text-fg'
-            %}"
-            href="{% if not p.isHomepage %}/{{ p.slug }}{% endif %}{% if loop.index > 1 %}/{{ collection.slug }}{% endif %}/"
-          >{{ collection.title }}</a>
-        {% endfor %}
+      <button
+        class="m:hidden text-20 leading-115 tracking-[0.01em] flex items-center gap-x-6 pb-12"
+        data-sqzbx-button
+      >
+        {{ module.navLabel }}
+        <div class="w-12 mt-3 transition ease-out-cubic duration-300">
+          {% include 'chevronIcon.njk' %}
+        </div>
+      </button>
+      <div class="overflow-hidden m:overflow-visible max-h-0 m:max-h-[unset] transform-none transition-all ease-out-cubic duration-300" data-sqzbx-panel>
+        <div class="grid grid-cols-2 grid-flow-row m:flex gap-y-15 m:gap-y-0 gap-x-10 m:gap-x-25 xl:gap-x-30 pt-8 pb-20 m:pt-0 m:pb-15">
+          {% for collection in module.collections %}
+            <a
+              class="{% classList
+                'text-20 xl:text-24 leading-115 tracking-[0.01em] col-span-1',
+                'text-fg pointer-events-none' if collection.slug == p.collectionSlug or p.isHomepage and loop.index == 1 and not p.collectionSlug else 'text-muted-light hover:text-fg'
+              %}"
+              href="{% if not p.isHomepage %}/{{ p.slug }}{% endif %}{% if loop.index > 1 %}/{{ collection.slug }}{% endif %}/"
+            >{{ collection.title }}</a>
+          {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
-{% endif %}
-<div class="m:grid grid-template gap-y-[calc(155/1536*100vw)]">
-  {% set collection = module.collections[0] %}
-  {% if p.collectionSlug %}
-    {% for col in module.collections %}
-      {% if col.slug == p.collectionSlug %}
-        {% set collection = col %}
+  {% endif %}
+  <div class="m:grid grid-template gap-y-[calc(155/1536*100vw)]">
+    {% set collection = module.collections[0] %}
+    {% if p.collectionSlug %}
+      {% for col in module.collections %}
+        {% if col.slug == p.collectionSlug %}
+          {% set collection = col %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% for item in collection.items %}
+      {% if item._type == 'item' %}
+        <a
+          class="block col-span-{{ item.width }} mb-75 m:mb-0"
+          href="/post/{{ item.post.slug }}"
+          style="height: fit-content; align-self: {{ item.verticalAlignment }};"
+        >
+          {% set media = item.post.media if item.post.type == 'media' else item.post.thumbnail %}
+          {% if media.type == 'image' %}
+            {% set image = media.image %}
+            <div class="relative overflow-hidden" data-component="lazy">
+              <div style="padding-top: {{ 1 / image.asset.metadata.dimensions.aspectRatio * 100 }}%"></div>
+              <img
+                class="absolute inset-0 w-full h-full object-cover scale-105 blur-md js-lqip"
+                src="{{ image.asset.metadata.lqip }}"
+                alt="{{ image.alt }}"
+              ></img>
+              <img
+                class="absolute inset-0 w-full h-full object-cover opacity-0 transition ease-out-cubic duration-500 js-img"
+                data-src="{{ image.asset.url }}"
+                alt="{{ image.alt }}"
+              ></img>
+              <div class="absolute w-50 h-50 z-1 top-0 left-0 pointer-events-none transition-opacity duration-300 ease-out-cubic" data-component="thumbnailCursor">
+                {% if item.post.type == 'media' %}
+                  <div class="-translate-x-1/2 -translate-y-1/2">
+                    {% include 'plusCursorIcon.njk' %}
+                  </div>
+                {% else %}
+                  <div class="text-white -rotate-90">
+                    {% include 'arrowCursorIcon.njk' %}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+          <div class="mt-10 m:mt-15 l:mt-20">
+            <h3 class="font-nm text-26/40 leading-115">
+              {{ item.post.title }}
+            </h3>
+            {% if item.post.subtitle %}
+              <p class="text-20 xl:text-24 leading-138 mt-5 m:mt-8 text-muted-dark">{{ item.post.subtitle }}</p>
+            {% endif %}
+          </div>
+        </a>
+      {% else %}
+        <div class="col-span-{{ item.width }}"></div>
       {% endif %}
     {% endfor %}
-  {% endif %}
-  {% for item in collection.items %}
-    {% if item._type == 'item' %}
-      <a
-        class="block col-span-{{ item.width }} mb-75 m:mb-0"
-        href="/post/{{ item.post.slug }}"
-        style="height: fit-content; align-self: {{ item.verticalAlignment }};"
-      >
-        {% set media = item.post.media if item.post.type == 'media' else item.post.thumbnail %}
-        {% if media.type == 'image' %}
-          {% set image = media.image %}
-          <div class="relative overflow-hidden" data-component="lazy">
-            <div style="padding-top: {{ 1 / image.asset.metadata.dimensions.aspectRatio * 100 }}%"></div>
-            <img
-              class="absolute inset-0 w-full h-full object-cover scale-105 blur-md js-lqip"
-              src="{{ image.asset.metadata.lqip }}"
-              alt="{{ image.alt }}"
-            ></img>
-            <img
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition ease-out-cubic duration-500 js-img"
-              data-src="{{ image.asset.url }}"
-              alt="{{ image.alt }}"
-            ></img>
-            <div class="absolute w-50 h-50 z-1 top-0 left-0 pointer-events-none transition-opacity duration-300 ease-out-cubic" data-component="thumbnailCursor">
-              {% if item.post.type == 'media' %}
-                <div class="-translate-x-1/2 -translate-y-1/2">
-                  {% include 'plusCursorIcon.njk' %}
-                </div>
-              {% else %}
-                <div class="text-white -rotate-90">
-                  {% include 'arrowCursorIcon.njk' %}
-                </div>
-              {% endif %}
-            </div>
-          </div>
-        {% endif %}
-        <div class="mt-10 m:mt-15 l:mt-20">
-          <h3 class="font-nm text-26/40 leading-115">
-            {{ item.post.title }}
-          </h3>
-          {% if item.post.subtitle %}
-            <p class="text-20 xl:text-24 leading-138 mt-5 m:mt-8 text-muted-dark">{{ item.post.subtitle }}</p>
-          {% endif %}
-        </div>
-      </a>
-    {% else %}
-      <div class="col-span-{{ item.width }}"></div>
-    {% endif %}
-  {% endfor %}
+  </div>
 </div>

@@ -1,4 +1,6 @@
 import linkAnnotation from '../lib/linkAnnotation'
+import blocksToString from '../lib/blocksToString'
+import emoji from '../lib/emoji'
 
 export default {
   name: 'bio',
@@ -22,4 +24,16 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      content: 'content',
+    },
+    prepare({ content }) {
+      return {
+        title: 'Bio',
+        subtitle: blocksToString(content),
+        media: emoji('📖'),
+      }
+    },
+  },
 }

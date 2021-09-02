@@ -1,3 +1,4 @@
+import emoji from '../lib/emoji'
 import linkAnnotation from '../lib/linkAnnotation'
 
 export default {
@@ -49,4 +50,16 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      subtitle: 'title',
+    },
+    prepare(selection) {
+      return {
+        title: 'List',
+        media: emoji('✅', 20),
+        ...selection,
+      }
+    },
+  },
 }
