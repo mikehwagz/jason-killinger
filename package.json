@@ -36,6 +36,7 @@
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",
     "choozy": "^1.0.0",
+    "embla-carousel": "^4.5.3",
     "focus-trap": "^6.6.1",
     "focus-visible": "^5.2.0",
     "fontfaceobserver": "^2.1.0",

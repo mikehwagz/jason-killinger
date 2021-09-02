@@ -1,0 +1,33 @@
+<div class="{% classList
+  'px' if not module.isFullBleed,
+  'mb-80 m:mb-[calc(80/1536*100vw)]' if module.caption else 'mb-[calc(40/1536*100vw)]'
+%}">
+  <div class="{% classList
+    'm:flex' if module.shouldStackOnMobile else 'flex',
+    'gap-[calc(40/1536*100vw)]'
+  %}">
+    {% set mediaList = [module.media] if module.media.type else module.media %}
+    {% for media in mediaList %}
+      {% if media.type == 'image' %}
+        <div class="relative w-full overflow-hidden" data-component="lazy">
+          <div style="padding-top: {{ 1 / media.image.asset.metadata.dimensions.aspectRatio * 100 }}%"></div>
+          <img
+            class="absolute inset-0 w-full h-full scale-105 blur-md js-lqip"
+            src="{{ media.image.asset.metadata.lqip }}"
+            alt=""
+          >
+          <img
+            class="absolute inset-0 w-full h-full opacity-0 transition ease-out-cubic duration-500 js-img"
+            data-src="{{ media.image.asset.url }}"
+            alt="{{ media.image.alt }}"
+          >
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% if module.caption %}
+    <div class="text-14 m:text-16 text-muted-dark leading-115 text-center pt-20">
+      {{ module.caption | blocksToHtml('caption') | safe }}
+    </div>
+  {% endif %}
+</div>

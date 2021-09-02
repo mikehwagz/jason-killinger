@@ -7,6 +7,7 @@ import hero from './components/hero'
 import dropdown from './components/dropdown'
 import thumbnailCursor from './components/thumbnailCursor'
 import modalCursor from './components/modalCursor'
+import carousel from './components/carousel'
 
 const components = {
   lazy,
@@ -15,6 +16,7 @@ const components = {
   dropdown,
   thumbnailCursor,
   modalCursor,
+  carousel,
 }
 
 const sizes = size()

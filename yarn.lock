@@ -4483,6 +4483,11 @@ elf-cam@^0.1.1:
   resolved "https://registry.yarnpkg.com/elf-cam/-/elf-cam-0.1.1.tgz#46883b10835ed9e417860636a870d57490ce9eda"
   integrity sha512-tKSFTWOp5OwJSp6MKyQDX7umYDkvUuI8rxHXw8BuUQ63d9Trj9xLeo6SHyoTGSoZNNZVitFa+RuHHXuoAzN3Rw==
 
+embla-carousel@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-4.5.3.tgz#3e1b471fd9765b910c5dd9acddf129b07626782d"
+  integrity sha512-S7fPpoV9AsPRII8ytsDQavW4JbU3xWBAO+i158eVahVZYVb04vC+913QfO3FGzsVK/4sb58NJ42LBDh143+YhA==
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"

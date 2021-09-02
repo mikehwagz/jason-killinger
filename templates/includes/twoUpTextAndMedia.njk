@@ -1,0 +1,54 @@
+<div class="{% classList
+  'flex flex-col m:flex-row gap-40 m:gap-[calc(40/1536*100vw)] px mb-[calc(40/1536*100vw)]',
+  'mt-80 m:mt-0' if module.mobileLayout == 'Text / Image'
+%}">
+  <div class="w-full flex justify-center items-center px-30">
+    <p class="max-w-[458px] text-18 m:text-20 l:text-28 leading-138">{{ module.text }}</p>
+  </div>
+  <div
+    class="{% classList
+      'w-full relative',
+      'm:order-first' if module.layout === 'Image / Text' else 'm:order-last',
+      'order-first' if module.mobileLayout === 'Image / Text' else 'order-last'
+    %}"
+    {% if module.media | length > 1 %}
+      data-component="carousel"
+    {% endif %}
+  >
+    {% if module.media | length > 1 %}
+      <div class="overflow-hidden js-carousel">
+        <div class="flex">
+    {% endif %}
+      {% for media in module.media %}
+        <div
+          class="relative overflow-hidden"
+          style="flex: 0 0 100%;"
+          data-component="lazy"
+        >
+          <div style="padding-top: {{ 1 / module.media[0].image.asset.metadata.dimensions.aspectRatio * 100 }}%"></div>
+          <img
+            class="absolute inset-0 w-full h-full scale-105 blur-md js-lqip"
+            src="{{ media.image.asset.metadata.lqip }}"
+            alt=""
+          >
+          <img
+            class="absolute inset-0 w-full h-full opacity-0 transition ease-out-cubic duration-500 js-img"
+            data-src="{{ media.image.asset.url }}"
+            alt="{{ media.image.alt }}"
+          >
+        </div>
+      {% endfor %}
+    {% if module.media | length > 1 %}
+        </div>
+      </div>
+      <div class="font-nm text-20 m:text-24 l:text-28 leading-100 absolute bottom-11 m:bottom-15 right-11 m:right-15">
+        <span class="js-page">1</span>/{{ module.media | length }}
+      </div>
+      <div class="hidden m:block absolute w-50 h-50 z-1 top-0 left-0 pointer-events-none transition-opacity duration-300 ease-out-cubic js-cursor">
+        <div class="rotate-45">
+          {% include 'arrowCursorIcon.njk' %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
