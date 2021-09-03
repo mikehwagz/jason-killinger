@@ -60,6 +60,18 @@ export default {
       hidden: ({ parent }) => parent?.type !== 'caseStudy',
     },
     {
+      name: 'heroNavTextColor',
+      title: 'Hero Navigation Text Color',
+      type: 'string',
+      initialValue: 'black',
+      options: {
+        list: ['black', 'white'],
+        layout: 'radio',
+        direction: 'vertical',
+      },
+      hidden: ({ parent }) => parent?.type !== 'caseStudy',
+    },
+    {
       name: 'introText',
       title: 'Intro Text',
       type: 'array',

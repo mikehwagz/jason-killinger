@@ -153,6 +153,10 @@ export default component((node, ctx) => {
       .restart()
   }
 
+  ctx.on('header:theme', (_, theme) => {
+    node.style.color = theme
+  })
+
   return () => {
     ctx.emit('header:toggle', { isOpen: false })
     offClick()

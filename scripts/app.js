@@ -10,6 +10,7 @@ import modalCursor from './components/modalCursor'
 import carousel from './components/carousel'
 import related from './components/related'
 import contact from './components/contact'
+import caseStudy from './components/caseStudy'
 
 const components = {
   lazy,
@@ -21,6 +22,7 @@ const components = {
   carousel,
   related,
   contact,
+  caseStudy,
 }
 
 const sizes = size()

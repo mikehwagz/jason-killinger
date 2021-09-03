@@ -14,6 +14,7 @@ module.exports = async function () {
     type == 'caseStudy' => {
       heroImageDesktop ${queries.asset},
       heroImageMobile ${queries.asset},
+      heroNavTextColor,
       introText[] ${queries.block},
       client,
       collaborators,
