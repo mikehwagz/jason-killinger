@@ -168,11 +168,11 @@ export default component((node, ctx) => {
     }
 
     if (scroll.target > scroll.last) {
-      add(header, 'opacity-0 -translate-y-5')
+      add(header, 'is-hidden')
     }
 
     if (scroll.target < scroll.last) {
-      remove(header, 'opacity-0 -translate-y-5')
+      remove(header, 'is-hidden')
     }
   })
 
