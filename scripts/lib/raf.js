@@ -19,13 +19,15 @@ export default function raf(app) {
   app.on('scroll:reset', reset)
   app.on('resize', resize)
 
-  function tick() {
+  function tick(time, delta) {
     current =
       app.getState().ww >= 768
         ? round(lerp(current, target, ease), 100)
         : target
 
     app.emit('tick', {
+      time,
+      delta,
       scroll: {
         current,
         target,

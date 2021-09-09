@@ -1,5 +1,6 @@
 const path = require('path')
-const esbuild = require('esbuild')
+const { build } = require('esbuild')
+const { glsl } = require('esbuild-plugin-glsl')
 
 module.exports = class {
   async data() {
@@ -9,12 +10,17 @@ module.exports = class {
   }
 
   async render() {
-    await esbuild.build({
+    await build({
       entryPoints: [path.join(__dirname, '..', '..', 'scripts', 'index.js')],
       minify: true,
       bundle: true,
       sourcemap: true,
       outfile: path.join(__dirname, '..', '..', 'build', 'app.js'),
+      plugins: [
+        glsl({
+          minify: true,
+        }),
+      ],
     })
   }
 }

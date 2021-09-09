@@ -11,6 +11,7 @@ import carousel from './components/carousel'
 import related from './components/related'
 import contact from './components/contact'
 import caseStudy from './components/caseStudy'
+import webgl from './components/webgl'
 
 const components = {
   lazy,
@@ -23,6 +24,7 @@ const components = {
   related,
   contact,
   caseStudy,
+  webgl,
 }
 
 const sizes = size()
