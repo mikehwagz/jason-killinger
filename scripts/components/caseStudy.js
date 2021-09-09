@@ -26,4 +26,8 @@ export default component((node, ctx) => {
       }
     }
   })
+
+  return () => {
+    ctx.emit('header:theme', null, defaultTheme)
+  }
 })

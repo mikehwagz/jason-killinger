@@ -1,0 +1,20 @@
+---
+layout: base.njk
+permalink: /collections/{{ p.slug }}/
+pagination:
+  alias: p
+  data: postCollections
+  size: 1
+---
+{% from 'theme.njk' import theme %}
+
+<div data-router-view="default" {{ theme(p.isDarkModeEnabled) }}>
+  {% include 'header.njk' %}
+  <div class="min-h-screen pt-100 m:pt-150 pb-80 m:pb-200">
+    {% set module = {
+      collections: [p]
+    } %}
+    {% include 'postGrid.njk' %}
+  </div>
+  {% include 'footer.njk' %}
+</div>

@@ -107,6 +107,55 @@ export default {
       hidden: ({ parent }) => parent?.type !== 'caseStudy',
     },
     {
+      name: 'taxonomies',
+      title: 'Taxonomies',
+      type: 'object',
+      hidden: ({ parent }) => parent?.type !== 'caseStudy',
+      fields: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+          initialValue: 'Disciplines',
+        },
+        {
+          name: 'list',
+          title: 'List',
+          type: 'array',
+          of: [
+            {
+              name: 'txt',
+              title: 'Text',
+              type: 'object',
+              fields: [
+                {
+                  name: 'text',
+                  type: 'string',
+                },
+              ],
+            },
+            {
+              name: 'collection',
+              type: 'object',
+              fields: [
+                {
+                  name: 'reference',
+                  title: 'reference',
+                  type: 'reference',
+                  to: [{ type: 'collection' }],
+                },
+              ],
+              preview: {
+                select: {
+                  title: 'reference.title',
+                },
+              },
+            },
+          ],
+        },
+      ],
+    },
+    {
       name: 'year',
       title: 'Year',
       type: 'string',

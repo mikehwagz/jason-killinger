@@ -19,7 +19,20 @@ module.exports = async function () {
       client,
       collaborators,
       location,
-      'disciplines': *[_type == 'collection' && references(^._id) && slug.current != 'all'] { title },
+      taxonomies {
+        title,
+        list[] {
+          _type,
+          _type == 'collection' => {
+            'title': reference->title,
+            'slug': reference->slug.current,
+            'items': reference->items,
+          },
+          _type == 'txt' => {
+            'title': text,
+          },
+        },
+      },
       year,
       modules[] {
         _type,
