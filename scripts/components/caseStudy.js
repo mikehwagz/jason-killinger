@@ -1,10 +1,10 @@
 import choozy from 'choozy'
-import { qs, rect } from 'martha'
+import { qsa, rect } from 'martha'
 import { component } from 'picoapp'
 
 export default component((node, ctx) => {
   const { hero } = choozy(node)
-  const header = qs('[data-scroll-padding-top]')
+  const header = qsa('[data-scroll-padding-top]').at(-1)
   const theme = hero.dataset.theme
   const defaultTheme = 'black'
 

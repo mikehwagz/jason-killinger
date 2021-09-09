@@ -1,6 +1,6 @@
 import { component } from 'picoapp'
 import choozy from 'choozy'
-import { add, remove, on, qs } from 'martha'
+import { add, remove, on, qs, qsa, rect } from 'martha'
 import gsap from 'gsap'
 import * as focusTrap from 'focus-trap'
 
@@ -16,6 +16,11 @@ export default component((node, ctx) => {
     inner,
     nav,
   } = choozy(node, 'js:header-')
+  let header = qsa('[data-scroll-padding-top]').at(-1)
+
+  ctx.on('resize', () => {
+    header.rect = rect(header)
+  })
 
   gsap.set([outer, inner, nav], {
     yPercent: gsap.utils.wrap([-101, 101]),
@@ -155,6 +160,20 @@ export default component((node, ctx) => {
 
   ctx.on('header:theme', (_, theme) => {
     node.style.color = theme
+  })
+
+  ctx.on('tick', ({ scroll }) => {
+    if (scroll.target <= header.rect.height) {
+      return
+    }
+
+    if (scroll.target > scroll.last) {
+      add(header, 'opacity-0 -translate-y-5')
+    }
+
+    if (scroll.target < scroll.last) {
+      remove(header, 'opacity-0 -translate-y-5')
+    }
   })
 
   return () => {

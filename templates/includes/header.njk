@@ -1,7 +1,12 @@
-{% macro headerBar() %}
+{% macro headerBar(main) %}
   <div
-    class="h-header flex items-center justify-between font-nm text-26/40 leading-100"
-    data-scroll-padding-top
+    class="{% classList
+      'h-header flex items-center justify-between font-nm text-26/40 leading-100',
+      'transition duration-300 ease-out-cubic' if main
+    %}"
+    {% if main %}
+      data-scroll-padding-top
+    {% endif %}
   >
     <a
       class="pointer-events-auto"
@@ -36,14 +41,14 @@
   class="fixed top-0 left-0 w-full px z-10 pointer-events-none"
   data-component="header"
 >
-  {{ headerBar() }}
+  {{ headerBar(true) }}
   <div
     class="m:hidden fixed inset-0 w-full h-full overflow-hidden z-1 pointer-events-auto js:header-outer"
     style="opacity: 0; visibility: hidden;"
   >
     <div class="relative w-full h-full text-bg bg-fg px js:header-inner">
       <div class="relative z-1">
-        {{ headerBar() }}
+        {{ headerBar(false) }}
       </div>
       <nav class="absolute inset-0 flex flex-col justify-end gap-y-20 px pb-30 font-nm text-80 leading-100 js:header-nav">
         {% for link in site.navigation %}

@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollToPlugin)
 gsap.config({ force3D: true })
 
 export default function raf(app) {
+  let last = 0
   let target = 0
   let current = 0
   let ease = 0.15
@@ -28,8 +29,11 @@ export default function raf(app) {
       scroll: {
         current,
         target,
+        last,
       },
     })
+
+    last = target
   }
 
   function scroll() {
