@@ -1,9 +1,9 @@
 const groq = require('groq')
-const client = require('../lib/sanity.js')
+const { sanityClient } = require('../lib/sanity.js')
 const queries = require('../lib/queries.js')
 
 module.exports = async function () {
-  const data = await client.fetch(groq`*[_type == 'site'][0] {
+  const data = await sanityClient.fetch(groq`*[_type == 'site'][0] {
     homepage-> ${queries.page},
     navigation[]-> {
       title,

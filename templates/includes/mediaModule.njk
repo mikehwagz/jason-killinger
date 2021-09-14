@@ -44,10 +44,20 @@
       </div>
     {% else %}
       {% for media in module.media %}
+        {%- set s -%}
+          {% set w = '50vw' if module._type == 'twoUpMedia' else '33vw' %}
+          {%- if module.shouldStackOnMobile -%}
+            100vw, (min-width: 768px) {{ w }}
+          {%- else -%}
+            {{ w }}
+          {%- endif -%}
+        {%- endset -%}
         {{ lazy(
           type = media.type,
           asset = media.asset,
           alt = media.alt,
+          width = 710 if module._type == 'twoUpMedia' else 460,
+          sizes = s | trim,
           aspectRatio = media.aspectRatio,
           cx = 'relative w-full overflow-hidden'
         ) }}

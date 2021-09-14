@@ -3,6 +3,8 @@
   asset,
   alt,
   lqip = true,
+  width = 1536,
+  sizes = '100vw',
   aspectRatio,
   fit = 'cover',
   style,
@@ -31,7 +33,9 @@
       {% endif %}
       <img
         class="absolute inset-0 w-full h-full object-{{ fit }} opacity-0 transition ease-out-cubic duration-500 js-img"
-        data-src="{{ asset.url }}"
+        data-src="{{ asset._id | src(width) }}"
+        data-srcset="{{ asset._id | srcset }}"
+        sizes="{{ sizes }}"
         alt="{{ alt }}"
         draggable="false"
       >

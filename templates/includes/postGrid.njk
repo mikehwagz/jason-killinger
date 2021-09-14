@@ -48,10 +48,15 @@
         >
           {% set media = item.post.media if item.post.type == 'media' else item.post.thumbnail %}
           <div class="relative">
+            {%- set s -%}
+              100vw, (min-width: 768px) {{ item.width / 12 * 100 }}vw
+            {%- endset -%}
             {{ lazy(
               type = media.type,
               asset = media.asset,
               alt = media.alt,
+              width = item.width * 1536 / 12,
+              sizes = s | trim,
               aspectRatio = media.aspectRatio,
               cx = 'relative overflow-hidden'
             ) }}

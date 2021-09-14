@@ -1,9 +1,9 @@
 const groq = require('groq')
-const client = require('../lib/sanity.js')
+const { sanityClient } = require('../lib/sanity.js')
 const queries = require('../lib/queries.js')
 
 module.exports = async function () {
-  const posts = await client.fetch(groq`*[_type == 'post'] {
+  const posts = await sanityClient.fetch(groq`*[_type == 'post'] {
     title,
     type,
     'slug': slug.current,

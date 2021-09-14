@@ -25,7 +25,9 @@ export default component((node, ctx) => {
     })
 
     refs.img.src = refs.img.dataset.src
+    refs.img.srcset = refs.img.dataset.srcset
     refs.img.removeAttribute('data-src')
+    refs.img.removeAttribute('data-srcset')
   })
 
   return () => {
