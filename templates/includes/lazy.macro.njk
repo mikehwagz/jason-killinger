@@ -1,0 +1,42 @@
+{% macro lazy(
+  asset,
+  alt,
+  lqip = true,
+  aspectRatio,
+  fit = 'cover',
+  style,
+  cx,
+  imgAttrs
+) %}
+  <div
+    {% if cx %}
+      class="{{ cx }}"
+    {% endif %}
+    {% if style %}
+      style="{{ style }}"
+    {% endif %}
+    data-component="lazy"
+  >
+    {% if aspectRatio %}
+      <div style="padding-top: {{ 1 / aspectRatio * 100 }}%"></div>
+    {% endif %}
+    {% if lqip %}
+      <img
+        class="absolute inset-0 w-full h-full object-{{ fit }} scale-105 blur-md js-lqip"
+        src="{{ asset.metadata.lqip }}"
+        alt=""
+        {% if imgAttrs %}
+          {{ imgAttrs }}
+        {% endif %}
+      >
+    {% endif %}
+    <img
+      class="absolute inset-0 w-full h-full object-{{ fit }} opacity-0 transition ease-out-cubic duration-500 js-img"
+      data-src="{{ asset.url }}"
+      alt="{{ alt }}"
+      {% if imgAttrs %}
+        {{ imgAttrs }}
+      {% endif %}
+    >
+  </div>
+{% endmacro %}

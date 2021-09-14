@@ -20,23 +20,15 @@
         <div class="flex">
     {% endif %}
       {% for media in module.media %}
-        <div
-          class="relative overflow-hidden"
-          style="flex: 0 0 100%;"
-          data-component="lazy"
-        >
-          <div style="padding-top: {{ 1 / module.media[0].image.asset.metadata.dimensions.aspectRatio * 100 }}%"></div>
-          <img
-            class="absolute inset-0 w-full h-full scale-105 blur-md js-lqip"
-            src="{{ media.image.asset.metadata.lqip }}"
-            alt=""
-          >
-          <img
-            class="absolute inset-0 w-full h-full opacity-0 transition ease-out-cubic duration-500 js-img"
-            data-src="{{ media.image.asset.url }}"
-            alt="{{ media.image.alt }}"
-          >
-        </div>
+        {% if media.type == 'image' %}
+          {{ lazy(
+            asset = media.image.asset,
+            alt = media.image.alt,
+            aspectRatio = module.media[0].image.asset.metadata.dimensions.aspectRatio,
+            style = 'flex: 0 0 100%;',
+            cx = 'relative overflow-hidden'
+          ) }}
+        {% endif %}
       {% endfor %}
     {% if module.media | length > 1 %}
         </div>
