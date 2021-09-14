@@ -3,15 +3,14 @@
 <div class="fixed inset-0 w-full h-full">
   <div class="w-full h-full bg-black/95"></div>
     <div class="absolute top-35 bottom-70 inset-x-0 px">
-      {% if p.media.type == 'image' %}
-        {{ lazy(
-          asset = p.media.image.asset,
-          alt = p.media.image.alt,
-          lqip = false,
-          cx = 'relative w-full h-full',
-          fit = 'contain'
-        ) }}
-      {% endif %}
+      {{ lazy(
+        type = p.media.type,
+        asset = p.media.asset,
+        alt = p.media.alt,
+        lqip = false,
+        cx = 'relative w-full h-full',
+        fit = 'contain'
+      ) }}
     </div>
   <div class="absolute inset-x-0 px bottom-32 text-center text-14 m:text-16 text-white leading-115">
     {{ p.caption | blocksToHtml('caption') | safe }}

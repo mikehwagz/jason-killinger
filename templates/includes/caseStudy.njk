@@ -6,11 +6,13 @@
     data-theme="{{ p.heroNavTextColor }}"
   >
     {{ lazy(
+      type = 'image',
       asset = p.heroImageDesktop.asset,
       alt = p.heroImageDesktop.alt,
       cx = 'hidden m:block relative w-full h-full'
     ) }}
     {{ lazy(
+      type = 'image',
       asset = p.heroImageMobile.asset,
       alt = p.heroImageMobile.alt,
       cx = 'm:hidden relative w-full h-full'
@@ -61,14 +63,14 @@
     </dl>
   </div>
   {% for module in p.modules %}
-    {% set type = module._type %}
+    {% set moduleType = module._type %}
     {% set moduleTemplate %}
-      {% include type + '.njk' ignore missing %}
+      {% include moduleType + '.njk' ignore missing %}
     {% endset %}
     {% if moduleTemplate | trim | length %}
       {{ moduleTemplate | safe }}
     {% else %}
-      <p class="text-40 my-100 text text-muted-light">{{ type }}<p>
+      <p class="text-40 my-100 text text-muted-light">{{ moduleType }}<p>
     {% endif %}
   {% endfor %}
   {% if p.related.posts | length %}

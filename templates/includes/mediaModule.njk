@@ -20,15 +20,14 @@
             <div class="flex">
         {% endif %}
           {% for media in module.media %}
-            {% if media.type == 'image' %}
-              {{ lazy(
-                asset = media.image.asset,
-                alt = media.image.alt,
-                aspectRatio = module.media[0].image.asset.metadata.dimensions.aspectRatio,
-                style = 'flex: 0 0 100%;',
-                cx = 'relative overflow-hidden'
-              ) }}
-            {% endif %}
+            {{ lazy(
+              type = media.type,
+              asset = media.asset,
+              alt = media.alt,
+              aspectRatio = module.media[0].aspectRatio,
+              style = 'flex: 0 0 100%;',
+              cx = 'relative overflow-hidden'
+            ) }}
           {% endfor %}
         {% if module.media | length > 1 %}
             </div>
@@ -45,14 +44,13 @@
       </div>
     {% else %}
       {% for media in module.media %}
-        {% if media.type == 'image' %}
-          {{ lazy(
-            asset = media.image.asset,
-            alt = media.image.alt,
-            aspectRatio = media.image.asset.metadata.dimensions.aspectRatio,
-            cx = 'relative w-full overflow-hidden'
-          ) }}
-        {% endif %}
+        {{ lazy(
+          type = media.type,
+          asset = media.asset,
+          alt = media.alt,
+          aspectRatio = media.aspectRatio,
+          cx = 'relative w-full overflow-hidden'
+        ) }}
       {% endfor %}
     {% endif %}
   </div>

@@ -10,3 +10,5 @@ col-span-9
 col-span-10
 col-span-11
 col-span-12
+object-cover
+object-contain

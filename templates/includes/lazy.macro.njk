@@ -15,11 +15,11 @@
     {% if style %}
       style="{{ style }}"
     {% endif %}
-    {% if aspectRatio %}
-      style="padding-top: {{ 1 / aspectRatio * 100 }}%"
-    {% endif %}
     data-component="{{ type }}"
   >
+    {% if aspectRatio %}
+      <div style="padding-top: {{ 1 / aspectRatio * 100 }}%"></div>
+    {% endif %}
     {% if type == 'image' %}
       {% if lqip %}
         <img
