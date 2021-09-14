@@ -1,7 +1,7 @@
 import { picoapp } from 'picoapp'
 import { size } from 'martha'
 
-import img from './components/img'
+import image from './components/image'
 import video from './components/video'
 import header from './components/header'
 import hero from './components/hero'
@@ -15,7 +15,7 @@ import caseStudy from './components/caseStudy'
 import webgl from './components/webgl'
 
 const components = {
-  img,
+  image,
   video,
   header,
   hero,

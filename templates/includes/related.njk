@@ -1,4 +1,4 @@
-{% from 'img.macro.njk' import img %}
+{% from 'lazy.macro.njk' import lazy %}
 
 <div class="px" data-component="related">
   <h2 class="font-nm text-28 m:text-40 l:text-50 leading-115 pb-10 border-b-2 border-black mb-40">
@@ -42,7 +42,7 @@
             %}"
             href="/post/{{ post.slug }}/"
           >
-            {{ img(
+            {{ lazy(
               asset = media.image.asset,
               alt = media.image.alt,
               cx = 'relative w-full h-full'

@@ -1,0 +1,51 @@
+{% macro lazy(
+  type,
+  asset,
+  alt,
+  lqip = true,
+  aspectRatio,
+  fit = 'cover',
+  style,
+  cx
+) %}
+  <div
+    {% if cx %}
+      class="{{ cx }}"
+    {% endif %}
+    {% if style %}
+      style="{{ style }}"
+    {% endif %}
+    {% if aspectRatio %}
+      style="padding-top: {{ 1 / aspectRatio * 100 }}%"
+    {% endif %}
+    data-component="{{ type }}"
+  >
+    {% if type == 'image' %}
+      {% if lqip %}
+        <img
+          class="absolute inset-0 w-full h-full object-{{ fit }} scale-105 blur-md js-lqip"
+          src="{{ asset.lqip }}"
+          alt=""
+          draggable="false"
+        >
+      {% endif %}
+      <img
+        class="absolute inset-0 w-full h-full object-{{ fit }} opacity-0 transition ease-out-cubic duration-500 js-img"
+        data-src="{{ asset.url }}"
+        alt="{{ alt }}"
+        draggable="false"
+      >
+    {% elif type == 'video' %}
+      <video
+        class="absolute inset-0 w-full h-full object-{{ fit }} js-video"
+        data-src="{{ asset.url }}#t=0.1"
+        aria-label="{{ alt }}"
+        preload="auto"
+        playsinline
+        muted
+        loop
+        draggable="false"
+      ></video>
+    {% endif %}
+  </div>
+{% endmacro %}

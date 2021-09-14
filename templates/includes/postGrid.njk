@@ -1,4 +1,4 @@
-{% from 'img.macro.njk' import img %}
+{% from 'lazy.macro.njk' import lazy %}
 
 <div class="mb-100 last:mb-0 px">
   {% if module.collections | length > 1 %}
@@ -48,14 +48,13 @@
         >
           {% set media = item.post.media if item.post.type == 'media' else item.post.thumbnail %}
           <div class="relative">
-            {% if media.type == 'image' %}
-              {{ img(
-                asset = media.image.asset,
-                alt = media.image.alt,
-                aspectRatio = media.image.asset.metadata.dimensions.aspectRatio,
-                cx = 'relative overflow-hidden'
-              ) }}        
-            {% endif %}
+            {{ lazy(
+              type = media.type,
+              asset = media.asset,
+              alt = media.alt,
+              aspectRatio = media.aspectRatio,
+              cx = 'relative overflow-hidden'
+            ) }}
             <div class="absolute w-50 h-50 z-1 top-0 left-0 pointer-events-none transition-opacity duration-300 ease-out-cubic" data-component="thumbnailCursor">
               {% if item.post.type == 'media' %}
                 <div class="-translate-x-1/2 -translate-y-1/2">

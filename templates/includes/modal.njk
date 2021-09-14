@@ -1,16 +1,15 @@
-{% from 'img.macro.njk' import img %}
+{% from 'lazy.macro.njk' import lazy %}
 
 <div class="fixed inset-0 w-full h-full">
   <div class="w-full h-full bg-black/95"></div>
     <div class="absolute top-35 bottom-70 inset-x-0 px">
       {% if p.media.type == 'image' %}
-        {{ img(
+        {{ lazy(
           asset = p.media.image.asset,
           alt = p.media.image.alt,
           lqip = false,
           cx = 'relative w-full h-full',
-          fit = 'contain',
-          imgAttrs = 'draggable="false"'
+          fit = 'contain'
         ) }}
       {% endif %}
     </div>

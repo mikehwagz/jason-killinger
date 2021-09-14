@@ -1,8 +1,10 @@
 import { component } from 'picoapp'
+import choozy from 'choozy'
 import inview from '../lib/inview'
 import signal from '../lib/signal'
 
-export default component((video, ctx) => {
+export default component((node, ctx) => {
+  let { video } = choozy(node)
   let [playing, setPlaying] = signal(false, (playing) =>
     video[playing ? 'play' : 'pause'](),
   )

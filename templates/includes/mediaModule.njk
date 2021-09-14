@@ -1,4 +1,4 @@
-{% from 'img.macro.njk' import img %}
+{% from 'lazy.macro.njk' import lazy %}
 
 <div class="{% classList
   'px' if not module.isFullBleed,
@@ -21,7 +21,7 @@
         {% endif %}
           {% for media in module.media %}
             {% if media.type == 'image' %}
-              {{ img(
+              {{ lazy(
                 asset = media.image.asset,
                 alt = media.image.alt,
                 aspectRatio = module.media[0].image.asset.metadata.dimensions.aspectRatio,
@@ -46,7 +46,7 @@
     {% else %}
       {% for media in module.media %}
         {% if media.type == 'image' %}
-          {{ img(
+          {{ lazy(
             asset = media.image.asset,
             alt = media.image.alt,
             aspectRatio = media.image.asset.metadata.dimensions.aspectRatio,
