@@ -1,3 +1,5 @@
+{% from 'lazy.macro.njk' import lazy %}
+
 <div class="mb-100 last:mb-0 px">
   {% if module.collections | length > 1 %}
     <div
@@ -45,33 +47,31 @@
           style="height: fit-content; align-self: {{ item.verticalAlignment }};"
         >
           {% set media = item.post.media if item.post.type == 'media' else item.post.thumbnail %}
-          {% if media.type == 'image' %}
-            {% set image = media.image %}
-            <div class="relative overflow-hidden" data-component="lazy">
-              <div style="padding-top: {{ 1 / image.asset.metadata.dimensions.aspectRatio * 100 }}%"></div>
-              <img
-                class="absolute inset-0 w-full h-full object-cover scale-105 blur-md js-lqip"
-                src="{{ image.asset.metadata.lqip }}"
-                alt="{{ image.alt }}"
-              ></img>
-              <img
-                class="absolute inset-0 w-full h-full object-cover opacity-0 transition ease-out-cubic duration-500 js-img"
-                data-src="{{ image.asset.url }}"
-                alt="{{ image.alt }}"
-              ></img>
-              <div class="absolute w-50 h-50 z-1 top-0 left-0 pointer-events-none transition-opacity duration-300 ease-out-cubic" data-component="thumbnailCursor">
-                {% if item.post.type == 'media' %}
-                  <div class="-translate-x-1/2 -translate-y-1/2">
-                    {% include 'plusCursorIcon.njk' %}
-                  </div>
-                {% else %}
-                  <div class="text-white -rotate-90">
-                    {% include 'arrowCursorIcon.njk' %}
-                  </div>
-                {% endif %}
-              </div>
+          <div class="relative">
+            {%- set s -%}
+              100vw, (min-width: 768px) {{ item.width / 12 * 100 }}vw
+            {%- endset -%}
+            {{ lazy(
+              type = media.type,
+              asset = media.asset,
+              alt = media.alt,
+              width = item.width * 1536 / 12,
+              sizes = s | trim,
+              aspectRatio = media.aspectRatio,
+              cx = 'relative overflow-hidden'
+            ) }}
+            <div class="absolute w-50 h-50 z-1 top-0 left-0 pointer-events-none transition-opacity duration-300 ease-out-cubic" data-component="thumbnailCursor">
+              {% if item.post.type == 'media' %}
+                <div class="-translate-x-1/2 -translate-y-1/2">
+                  {% include 'plusCursorIcon.njk' %}
+                </div>
+              {% else %}
+                <div class="text-white -rotate-90">
+                  {% include 'arrowCursorIcon.njk' %}
+                </div>
+              {% endif %}
             </div>
-          {% endif %}
+          </div>
           <div class="mt-10 m:mt-15 l:mt-20">
             <h3 class="font-nm text-26/40 leading-115">
               {{ item.post.title }}
