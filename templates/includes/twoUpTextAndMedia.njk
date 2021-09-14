@@ -1,3 +1,5 @@
+{% from 'img.macro.njk' import img %}
+
 <div class="{% classList
   'flex flex-col m:flex-row gap-40 m:gap-[calc(40/1536*100vw)] px mb-[calc(40/1536*100vw)]',
   'mt-80 m:mt-0' if module.mobileLayout == 'Text / Image'
@@ -21,7 +23,7 @@
     {% endif %}
       {% for media in module.media %}
         {% if media.type == 'image' %}
-          {{ lazy(
+          {{ img(
             asset = media.image.asset,
             alt = media.image.alt,
             aspectRatio = module.media[0].image.asset.metadata.dimensions.aspectRatio,

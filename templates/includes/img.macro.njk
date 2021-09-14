@@ -1,4 +1,4 @@
-{% macro lazy(
+{% macro img(
   asset,
   alt,
   lqip = true,
@@ -15,7 +15,7 @@
     {% if style %}
       style="{{ style }}"
     {% endif %}
-    data-component="lazy"
+    data-component="img"
   >
     {% if aspectRatio %}
       <div style="padding-top: {{ 1 / aspectRatio * 100 }}%"></div>

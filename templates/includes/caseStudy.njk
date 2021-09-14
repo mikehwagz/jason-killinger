@@ -1,16 +1,16 @@
-{% from 'lazy.macro.njk' import lazy %}
+{% from 'img.macro.njk' import img %}
 
 <div class="pb-80 m:pb-115 l:pb-150" data-component="caseStudy">
   <div
     class="h-screen overflow-hidden js-hero"
     data-theme="{{ p.heroNavTextColor }}"
   >
-    {{ lazy(
+    {{ img(
       asset = p.heroImageDesktop.asset,
       alt = p.heroImageDesktop.alt,
       cx = 'hidden m:block relative w-full h-full'
     ) }}
-    {{ lazy(
+    {{ img(
       asset = p.heroImageMobile.asset,
       alt = p.heroImageMobile.alt,
       cx = 'm:hidden relative w-full h-full'

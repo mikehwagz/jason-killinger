@@ -1,7 +1,8 @@
 import { picoapp } from 'picoapp'
 import { size } from 'martha'
 
-import lazy from './components/lazy'
+import img from './components/img'
+import video from './components/video'
 import header from './components/header'
 import hero from './components/hero'
 import dropdown from './components/dropdown'
@@ -14,7 +15,8 @@ import caseStudy from './components/caseStudy'
 import webgl from './components/webgl'
 
 const components = {
-  lazy,
+  img,
+  video,
   header,
   hero,
   dropdown,
