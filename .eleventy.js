@@ -26,6 +26,7 @@ module.exports = (config) => {
         serializers: serializers[type],
       })
     } catch (e) {
+      // console.log('[blocksToHtml]', blocks, type)
       console.log('Error converting blocks to HTML in blocksToHtml filter:', e)
       return ''
     }

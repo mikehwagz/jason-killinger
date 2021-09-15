@@ -1,3 +1,5 @@
-<div class="mb-50 m:mb-60 last:mb-0 px">
-  {{ module.content | blocksToHtml('bio') | safe }}
-</div>
+{% if module.content %}
+  <div class="mb-50 m:mb-60 last:mb-0 px">
+    {{ module.content | blocksToHtml('bio') | safe }}
+  </div>
+{% endif %}

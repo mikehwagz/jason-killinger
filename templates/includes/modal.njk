@@ -2,19 +2,21 @@
 
 <div class="fixed inset-0 w-full h-full">
   <div class="w-full h-full bg-black/95"></div>
-    <div class="absolute top-35 bottom-70 inset-x-0 px">
-      {{ lazy(
-        type = p.media.type,
-        asset = p.media.asset,
-        alt = p.media.alt,
-        lqip = false,
-        cx = 'relative w-full h-full',
-        fit = 'contain'
-      ) }}
-    </div>
-  <div class="absolute inset-x-0 px bottom-32 text-center text-14 m:text-16 text-white leading-115">
-    {{ p.caption | blocksToHtml('caption') | safe }}
+  <div class="absolute top-35 bottom-70 inset-x-0 px">
+    {{ lazy(
+      type = p.media.type,
+      asset = p.media.asset,
+      alt = p.media.alt,
+      lqip = false,
+      cx = 'relative w-full h-full',
+      fit = 'contain'
+    ) }}
   </div>
+  {% if p.caption %}
+    <div class="absolute inset-x-0 px bottom-32 text-center text-14 m:text-16 text-white leading-115">
+      {{ p.caption | blocksToHtml('caption') | safe }}
+    </div>
+  {% endif %}
   <div
     class="absolute top-0 left-0 pointer-events-none"
     data-component="modalCursor"
