@@ -1,4 +1,4 @@
-{% macro headerBar(main) %}
+{% macro headerBar(main, slug) %}
   <div
     class="{% classList
       'h-header flex items-center justify-between font-nm text-26/40 leading-100',
@@ -11,14 +11,25 @@
     <a
       class="pointer-events-auto"
       href="/"
-      data-component="funHover"
     >{{ 'Jason Killinger' | split | safe }}</a>
     <nav class="hidden m:flex gap-x-25">
       {% for link in site.navigation %}
         <a
-          class="pointer-events-auto"
+          class="{% classList
+            'relative pointer-events-auto hover:opacity-100 focus:opacity-100 transition-opacity duration-500 ease-out-cubic',
+            'opacity-65' if p.slug != link.slug
+          %}"
           href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}"
-        >{{ link.title }}</a>
+          {% if p.slug == link.slug %}
+            aria-current="page"
+          {% endif %}
+          data-component="waveHover"
+        >
+          {{ link.title }}
+          <div class="absolute top-[110%] inset-x-0 w-full h-10 js-wrap" style="opacity: 0;">
+            <canvas class="w-full h-full js-canvas"></canvas>
+          </div>
+        </a>
       {% endfor %}
     </nav>
     <button class="m:hidden w-50 h-50 pointer-events-auto js:header-burger" data-initial-focus>
@@ -42,14 +53,14 @@
   class="fixed top-0 left-0 w-full px z-10 pointer-events-none"
   data-component="header"
 >
-  {{ headerBar(true) }}
+  {{ headerBar(true, p.slug) }}
   <div
     class="m:hidden fixed inset-0 w-full h-full overflow-hidden z-1 pointer-events-auto js:header-outer"
     style="opacity: 0; visibility: hidden;"
   >
     <div class="relative w-full h-full text-bg bg-fg px js:header-inner">
       <div class="relative z-1">
-        {{ headerBar(false) }}
+        {{ headerBar(false, p.slug) }}
       </div>
       <nav class="absolute inset-0 flex flex-col justify-end gap-y-20 px pb-30 font-nm text-80 leading-100 js:header-nav">
         {% for link in site.navigation %}

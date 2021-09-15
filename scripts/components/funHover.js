@@ -12,7 +12,7 @@ export default component((node, ctx) => {
     () => {
       tl.clear()
         .to(chars, {
-          scaleY: 2,
+          scaleY: 1.5,
           stagger: {
             each: 0.025, // stagger each by 0.1 seconds (or use amount for an overall value to distribute)
             repeat: -1, // <-- LOOK! It's nested, so each sub-tween will repeat independently
