@@ -14,6 +14,7 @@ import contact from './components/contact'
 import caseStudy from './components/caseStudy'
 import webgl from './components/webgl'
 import scrollUp from './components/scrollUp'
+import eye from './components/eye'
 
 const components = {
   image,
@@ -29,6 +30,7 @@ const components = {
   caseStudy,
   webgl,
   scrollUp,
+  eye,
 }
 
 const sizes = size()
