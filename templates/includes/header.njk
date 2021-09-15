@@ -11,7 +11,8 @@
     <a
       class="pointer-events-auto"
       href="/"
-    >Jason Killinger</a>
+      data-component="funHover"
+    >{{ 'Jason Killinger' | split | safe }}</a>
     <nav class="hidden m:flex gap-x-25">
       {% for link in site.navigation %}
         <a

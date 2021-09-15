@@ -15,6 +15,7 @@ import caseStudy from './components/caseStudy'
 import webgl from './components/webgl'
 import scrollUp from './components/scrollUp'
 import eye from './components/eye'
+import funHover from './components/funHover'
 
 const components = {
   image,
@@ -31,6 +32,7 @@ const components = {
   webgl,
   scrollUp,
   eye,
+  funHover,
 }
 
 const sizes = size()

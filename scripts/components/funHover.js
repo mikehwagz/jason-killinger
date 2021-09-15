@@ -1,25 +1,23 @@
 import { component } from 'picoapp'
-import choozy from 'choozy'
-import { on } from 'martha'
-import gsap from 'gsap'
+import { qsa } from 'martha'
 import hover from '../lib/hover'
+import gsap from 'gsap'
 
 export default component((node, ctx) => {
-  let { arrow } = choozy(node)
   let tl = gsap.timeline({ paused: true })
-
-  let offClick = on(node, 'click', () => {
-    ctx.emit('scroll:to')
-  })
+  let chars = qsa('.char', node)
 
   let offHover = hover(
     node,
     () => {
       tl.clear()
-        .to(arrow, {
-          yPercent: -8,
-          yoyo: true,
-          repeat: -1,
+        .to(chars, {
+          scaleY: 2,
+          stagger: {
+            each: 0.025, // stagger each by 0.1 seconds (or use amount for an overall value to distribute)
+            repeat: -1, // <-- LOOK! It's nested, so each sub-tween will repeat independently
+            yoyo: true, // again, passed to each sub-tween.
+          },
           duration: 0.2,
           ease: 'sine.inOut',
         })
@@ -27,8 +25,8 @@ export default component((node, ctx) => {
     },
     () => {
       tl.clear()
-        .to(arrow, {
-          yPercent: 0,
+        .to(chars, {
+          scaleY: 1,
           duration: 0.2,
           ease: 'expo',
         })
@@ -37,7 +35,6 @@ export default component((node, ctx) => {
   )
 
   return () => {
-    offClick()
     offHover()
   }
 })
