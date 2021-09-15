@@ -42,16 +42,20 @@ export default function raf(app) {
     target = window.scrollY
   }
 
-  function scrollTo(_, target) {
-    const top = target.offsetTop
-    const offset = top === 0 ? target.parentNode.offsetTop : top
-    const padding = rect(qs('[data-scroll-padding-top]'))?.bottom ?? 0
-    const temp = { y: current }
+  function scrollTo(_, { el = document.body, scrollPadding = true } = {}) {
+    let top = el.offsetTop
+    let offset = top === 0 ? el.parentNode.offsetTop : top
+    let padding = 0
+    let temp = { y: current }
+
+    if (scrollPadding) {
+      padding = rect(qs('[data-scroll-padding-top]'))?.bottom ?? 0
+    }
 
     gsap.to(temp, {
       y: offset - padding,
-      duration: 0.5,
-      ease: 'expo.inOut',
+      duration: 1,
+      ease: 'quart.inOut',
       onStart() {
         app.hydrate({ isAutoScrolling: true })
       },
