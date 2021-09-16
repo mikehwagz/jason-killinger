@@ -4,7 +4,7 @@ import { size } from 'martha'
 import image from './components/image'
 import video from './components/video'
 import header from './components/header'
-import waveHover from './components/waveHover'
+import wave from './components/wave'
 import hero from './components/hero'
 import dropdown from './components/dropdown'
 import thumbnailCursor from './components/thumbnailCursor'
@@ -22,7 +22,7 @@ const components = {
   image,
   video,
   header,
-  waveHover,
+  wave,
   hero,
   dropdown,
   thumbnailCursor,

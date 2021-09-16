@@ -13,21 +13,29 @@
       href="/"
     >{{ 'Jason Killinger' | split | safe }}</a>
     <nav class="hidden m:flex gap-x-25">
+      {% set hasActiveLink = false %}
+      {% for link in site.navigation %}
+        {% if link.slug == p.slug %}
+          {% set hasActiveLink = true %}
+        {% endif %}
+      {% endfor %}
       {% for link in site.navigation %}
         <a
           class="{% classList
-            'relative pointer-events-auto hover:opacity-100 focus:opacity-100 transition-opacity duration-500 ease-out-cubic',
-            'opacity-65' if p.slug != link.slug
+            'group relative pointer-events-auto hover:opacity-100 focus:opacity-100 transition-opacity duration-500 ease-out-cubic',
+            'opacity-65' if hasActiveLink and link.slug != p.slug
           %}"
           href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}"
-          {% if p.slug == link.slug %}
+          {% if link.slug == p.slug %}
             aria-current="page"
           {% endif %}
-          data-component="waveHover"
         >
           {{ link.title }}
-          <div class="absolute top-[110%] inset-x-0 w-full h-10 js-wrap" style="opacity: 0;">
-            <canvas class="w-full h-full js-canvas"></canvas>
+          <div class="absolute top-[110%] inset-x-0 w-full h-10 opacity-0 group-hover:opacity-100 transition duration-500 ease-out-cubic">
+            <canvas
+              class="w-full h-full"
+              data-component="wave"
+            ></canvas>
           </div>
         </a>
       {% endfor %}
