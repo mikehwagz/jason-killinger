@@ -10,9 +10,13 @@
       </main>
       {% include 'grid.njk' %}
       <div
-        class="fixed top-0 left-0 z-[-1] opacity-0 transition duration-500 ease-out-cubic"
+        class="fixed inset-0 w-full h-full pointer-events-none z-[-1] opacity-0 transition duration-500 ease-out-cubic"
         data-component="webgl"
         data-webgl
+      ></div>
+      <div
+        class="fixed inset-0 w-full h-full pointer-events-none z-[20]"
+        data-component="noise"
       ></div>
     </div>
     <script src="/app.js"></script>

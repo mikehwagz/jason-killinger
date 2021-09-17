@@ -18,6 +18,7 @@ import scrollUp from './components/scrollUp'
 import eye from './components/eye'
 import funHover from './components/funHover'
 import themeToggle from './components/themeToggle'
+import noise from './components/noise'
 
 const components = {
   image,
@@ -37,6 +38,7 @@ const components = {
   eye,
   funHover,
   themeToggle,
+  noise,
 }
 
 const sizes = size()
