@@ -27,13 +27,14 @@
                 'pointer-events-none' if collection.slug == p.collectionSlug or p.isHomepage and loop.index == 1 and not p.collectionSlug else 'opacity-65 hover:opacity-100 focus:opacity-100'
               %}"
               href="{% if not p.isHomepage %}/{{ p.slug }}{% endif %}{% if loop.index > 1 %}/{{ collection.slug }}{% endif %}/"
+              data-transition="postGrid"
             >{{ collection.title }}</a>
           {% endfor %}
         </div>
       </div>
     </div>
   {% endif %}
-  <div class="m:grid grid-template gap-y-[calc(155/1536*100vw)]">
+  <div class="m:grid grid-template gap-y-[calc(155/1536*100vw)]" data-post-grid>
     {% set collection = module.collections[0] %}
     {% if p.collectionSlug %}
       {% for col in module.collections %}

@@ -6,6 +6,7 @@ import raf from './lib/raf'
 import loadFonts from './lib/loadFonts'
 import { on, once, size, add, remove, toggle, qs, qsa } from 'martha'
 import Fade from './transitions/Fade'
+import PostGrid from './transitions/PostGrid'
 
 class Base extends Highway.Renderer {
   onLoad() {
@@ -92,7 +93,9 @@ const H = new Highway.Core({
   },
   transitions: {
     default: Fade,
-    contextual: {},
+    contextual: {
+      postGrid: PostGrid,
+    },
   },
 })
 
