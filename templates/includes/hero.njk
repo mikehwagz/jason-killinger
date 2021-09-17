@@ -11,7 +11,13 @@
       </h2>
     {% endfor %}
   </div>
-  <div class="w-5/6 m:w-full col-span-5 mx-auto m:mx-0">
-    {% include 'spiral.njk' %}
-  </div>
+  <button
+    class="w-5/6 m:w-full col-span-5 mx-auto m:mx-0 rounded-full"
+    data-component="themeToggle"
+    data-initial-speed="1"
+  >
+    <div class="w-full h-full p-5 js-spiral">
+      {% include 'spiral.njk' %}
+    </div>
+  </button>
 </div>

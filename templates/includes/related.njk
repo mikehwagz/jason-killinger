@@ -1,7 +1,7 @@
 {% from 'lazy.macro.njk' import lazy %}
 
 <div class="px" data-component="related">
-  <h2 class="font-nm text-28 m:text-40 l:text-50 leading-115 pb-10 border-b-2 border-black mb-40">
+  <h2 class="font-nm text-28 m:text-40 l:text-50 leading-115 pb-10 border-b-2 border-current mb-40">
     {{ p.related.title }}
   </h2>
   <div class="grid grid-template">
@@ -10,7 +10,7 @@
         <a
           class="{% classList
             'flex m:block justify-between items-center font-nm text-28 m:text-40 l:text-50 leading-132 mb-15 m:mb-25 l:mb-40 js-links',
-            'text-muted-light' if loop.index > 1
+            'opacity-65' if loop.index > 1
           %}"
           href="/post/{{ post.slug }}/"
         >
@@ -18,7 +18,7 @@
             {{ post.title }}
           </div>
           <div class="{% classList
-            'text-black w-20 m:w-30 h-20 m:h-30 m:inline-block ml-0 m:ml-15 js-arrows',
+            'w-20 m:w-30 h-20 m:h-30 m:inline-block ml-0 m:ml-15 js-arrows',
             'opacity-0' if loop.index > 1
           %}">
             {% include 'arrowCursorIcon.njk' %}

@@ -4,10 +4,9 @@ import { qs } from 'martha'
 
 class Fade extends Highway.Transition {
   in({ from, to, done }) {
-    let content = qs('[data-content]', to)
+    let content = qs('[data-post-grid]', to)
 
     if (content) {
-      window.scrollTo(0, 0)
       gsap.set(content, { autoAlpha: 0 })
       gsap.set(to, { autoAlpha: 1 })
       from.remove()
@@ -17,7 +16,6 @@ class Fade extends Highway.Transition {
         onComplete: done,
       })
     } else {
-      window.scrollTo(0, 0)
       from.remove()
       gsap.to(to, {
         duration: 0.5,
@@ -28,7 +26,7 @@ class Fade extends Highway.Transition {
   }
 
   out({ from, done }) {
-    let content = qs('[data-content]', from)
+    let content = qs('[data-post-grid]', from)
 
     if (content) {
       gsap.to(content, {

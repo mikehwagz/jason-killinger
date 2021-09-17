@@ -29,14 +29,10 @@ module.exports = {
     colors: {
       white: '#f9f9f9',
       black: '#181818',
-      'gray-light': '#909090',
-      'gray-dark': '#696969',
       current: 'currentColor',
       transparent: 'transparent',
       fg: 'var(--color-fg)',
       bg: 'var(--color-bg)',
-      'muted-light': 'var(--color-muted-light)',
-      'muted-dark': 'var(--color-muted-dark)',
     },
     fontSize: {
       ...new Array(201)

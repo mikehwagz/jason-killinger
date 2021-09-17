@@ -17,6 +17,8 @@ import webgl from './components/webgl'
 import scrollUp from './components/scrollUp'
 import eye from './components/eye'
 import funHover from './components/funHover'
+import themeToggle from './components/themeToggle'
+import noise from './components/noise'
 
 const components = {
   image,
@@ -35,6 +37,8 @@ const components = {
   scrollUp,
   eye,
   funHover,
+  themeToggle,
+  noise,
 }
 
 const sizes = size()
@@ -42,6 +46,7 @@ const state = {
   ...sizes,
   mx: 0,
   my: 0,
+  isAltTheme: false,
   isAutoScrolling: false,
   isOpen: false,
   dom: {

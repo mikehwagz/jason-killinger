@@ -1,6 +1,7 @@
 import { component } from 'picoapp'
-import { round, lerp, once } from 'martha'
+import { round, lerp, once, on } from 'martha'
 import gsap from 'gsap'
+import app from '../app'
 
 export default component((node, ctx) => {
   let e = 0.25
@@ -17,5 +18,13 @@ export default component((node, ctx) => {
     gsap.to(node, { autoAlpha: 1, duration: 0.5, ease: 'power3' }),
   )
 
-  return () => {}
+  let offClick = on(document, 'click', () => {
+    let ref = document.referrer
+    let current = location.href
+    app.router.redirect(ref === current ? location.origin : ref)
+  })
+
+  return () => {
+    offClick()
+  }
 })

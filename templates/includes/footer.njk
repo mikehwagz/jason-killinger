@@ -1,7 +1,18 @@
 <footer class="px">
-  <div class="border-t-2 border-fg pb-20 m:pb-30">
+  <div class="border-t-2 border-current pb-20 m:pb-30">
     <div class="relative py-30 m:py-45 l:py-60 flex justify-between items-center">
-      <div class="rounded-full bg-fg w-30 m:w-65 h-30 m:h-65"></div>
+      <button
+        class="w-40 m:w-75 h-40 m:h-75 relative z-1"
+        data-component="themeToggle"
+      >
+        <div class="w-full h-full p-5 js-spiral">
+          {% include 'spiral.njk' %}
+        </div>
+        <div
+          class="absolute inset-0 w-full h-full rounded-full bg-current opacity-0 transition duration-500 ease-out-cubic"
+          data-theme-toggle-circle
+        ></div>
+      </button>
       <div class="absolute w-full text-center">
         <a
           href="{{ site.footer.link.url }}"

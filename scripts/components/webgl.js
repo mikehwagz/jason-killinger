@@ -3,6 +3,7 @@ import { Renderer, Triangle, Program, Mesh, Texture, Vec2 } from 'ogl'
 import glsl from 'glslify'
 import vertexShader from '../shaders/quad.vert'
 import fragmentShader from '../shaders/quad.frag'
+import { round, lerp } from 'martha'
 
 export default component((node, ctx) => {
   let renderer = new Renderer({
@@ -12,6 +13,8 @@ export default component((node, ctx) => {
   })
 
   let { gl } = renderer
+  let x = ctx.getState().mx
+  let y = ctx.getState().my
 
   node.appendChild(gl.canvas)
 
@@ -52,10 +55,16 @@ export default component((node, ctx) => {
     program.uniforms.uResolution.value.y = wh
   })
 
-  ctx.on('tick', ({ time, mx, my, ww, wh }) => {
-    program.uniforms.uMouse.value.x = (mx / ww) * 2 - 1
-    program.uniforms.uMouse.value.y = -(my / wh) * 2 + 1
+  ctx.on('tick', ({ time, mx, my, ww, wh, isAltTheme }) => {
+    if (!isAltTheme) return
+
+    x = round(lerp(x, mx, 0.1), 100)
+    y = round(lerp(y, my, 0.1), 100)
+
+    program.uniforms.uMouse.value.x = (x / ww) * 2 - 1
+    program.uniforms.uMouse.value.y = -(y / wh) * 2 + 1
     program.uniforms.uTime.value = time * 0.05
+
     renderer.render({ scene: mesh })
   })
 })

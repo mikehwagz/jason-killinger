@@ -6,8 +6,8 @@ import gsap from 'gsap'
 export default component((node, ctx) => {
   let { iris, pupil } = choozy(node)
 
-  let x = ctx.getState().mx
-  let y = ctx.getState().my
+  let x = 0
+  let y = 0
 
   ctx.on('tick', ({ mx, my, ww, wh }) => {
     x = round(lerp(x, map(mx, 0, ww, 0, 1), 0.17), 100)

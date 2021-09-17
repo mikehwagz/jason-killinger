@@ -41,7 +41,7 @@ void main() {
   uv *= scl;
   
   // distort the uvs based on mouse origin
-  uv = rotate(uv, sin(mouseOrigin * 1.0 + t * 0.5)); 
+  uv = rotate(uv, sin(mouseOrigin * 0.3 + t * 0.2)); 
 
   vec4 background = texture2D(tBackground, uv);
 

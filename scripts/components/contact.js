@@ -10,9 +10,9 @@ export default component((node, ctx) => {
 
     links.map((thumb, j) => {
       if (i === j) {
-        remove(thumb, 'text-muted-light')
+        remove(thumb, 'opacity-65')
       } else {
-        add(thumb, 'text-muted-light')
+        add(thumb, 'opacity-65')
       }
     })
 

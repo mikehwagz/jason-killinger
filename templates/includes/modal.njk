@@ -1,8 +1,11 @@
 {% from 'lazy.macro.njk' import lazy %}
 
-<div class="fixed inset-0 w-full h-full">
+<div class="fixed inset-0 w-full h-full z-10">
   <div class="w-full h-full bg-black/95"></div>
-  <div class="absolute top-35 bottom-70 inset-x-0 px">
+  <div class="{% classList
+    'absolute top-35 inset-x-0 px',
+    'bottom-70' if p.caption else 'bottom-35'
+  %}">
     {{ lazy(
       type = p.media.type,
       asset = p.media.asset,
