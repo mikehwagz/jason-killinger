@@ -3,13 +3,17 @@
   <head>
     {% include 'head.njk' %}
   </head>
-  <body class="font-ag text-18 transition ease-out-quint duration-500 opacity-0">
+  <body class="font-ag text-18 opacity-0 transition duration-500 ease-out-cubic">
     <div id="root">
       <main data-router-wrapper>
         {{ content | safe }}
       </main>
       {% include 'grid.njk' %}
-      <div id="gl" class="fixed top-0 left-0 z-[-1]" data-component="webgl"></div>
+      <div
+        class="fixed top-0 left-0 z-[-1] opacity-0 transition duration-500 ease-out-cubic"
+        data-component="webgl"
+        data-webgl
+      ></div>
     </div>
     <script src="/app.js"></script>
   </body>

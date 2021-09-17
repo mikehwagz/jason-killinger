@@ -8,6 +8,8 @@ title: Home
 
 <div data-router-view="default" {{ theme(p.isDarkModeEnabled) }}>
   {% include 'header.njk' %}
-  {% include 'page.njk' %}
-  {% include 'footer.njk' %}
+  <div data-content>
+    {% include 'page.njk' %}
+    {% include 'footer.njk' %}
+  </div>
 </div>

@@ -11,9 +11,13 @@ pagination:
 <div data-router-view="default" {{ theme() }}>
   {% if p.type == 'caseStudy' %}
     {% include 'header.njk' %}
-    {% include 'caseStudy.njk' %}
-    {% include 'footer.njk' %}
+    <div data-content>
+      {% include 'caseStudy.njk' %}
+      {% include 'footer.njk' %}
+    </div>
   {% elif p.type == 'media' %}
-    {% include 'modal.njk' %}
+    <div data-content>
+      {% include 'modal.njk' %}
+    </div>
   {% endif %}
 </div>

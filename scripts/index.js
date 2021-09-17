@@ -4,14 +4,34 @@ import gsap from 'gsap'
 import app from './app'
 import raf from './lib/raf'
 import loadFonts from './lib/loadFonts'
-import { on, once, size, remove, toggle, qs } from 'martha'
+import { on, once, size, add, remove, toggle, qs, qsa } from 'martha'
 import Fade from './transitions/Fade'
 
 class Base extends Highway.Renderer {
   onLoad() {
     quicklink.listen()
+
     on(window, 'resize', this.resize)
     on(document, 'mousemove', this.mousemove)
+
+    app.on('site:theme', ({ isAltTheme }) => {
+      let views = qsa('[data-router-view]')
+      let circle = qsa('[data-theme-toggle-circle]')
+      let webgl = qsa('[data-webgl]')
+
+      if (isAltTheme) {
+        remove(circle, 'opacity-0')
+        remove(webgl, 'opacity-0')
+        remove(views, 'text-fg bg-bg')
+        add(views, 'text-white')
+      } else {
+        add(circle, 'opacity-0')
+        add(webgl, 'opacity-0')
+        add(views, 'text-fg bg-bg')
+        remove(views, 'text-white')
+      }
+    })
+
     raf(app)
     gsap.set('[data-router-view]', { autoAlpha: 1 })
     loadFonts(app.getState().fonts)
@@ -20,13 +40,17 @@ class Base extends Highway.Renderer {
   }
 
   onLoadCompleted = () => {
-    this.mount()
+    this.onEnter()
+
     let { dom } = app.getState()
+
     once(dom.body, 'transitionend', this.onEnterCompleted)
     remove(dom.body, 'opacity-0')
   }
 
   onEnter() {
+    app.emit('site:theme')
+
     this.mount()
   }
 
