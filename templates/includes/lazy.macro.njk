@@ -20,17 +20,17 @@
     data-component="{{ type }}"
   >
     {% if aspectRatio %}
-      <div style="padding-top: {{ 1 / aspectRatio * 100 }}%"></div>
+      <div style="background-color: {{ asset.dominant }}; padding-top: {{ 1 / aspectRatio * 100 }}%"></div>
     {% endif %}
     {% if type == 'image' %}
-      {% if lqip %}
+      {# {% if lqip %}
         <img
           class="absolute inset-0 w-full h-full object-{{ fit }} scale-105 blur-md js-lqip"
           src="{{ asset.lqip }}"
           alt=""
           draggable="false"
         >
-      {% endif %}
+      {% endif %} #}
       <img
         class="absolute inset-0 w-full h-full object-{{ fit }} opacity-0 transition ease-out-cubic duration-500 js-img"
         data-src="{{ asset._id | src(width) }}"
