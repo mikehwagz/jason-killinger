@@ -87,7 +87,7 @@ class Base extends Highway.Renderer {
   }
 }
 
-const H = new Highway.Core({
+app.router = new Highway.Core({
   renderers: {
     default: Base,
   },

@@ -48,7 +48,7 @@
             {% for tax in p.taxonomies.list %}
               {% if tax._type == 'collection' and tax.items | length %}
                 <li>
-                  <a href="/collections/{{ tax.slug }}">
+                  <a href="/collections/{{ tax.slug }}/">
                     {{ tax.title }}
                   </a>
                 </li>
