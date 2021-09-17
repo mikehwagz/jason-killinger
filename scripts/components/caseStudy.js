@@ -6,7 +6,6 @@ export default component((node, ctx) => {
   const { hero } = choozy(node)
   const header = qsa('[data-scroll-padding-top]').at(-1)
   const theme = hero.dataset.theme
-  const defaultTheme = 'black'
 
   let last = null
 
@@ -22,14 +21,14 @@ export default component((node, ctx) => {
         last = theme
       }
     } else {
-      if (last !== defaultTheme) {
-        ctx.emit('header:theme', null, defaultTheme)
-        last = defaultTheme
+      if (last !== null) {
+        ctx.emit('header:theme', null, null)
+        last = null
       }
     }
   })
 
   return () => {
-    ctx.emit('header:theme', null, defaultTheme)
+    ctx.emit('header:theme', null, null)
   }
 })

@@ -30,19 +30,19 @@
     {% endif %}
     <dl class="col-start-11 col-span-2 m:pt-18 text-16 m:text-18 l:text-20 leading-115 tracking-[0.01em] px-30 m:px-0">
       {% if p.client %}
-        <dt class="text-gray-dark mb-6">Client</dt>
+        <dt class="opacity-65 mb-6">Client</dt>
         <dd class="mb-20 m:mb-25 l:mb-30">{{ p.client }}</dd>
       {% endif %}
       {% if p.collaborators %}
-        <dt class="text-gray-dark mb-6">Collaborators</dt>
+        <dt class="opacity-65 mb-6">Collaborators</dt>
         <dd class="mb-20 m:mb-25 l:mb-30">{{ p.collaborators }}</dd>
       {% endif %}
       {% if p.location %}
-        <dt class="text-gray-dark mb-6">Location</dt>
+        <dt class="opacity-65 mb-6">Location</dt>
         <dd class="mb-20 m:mb-25 l:mb-30">{{ p.location }}</dd>
       {% endif %}
       {% if p.taxonomies.list | length %}
-        <dt class="text-gray-dark mb-6">{{ p.taxonomies.title }}</dt>
+        <dt class="opacity-65 mb-6">{{ p.taxonomies.title }}</dt>
         <dd class="mb-20 m:mb-25 l:mb-30">
           <ul class="space-y-6">
             {% for tax in p.taxonomies.list %}
@@ -60,7 +60,7 @@
         </dd>
       {% endif %}
       {% if p.year %}
-        <dt class="text-gray-dark mb-6">Year</dt>
+        <dt class="opacity-65 mb-6">Year</dt>
         <dd>{{ p.year }}</dd>
       {% endif %}
     </dl>
@@ -73,7 +73,7 @@
     {% if moduleTemplate | trim | length %}
       {{ moduleTemplate | safe }}
     {% else %}
-      <p class="text-40 my-100 text text-muted-light">{{ moduleType }}<p>
+      <p class="text-40 my-100">{{ moduleType }}<p>
     {% endif %}
   {% endfor %}
   {% if p.related.posts | length %}

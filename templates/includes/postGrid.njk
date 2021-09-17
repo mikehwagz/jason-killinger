@@ -3,7 +3,7 @@
 <div class="mb-100 last:mb-0 px">
   {% if module.collections | length > 1 %}
     <div
-      class="border-b-2 border-fg mb-60"
+      class="border-b-2 border-current mb-60"
       data-component="dropdown"
     >
       <button
@@ -24,7 +24,7 @@
             <a
               class="{% classList
                 'text-20 xl:text-24 leading-115 tracking-[0.01em] col-span-1',
-                'text-fg pointer-events-none' if collection.slug == p.collectionSlug or p.isHomepage and loop.index == 1 and not p.collectionSlug else 'text-muted-light hover:text-fg'
+                'pointer-events-none' if collection.slug == p.collectionSlug or p.isHomepage and loop.index == 1 and not p.collectionSlug else 'opacity-65 hover:opacity-100 focus:opacity-100'
               %}"
               href="{% if not p.isHomepage %}/{{ p.slug }}{% endif %}{% if loop.index > 1 %}/{{ collection.slug }}{% endif %}/"
             >{{ collection.title }}</a>
@@ -80,7 +80,7 @@
               {{ item.post.title }}
             </h3>
             {% if item.post.subtitle %}
-              <p class="text-20 xl:text-24 leading-138 mt-5 m:mt-8 text-muted-dark">{{ item.post.subtitle }}</p>
+              <p class="text-20 xl:text-24 leading-138 mt-5 m:mt-8 opacity-65">{{ item.post.subtitle }}</p>
             {% endif %}
           </div>
         </a>

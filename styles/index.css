@@ -79,10 +79,6 @@
   .fill-fg {
     fill: var(--color-fg);
   }
-
-  .fill-muted-light {
-    fill: var(--color-muted-light);
-  }
 }
 
 [data-sqzbx-button][aria-expanded='true'] div {

@@ -18,9 +18,9 @@ export default component((node, ctx) => {
 
     links.map((link, j) => {
       if (i === j) {
-        remove(link, 'text-muted-light')
+        remove(link, 'opacity-65')
       } else {
-        add(link, 'text-muted-light')
+        add(link, 'opacity-65')
       }
     })
 
