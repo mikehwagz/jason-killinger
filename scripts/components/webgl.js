@@ -55,7 +55,9 @@ export default component((node, ctx) => {
     program.uniforms.uResolution.value.y = wh
   })
 
-  ctx.on('tick', ({ time, mx, my, ww, wh }) => {
+  ctx.on('tick', ({ time, mx, my, ww, wh, isAltTheme }) => {
+    if (!isAltTheme) return
+
     x = round(lerp(x, mx, 0.1), 100)
     y = round(lerp(y, my, 0.1), 100)
 

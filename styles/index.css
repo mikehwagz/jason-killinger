@@ -110,13 +110,3 @@
 .is-hidden * {
   pointer-events: none !important;
 }
-
-.animate-spin {
-  animation-duration: 10s;
-}
-
-@media (prefers-reduced-motion) {
-  .animate-spin {
-    animation: none;
-  }
-}

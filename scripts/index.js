@@ -25,11 +25,13 @@ class Base extends Highway.Renderer {
         remove(webgl, 'opacity-0')
         remove(views, 'text-fg bg-bg')
         add(views, 'text-white')
+        app.emit('themeToggle:targetSpeed', null, 10)
       } else {
         add(circle, 'opacity-0')
         add(webgl, 'opacity-0')
         add(views, 'text-fg bg-bg')
         remove(views, 'text-white')
+        app.emit('themeToggle:targetSpeed', null, null)
       }
     })
 

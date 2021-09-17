@@ -7,8 +7,10 @@ import gsap from 'gsap'
 export default component((node, ctx) => {
   let { spiral } = choozy(node)
 
-  let targetSpeed = 0
-  let currentSpeed = 0
+  let initialSpeed = parseInt(node.dataset.initialSpeed, 10) ?? 0
+
+  let targetSpeed = initialSpeed
+  let currentSpeed = initialSpeed
   let rotation = 0
 
   let offClick = on(node, 'click', () =>
@@ -17,13 +19,19 @@ export default component((node, ctx) => {
     }),
   )
 
+  ctx.on('themeToggle:targetSpeed', (_, newValue) => {
+    targetSpeed = newValue ? newValue : initialSpeed
+  })
+
   let offHover = hover(
     node,
     () => {
+      if (ctx.getState().isAltTheme) return
       targetSpeed = 10
     },
     () => {
-      targetSpeed = 0
+      if (ctx.getState().isAltTheme) return
+      targetSpeed = initialSpeed
     },
   )
 
