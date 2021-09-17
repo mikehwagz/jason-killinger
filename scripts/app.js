@@ -4,6 +4,7 @@ import { size } from 'martha'
 import image from './components/image'
 import video from './components/video'
 import header from './components/header'
+import wave from './components/wave'
 import hero from './components/hero'
 import dropdown from './components/dropdown'
 import thumbnailCursor from './components/thumbnailCursor'
@@ -13,11 +14,15 @@ import related from './components/related'
 import contact from './components/contact'
 import caseStudy from './components/caseStudy'
 import webgl from './components/webgl'
+import scrollUp from './components/scrollUp'
+import eye from './components/eye'
+import funHover from './components/funHover'
 
 const components = {
   image,
   video,
   header,
+  wave,
   hero,
   dropdown,
   thumbnailCursor,
@@ -27,6 +32,9 @@ const components = {
   contact,
   caseStudy,
   webgl,
+  scrollUp,
+  eye,
+  funHover,
 }
 
 const sizes = size()

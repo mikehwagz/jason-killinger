@@ -1,4 +1,4 @@
-{% macro headerBar(main) %}
+{% macro headerBar(main, slug) %}
   <div
     class="{% classList
       'h-header flex items-center justify-between font-nm text-26/40 leading-100',
@@ -11,13 +11,33 @@
     <a
       class="pointer-events-auto"
       href="/"
-    >Jason Killinger</a>
+    >{{ 'Jason Killinger' | split | safe }}</a>
     <nav class="hidden m:flex gap-x-25">
+      {% set hasActiveLink = false %}
+      {% for link in site.navigation %}
+        {% if link.slug == p.slug %}
+          {% set hasActiveLink = true %}
+        {% endif %}
+      {% endfor %}
       {% for link in site.navigation %}
         <a
-          class="pointer-events-auto"
+          class="{% classList
+            'group relative pointer-events-auto hover:opacity-100 focus:opacity-100 transition-opacity duration-500 ease-out-cubic',
+            'opacity-65' if hasActiveLink and link.slug != p.slug
+          %}"
           href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}"
-        >{{ link.title }}</a>
+          {% if link.slug == p.slug %}
+            aria-current="page"
+          {% endif %}
+        >
+          {{ link.title }}
+          <div class="absolute top-[110%] inset-x-0 w-full h-10 opacity-0 group-hover:opacity-100 transition duration-500 ease-out-cubic">
+            <canvas
+              class="w-full h-full"
+              data-component="wave"
+            ></canvas>
+          </div>
+        </a>
       {% endfor %}
     </nav>
     <button class="m:hidden w-50 h-50 pointer-events-auto js:header-burger" data-initial-focus>
@@ -41,14 +61,14 @@
   class="fixed top-0 left-0 w-full px z-10 pointer-events-none"
   data-component="header"
 >
-  {{ headerBar(true) }}
+  {{ headerBar(true, p.slug) }}
   <div
     class="m:hidden fixed inset-0 w-full h-full overflow-hidden z-1 pointer-events-auto js:header-outer"
     style="opacity: 0; visibility: hidden;"
   >
     <div class="relative w-full h-full text-bg bg-fg px js:header-inner">
       <div class="relative z-1">
-        {{ headerBar(false) }}
+        {{ headerBar(false, p.slug) }}
       </div>
       <nav class="absolute inset-0 flex flex-col justify-end gap-y-20 px pb-30 font-nm text-80 leading-100 js:header-nav">
         {% for link in site.navigation %}

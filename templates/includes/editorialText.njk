@@ -1,7 +1,9 @@
-<div class="px my-80 m:my-115 l:my-150">
-  <div class="px-30">
-    <div class="w-full max-w-[460px] m:max-w-[510px] l:max-w-[708px] mx-auto">
-      {{ module.content | blocksToHtml('editorialText') | safe }}
+{% if module.content %}
+  <div class="px my-80 m:my-115 l:my-150">
+    <div class="px-30">
+      <div class="w-full max-w-[460px] m:max-w-[510px] l:max-w-[708px] mx-auto">
+        {{ module.content | blocksToHtml('editorialText') | safe }}
+      </div>
     </div>
   </div>
-</div>
+{% endif %}

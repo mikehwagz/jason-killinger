@@ -26,6 +26,7 @@ module.exports = (config) => {
         serializers: serializers[type],
       })
     } catch (e) {
+      // console.log('[blocksToHtml]', blocks, type)
       console.log('Error converting blocks to HTML in blocksToHtml filter:', e)
       return ''
     }
@@ -49,6 +50,8 @@ module.exports = (config) => {
     const widths = [375, 650, 768, 1024, 1280, 1536]
     return widths.map((width) => `${getSrc(id, width)} ${width}w`).join(',')
   })
+
+  config.addFilter('split', split)
 
   config.addWatchTarget('./tailwind.config.js')
   config.addWatchTarget('./lib')
@@ -80,4 +83,23 @@ module.exports = (config) => {
       output: 'build',
     },
   }
+}
+
+function split(text) {
+  return `
+    <span aria-label="${text}">
+      <span class="inline-block select-none" aria-hidden="true">
+        ${text
+          .split(' ')
+          .map((word) =>
+            word
+              .split('')
+              .map((char) => `<span class="char inline-block">${char}</span>`)
+              .join(''),
+          )
+          .map((word) => `<span class="word inline-block">${word}</span>`)
+          .join('<span class="space inline-block pr-[0.2em]"></span>')}
+      </span>
+    </span>
+  `
 }

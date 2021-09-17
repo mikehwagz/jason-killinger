@@ -3,13 +3,17 @@
     <div class="relative py-30 m:py-45 l:py-60 flex justify-between items-center">
       <div class="rounded-full bg-fg w-30 m:w-65 h-30 m:h-65"></div>
       <div class="absolute w-full text-center">
-        <a href="{{ site.footer.link.url }}"
+        <a
+          href="{{ site.footer.link.url }}"
           class="font-nm text-26 m:text-40 l:text-60 xl:text-80 leading-100"
-        >{{ site.footer.link.title }}</a>
+          data-component="funHover"
+        >{{ site.footer.link.title | split | safe }}</a>
       </div>
-      <div class="w-25 m:w-48">
-        {% include 'upIcon.njk' %}
-      </div>
+      <button class="w-25 m:w-48 relative z-1" data-component="scrollUp">
+        <div class="pointer-events-none js-arrow">
+          {% include 'upIcon.njk' %}
+        </div>
+      </button>
     </div>
     <p class="text-center text-14 m:text-16 leading-100">{{ site.footer.copyright }}</p>
   </div>
