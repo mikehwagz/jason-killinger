@@ -14,9 +14,9 @@ export default component((node, ctx) => {
         .to(chars, {
           scaleY: 1.5,
           stagger: {
-            each: 0.025, // stagger each by 0.1 seconds (or use amount for an overall value to distribute)
-            repeat: -1, // <-- LOOK! It's nested, so each sub-tween will repeat independently
-            yoyo: true, // again, passed to each sub-tween.
+            each: 0.025,
+            repeat: -1,
+            yoyo: true,
           },
           duration: 0.2,
           ease: 'sine.inOut',
