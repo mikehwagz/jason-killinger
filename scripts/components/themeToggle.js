@@ -11,8 +11,6 @@ export default component((node, ctx) => {
     ? parseInt(node.dataset.initialSpeed, 10)
     : 0
 
-  console.log(initialSpeed)
-
   let targetSpeed = initialSpeed
   let currentSpeed = initialSpeed
   let rotation = 0
