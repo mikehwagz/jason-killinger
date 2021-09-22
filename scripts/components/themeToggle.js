@@ -1,13 +1,17 @@
 import { component } from 'picoapp'
 import choozy from 'choozy'
 import hover from '../lib/hover'
-import { round, lerp, on, wrap, remove, add, qsa } from 'martha'
+import { round, lerp, on, wrap } from 'martha'
 import gsap from 'gsap'
 
 export default component((node, ctx) => {
   let { spiral } = choozy(node)
 
-  let initialSpeed = parseInt(node.dataset.initialSpeed, 10) ?? 0
+  let initialSpeed = node.dataset.initialSpeed
+    ? parseInt(node.dataset.initialSpeed, 10)
+    : 0
+
+  console.log(initialSpeed)
 
   let targetSpeed = initialSpeed
   let currentSpeed = initialSpeed

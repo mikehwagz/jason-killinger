@@ -1,9 +1,8 @@
 import { component } from 'picoapp'
 import { Renderer, Triangle, Program, Mesh, Texture, Vec2 } from 'ogl'
-import glsl from 'glslify'
-import vertexShader from '../shaders/quad.vert'
-import fragmentShader from '../shaders/quad.frag'
 import { round, lerp } from 'martha'
+import vertex from '../shaders/quad.vert'
+import fragment from '../shaders/quad.frag'
 
 export default component((node, ctx) => {
   let renderer = new Renderer({
@@ -29,8 +28,8 @@ export default component((node, ctx) => {
   background.onload = () => (texture.image = background)
 
   let program = new Program(gl, {
-    vertex: glsl(vertexShader),
-    fragment: glsl(fragmentShader),
+    vertex,
+    fragment,
     uniforms: {
       uTime: {
         value: 0,

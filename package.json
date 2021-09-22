@@ -38,12 +38,9 @@
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",
     "choozy": "^1.0.0",
-    "dat.gui": "^0.7.7",
     "embla-carousel": "^4.5.3",
     "focus-trap": "^6.6.1",
-    "focus-visible": "^5.2.0",
     "fontfaceobserver": "^2.1.0",
-    "glslify": "^7.1.1",
     "gsap": "^3.7.1",
     "martha": "^3.0.3",
     "ogl": "^0.0.76",
