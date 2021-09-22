@@ -6,16 +6,17 @@ import fragment from '../shaders/quad.frag'
 
 export default component((node, ctx) => {
   const [color1, color2] = JSON.parse(node.dataset.colors)
+  const { ww, wh, mx, my, time } = ctx.getState()
 
   let renderer = new Renderer({
-    width: ctx.getState().ww,
-    height: ctx.getState().wh,
+    width: ww,
+    height: wh,
     antialias: true,
   })
 
   let { gl } = renderer
-  let x = ctx.getState().mx
-  let y = ctx.getState().my
+  let x = mx
+  let y = my
 
   node.appendChild(gl.canvas)
 
@@ -33,24 +34,12 @@ export default component((node, ctx) => {
     vertex,
     fragment,
     uniforms: {
-      uTime: {
-        value: 0,
-      },
-      uResolution: {
-        value: new Vec2(ctx.getState().ww, ctx.getState().wh),
-      },
-      tBackground: {
-        value: texture,
-      },
-      uColor1: {
-        value: new Vec3(...color1),
-      },
-      uColor2: {
-        value: new Vec3(...color2),
-      },
-      uMouse: {
-        value: new Vec2(),
-      },
+      tBackground: { value: texture },
+      uTime: { value: time },
+      uResolution: { value: new Vec2(ww, wh) },
+      uColor1: { value: new Vec3(...color1) },
+      uColor2: { value: new Vec3(...color2) },
+      uMouse: { value: new Vec2(x, y) },
     },
   })
 
@@ -63,15 +52,15 @@ export default component((node, ctx) => {
   })
 
   ctx.on('tick', ({ time, mx, my, ww, wh, isAltTheme }) => {
-    if (!isAltTheme) return
-
     x = round(lerp(x, mx, 0.1), 100)
     y = round(lerp(y, my, 0.1), 100)
 
     program.uniforms.uMouse.value.x = (x / ww) * 2 - 1
     program.uniforms.uMouse.value.y = -(y / wh) * 2 + 1
-    program.uniforms.uTime.value = time * 0.05
+    program.uniforms.uTime.value = time
 
-    renderer.render({ scene: mesh })
+    if (isAltTheme) {
+      renderer.render({ scene: mesh })
+    }
   })
 })

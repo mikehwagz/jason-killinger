@@ -40,11 +40,11 @@ void main() {
   float mouseOrigin = length((muv - mousePos) * vec2(ratio, 1.0)); // calculate new vector origin based on mouse position that takes into account mf aspect ratio
 
   // use mouse origin to change the scale origin instead of being fixed to the center or length(uv)
-  float scl = map(sin(mouseOrigin * 2.0 + t * 1.0), -1.0, 1.0, 0.8, 1.0);
+  float scl = map(sin(mouseOrigin * 2.0 + t * 0.05), -1.0, 1.0, 0.8, 1.0);
   uv *= scl;
   
   // distort the uvs based on mouse origin
-  uv = rotate(uv, sin(mouseOrigin * 0.3 + t * 0.2)); 
+  uv = rotate(uv, sin(mouseOrigin * 0.3 + t * 0.01));
 
   vec4 background = texture2D(tBackground, uv);
 
