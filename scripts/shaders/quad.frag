@@ -5,6 +5,9 @@ uniform float uTime;
 uniform vec2 uResolution;
 uniform vec2 uMouse;
 
+uniform vec3 uColor1;
+uniform vec3 uColor2;
+
 uniform sampler2D tBackground;
 
 varying vec2 vUv;
@@ -45,8 +48,8 @@ void main() {
 
   vec4 background = texture2D(tBackground, uv);
 
-  vec3 color1 = vec3(216.0, 30.0, 82.0) / 255.0;
-  vec3 color2 = vec3(40.0 , 55.0, 84.0) / 255.0;
+  vec3 color1 = uColor1 / 255.0;
+  vec3 color2 = uColor2 / 255.0;
 
   float x = background.r;
   

@@ -1,11 +1,14 @@
 import seoFields from '../lib/seoFields'
+import Tabs from 'sanity-plugin-tabs'
 
 export default {
   title: 'Site',
   name: 'site',
   type: 'document',
+  inputComponent: Tabs,
   fieldsets: [
     { title: 'General', name: 'general' },
+    { title: 'Footer', name: 'footer' },
     { title: 'SEO', name: 'seo' },
   ],
   fields: [
@@ -17,17 +20,38 @@ export default {
       type: 'reference',
       to: [{ type: 'page' }],
       validation: (Rule) => Rule.required(),
+      fieldset: 'general',
     },
     {
       name: 'navigation',
       title: 'Navigation',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'page' }] }],
+      fieldset: 'general',
+    },
+    {
+      name: 'altThemeColor1',
+      title: 'Alt Theme Color 1',
+      type: 'color',
+      options: {
+        disableAlpha: true,
+      },
+      fieldset: 'general',
+    },
+    {
+      name: 'altThemeColor2',
+      title: 'Alt Theme Color 2',
+      type: 'color',
+      options: {
+        disableAlpha: true,
+      },
+      fieldset: 'general',
     },
     {
       name: 'footer',
       title: 'Footer',
       type: 'object',
+      fieldset: 'footer',
       fields: [
         {
           name: 'link',

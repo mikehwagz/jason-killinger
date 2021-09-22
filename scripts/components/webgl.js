@@ -1,10 +1,12 @@
 import { component } from 'picoapp'
-import { Renderer, Triangle, Program, Mesh, Texture, Vec2 } from 'ogl'
+import { Renderer, Triangle, Program, Mesh, Texture, Vec2, Vec3 } from 'ogl'
 import { round, lerp } from 'martha'
 import vertex from '../shaders/quad.vert'
 import fragment from '../shaders/quad.frag'
 
 export default component((node, ctx) => {
+  const [color1, color2] = JSON.parse(node.dataset.colors)
+
   let renderer = new Renderer({
     width: ctx.getState().ww,
     height: ctx.getState().wh,
@@ -39,6 +41,12 @@ export default component((node, ctx) => {
       },
       tBackground: {
         value: texture,
+      },
+      uColor1: {
+        value: new Vec3(...color1),
+      },
+      uColor2: {
+        value: new Vec3(...color2),
       },
       uMouse: {
         value: new Vec2(),

@@ -17,6 +17,8 @@ module.exports = async function () {
     title,
     description,
     image ${queries.image},
+    'color1': [altThemeColor1.rgb.r, altThemeColor1.rgb.g, altThemeColor1.rgb.b],
+    'color2': [altThemeColor2.rgb.r, altThemeColor2.rgb.g, altThemeColor2.rgb.b],
   }`)
 
   data.footer.copyright = data.footer.copyright.replace(

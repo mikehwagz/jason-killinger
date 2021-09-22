@@ -15,7 +15,9 @@
     "@sanity/desk-tool",
     "@sanity/dashboard",
     "dashboard-widget-netlify",
-    "goth-vimeo-input"
+    "goth-vimeo-input",
+    "tabs",
+    "@sanity/color-input"
   ],
   "env": {
     "development": {

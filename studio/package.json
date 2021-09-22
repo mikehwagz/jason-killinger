@@ -13,6 +13,7 @@
   "dependencies": {
     "@sanity/base": "^2.17.0",
     "@sanity/cli": "^2.17.0",
+    "@sanity/color-input": "^2.20.0",
     "@sanity/components": "2.15.3-conditional-fields.39",
     "@sanity/core": "^2.17.0",
     "@sanity/dashboard": "^2.17.0",
@@ -25,7 +26,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sanity-plugin-dashboard-widget-netlify": "^1.1.0",
-    "sanity-plugin-goth-vimeo-input": "^1.0.3"
+    "sanity-plugin-goth-vimeo-input": "^1.0.3",
+    "sanity-plugin-tabs": "^2.0.1"
   },
   "devDependencies": {}
 }
