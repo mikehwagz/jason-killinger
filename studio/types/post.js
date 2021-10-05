@@ -91,13 +91,37 @@ export default {
     {
       name: 'client',
       title: 'Client',
-      type: 'string',
+      type: 'array',
+      validation: (Rule) => Rule.max(1),
+      of: [
+        {
+          type: 'block',
+          styles: [],
+          lists: [],
+          marks: {
+            decorators: [],
+            annotations: [linkAnnotation],
+          },
+        },
+      ],
       hidden: ({ parent }) => parent?.type !== 'caseStudy',
     },
     {
       name: 'collaborators',
       title: 'Collaborators',
-      type: 'string',
+      type: 'array',
+      validation: (Rule) => Rule.max(1),
+      of: [
+        {
+          type: 'block',
+          styles: [],
+          lists: [],
+          marks: {
+            decorators: [],
+            annotations: [linkAnnotation],
+          },
+        },
+      ],
       hidden: ({ parent }) => parent?.type !== 'caseStudy',
     },
     {

@@ -16,8 +16,8 @@ module.exports = async function () {
       heroImageMobile ${queries.image},
       heroNavTextColor,
       introText[] ${queries.block},
-      client,
-      collaborators,
+      client[] ${queries.block},
+      collaborators[] ${queries.block},
       location,
       taxonomies {
         title,

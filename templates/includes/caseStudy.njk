@@ -42,11 +42,15 @@
     <dl class="col-start-11 col-span-2 m:pt-18 text-16 m:text-18 l:text-20 leading-115 tracking-[0.01em] px-30 m:px-0">
       {% if p.client %}
         <dt class="opacity-65 mb-6">Client</dt>
-        <dd class="mb-20 m:mb-25 l:mb-30">{{ p.client }}</dd>
+        <dd class="mb-20 m:mb-25 l:mb-30">
+          {{ p.client | blocksToHtml('metadata') | safe }}
+        </dd>
       {% endif %}
       {% if p.collaborators %}
         <dt class="opacity-65 mb-6">Collaborators</dt>
-        <dd class="mb-20 m:mb-25 l:mb-30">{{ p.collaborators }}</dd>
+        <dd class="mb-20 m:mb-25 l:mb-30">
+          {{ p.collaborators | blocksToHtml('metadata') | safe }}
+        </dd>
       {% endif %}
       {% if p.location %}
         <dt class="opacity-65 mb-6">Location</dt>
