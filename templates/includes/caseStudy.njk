@@ -1,6 +1,6 @@
 {% from 'lazy.macro.njk' import lazy %}
 
-{% set hasHero = p.heroImageDesktop.asset and p.heroImageMobile.asset %}
+{% set hasHero = p.heroImageDesktop.asset or p.heroImageMobile.asset %}
 
 <div class="pb-80 m:pb-115 l:pb-150"
   {% if hasHero %}
@@ -12,19 +12,23 @@
       class="h-screen overflow-hidden js-hero"
       data-theme="{{ p.heroNavTextColor }}"
     >
-      {{ lazy(
-        type = 'image',
-        asset = p.heroImageDesktop.asset,
-        alt = p.heroImageDesktop.alt,
-        cx = 'hidden m:block relative w-full h-full'
-      ) }}
-      {{ lazy(
-        type = 'image',
-        asset = p.heroImageMobile.asset,
-        alt = p.heroImageMobile.alt,
-        width = 768,
-        cx = 'm:hidden relative w-full h-full'
-      ) }}
+      {% if p.heroImageDesktop.asset %}
+        {{ lazy(
+          type = 'image',
+          asset = p.heroImageDesktop.asset,
+          alt = p.heroImageDesktop.alt,
+          cx = 'hidden m:block relative w-full h-full' if p.heroImageMobile.asset else 'relative w-full h-full'
+        ) }}
+      {% endif %}
+      {% if p.heroImageMobile.asset %}
+        {{ lazy(
+          type = 'image',
+          asset = p.heroImageMobile.asset,
+          alt = p.heroImageMobile.alt,
+          width = 768,
+          cx = 'm:hidden relative w-full h-full' if p.heroImageDesktop.asset else 'relative w-full h-full'
+        ) }}
+      {% endif %}
     </div>
   {% endif %}
   <div class="{% classList

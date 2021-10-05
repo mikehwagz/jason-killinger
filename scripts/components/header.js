@@ -16,7 +16,7 @@ export default component((node, ctx) => {
     inner,
     nav,
   } = choozy(node, 'js:header-')
-  let header = qsa('[data-scroll-padding-top]').at(-1)
+  let header = qsa('[data-scroll-padding-top]').slice(-1)[0]
 
   ctx.on('resize', () => {
     header.rect = rect(header)

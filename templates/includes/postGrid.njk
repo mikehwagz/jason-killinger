@@ -64,7 +64,7 @@
               aspectRatio = media.aspectRatio,
               cx = 'relative overflow-hidden'
             ) }}
-            <div class="absolute w-50 h-50 z-1 top-0 left-0 pointer-events-none transition-opacity duration-300 ease-out-cubic" data-component="thumbnailCursor">
+            <div class="hidden m:block absolute w-50 h-50 z-1 top-0 left-0 pointer-events-none transition-opacity duration-300 ease-out-cubic" data-component="thumbnailCursor">
               {% if item.post.type == 'media' %}
                 <div class="-translate-x-1/2 -translate-y-1/2">
                   {% include 'plusCursorIcon.njk' %}

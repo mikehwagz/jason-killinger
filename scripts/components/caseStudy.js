@@ -4,7 +4,7 @@ import { component } from 'picoapp'
 
 export default component((node, ctx) => {
   const { hero } = choozy(node)
-  const header = qsa('[data-scroll-padding-top]').at(-1)
+  const header = qsa('[data-scroll-padding-top]').slice(-1)[0]
   const theme = hero.dataset.theme
 
   let last = null
