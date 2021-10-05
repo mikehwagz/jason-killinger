@@ -13,26 +13,7 @@ export default component((node, ctx) => {
     dpr: 1,
   }).resize(size, size)
 
-  let fps = 15
-  let interval = 1000 / fps
-  let start = Date.now()
-  let then = start
-
   ctx.on('resize', resize)
-  ctx.on('tick', ({ ww, wh, time }) => {
-    let t = time * 1000
-    let now = start + t
-    let elapsed = now - then
-
-    if (elapsed > interval) {
-      then = now - (elapsed % interval)
-      drawNoise({
-        grayscale: true,
-        width: ww,
-        height: wh,
-      })
-    }
-  })
 
   function drawNoise({ grayscale = true, width, height }) {
     let hctx = hiddenCanvas.context
@@ -74,6 +55,14 @@ export default component((node, ctx) => {
 
   function resize({ ww, wh }) {
     canvas.resize(ww, wh)
+
+    requestAnimationFrame(() => {
+      drawNoise({
+        grayscale: true,
+        width: ww,
+        height: wh,
+      })
+    })
   }
 
   function createCanvas({ dpr, parent }) {

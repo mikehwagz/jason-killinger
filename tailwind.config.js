@@ -27,7 +27,7 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
-      white: '#f9f9f9',
+      white: '#ffffff',
       black: '#181818',
       current: 'currentColor',
       transparent: 'transparent',

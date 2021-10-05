@@ -22,21 +22,16 @@
       {% for link in site.navigation %}
         <a
           class="{% classList
-            'group relative pointer-events-auto hover:opacity-100 focus:opacity-100 transition-opacity duration-500 ease-out-cubic',
+            'pointer-events-auto hover:opacity-100 focus:opacity-100 transition-opacity duration-500 ease-out-cubic',
             'opacity-65' if hasActiveLink and link.slug != p.slug
           %}"
           href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}"
           {% if link.slug == p.slug %}
             aria-current="page"
           {% endif %}
+          data-component="funHover"
         >
-          {{ link.title }}
-          <div class="absolute top-[110%] inset-x-0 w-full h-10 opacity-0 group-hover:opacity-100 transition duration-500 ease-out-cubic">
-            <canvas
-              class="w-full h-full"
-              data-component="wave"
-            ></canvas>
-          </div>
+          {{ link.title | split | safe }}
         </a>
       {% endfor %}
     </nav>

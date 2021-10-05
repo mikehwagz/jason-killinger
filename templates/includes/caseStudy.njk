@@ -1,26 +1,37 @@
 {% from 'lazy.macro.njk' import lazy %}
 
-<div class="pb-80 m:pb-115 l:pb-150" data-component="caseStudy">
-  <div
-    class="h-screen overflow-hidden js-hero"
-    data-theme="{{ p.heroNavTextColor }}"
-  >
-    {{ lazy(
-      type = 'image',
-      asset = p.heroImageDesktop.asset,
-      alt = p.heroImageDesktop.alt,
-      cx = 'hidden m:block relative w-full h-full'
-    ) }}
-    {{ lazy(
-      type = 'image',
-      asset = p.heroImageMobile.asset,
-      alt = p.heroImageMobile.alt,
-      width = 768,
-      cx = 'm:hidden relative w-full h-full'
-    ) }}
-  </div>
-  <div class="m:grid grid-template pt-40 s:pt-60 m:pt-80 l:pt-100 pb-80 m:pb-115 l:pb-150 px">
-    <h1 class="col-start-3 col-span-7 font-nm text-30 xs:text-36 s:text-45 m:text-55 l:text-65 leading-115 mb-20 m:mb-30 l:mb-40">
+{% set hasHero = p.heroImageDesktop.asset and p.heroImageMobile.asset %}
+
+<div class="pb-80 m:pb-115 l:pb-150"
+  {% if hasHero %}
+    data-component="caseStudy"
+  {% endif %}
+>
+  {% if hasHero %}
+    <div
+      class="h-screen overflow-hidden js-hero"
+      data-theme="{{ p.heroNavTextColor }}"
+    >
+      {{ lazy(
+        type = 'image',
+        asset = p.heroImageDesktop.asset,
+        alt = p.heroImageDesktop.alt,
+        cx = 'hidden m:block relative w-full h-full'
+      ) }}
+      {{ lazy(
+        type = 'image',
+        asset = p.heroImageMobile.asset,
+        alt = p.heroImageMobile.alt,
+        width = 768,
+        cx = 'm:hidden relative w-full h-full'
+      ) }}
+    </div>
+  {% endif %}
+  <div class="{% classList
+    'm:grid grid-template pb-80 m:pb-115 l:pb-150 px',
+    'pt-40 s:pt-60 m:pt-80 l:pt-100' if hasHero else 'pt-80 s:pt-120 m:pt-160 l:pt-200'
+  %}">
+    <h1 class="col-start-3 col-span-6 font-nm text-30 xs:text-36 s:text-45 m:text-55 l:text-65 leading-115 mb-20 m:mb-30 l:mb-40">
       {{ p.title }}
     </h1>
     {% if p.introText %}

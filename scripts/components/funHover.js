@@ -12,13 +12,14 @@ export default component((node, ctx) => {
     () => {
       tl.clear()
         .to(chars, {
-          scaleY: 1.5,
+          scaleY: 1.4,
+          willChange: 'transform',
           stagger: {
-            each: 0.025,
+            each: 0.06,
             repeat: -1,
             yoyo: true,
           },
-          duration: 0.2,
+          duration: 0.5,
           ease: 'sine.inOut',
         })
         .restart()
@@ -27,7 +28,8 @@ export default component((node, ctx) => {
       tl.clear()
         .to(chars, {
           scaleY: 1,
-          duration: 0.2,
+          willChange: null,
+          duration: 0.25,
           ease: 'expo',
         })
         .restart()
