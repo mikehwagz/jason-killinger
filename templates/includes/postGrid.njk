@@ -47,10 +47,7 @@
     {% for item in collection.items %}
       {% if item._type == 'item' %}
         <a
-          class="{% classList
-            'block col-span-{{ item.width }} mb-75 m:mb-0',
-            'pr-[15vw] m:pr-0' if cls.next() == 'odd' else 'pl-[15vw] m:pl-0'
-          %}"
+          class="block col-span-{{ item.width }} mb-75 m:mb-0 {% if cls.next() == 'odd' %}pr-[15vw] m:pr-0{% else %}pl-[15vw] m:pl-0{% endif %}"
           href="/post/{{ item.post.slug }}/"
           style="height: fit-content; align-self: {{ item.verticalAlignment }};"
         >
