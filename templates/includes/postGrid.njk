@@ -43,10 +43,14 @@
         {% endif %}
       {% endfor %}
     {% endif %}
+    {% set cls = cycler('odd', 'even') %}
     {% for item in collection.items %}
       {% if item._type == 'item' %}
         <a
-          class="block col-span-{{ item.width }} mb-75 m:mb-0"
+          class="{% classList
+            'block col-span-{{ item.width }} mb-75 m:mb-0',
+            'pr-[15vw] m:pr-0' if cls.next() == 'odd' else 'pl-[15vw] m:pl-0'
+          %}"
           href="/post/{{ item.post.slug }}/"
           style="height: fit-content; align-self: {{ item.verticalAlignment }};"
         >

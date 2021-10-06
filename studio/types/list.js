@@ -21,6 +21,16 @@ export default {
       },
     },
     {
+      name: 'shouldStackOnMobile',
+      title: 'Stack on mobile?',
+      type: 'boolean',
+      initialValue: true,
+      hidden: ({ parent }) => !parent?.isTwoColumns,
+      options: {
+        layout: 'checkbox',
+      },
+    },
+    {
       name: 'listItems',
       title: 'List Items',
       type: 'array',
