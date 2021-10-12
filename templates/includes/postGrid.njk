@@ -23,7 +23,7 @@
           {% for collection in module.collections %}
             <a
               class="{% classList
-                'text-20 xl:text-24 leading-115 tracking-[0.01em] col-span-1',
+                'text-20 xl:text-24 leading-115 tracking-[0.01em] col-span-1 whitespace-nowrap',
                 'pointer-events-none' if collection.slug == p.collectionSlug or p.isHomepage and loop.index == 1 and not p.collectionSlug else 'opacity-65 hover:opacity-100 focus:opacity-100'
               %}"
               href="{% if not p.isHomepage %}/{{ p.slug }}{% endif %}{% if loop.index > 1 %}/{{ collection.slug }}{% endif %}/"

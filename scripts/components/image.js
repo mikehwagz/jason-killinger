@@ -1,5 +1,5 @@
 import { component } from 'picoapp'
-import { noop, on, remove } from 'martha'
+import { add, noop, on, remove } from 'martha'
 import choozy from 'choozy'
 
 export default component((node, ctx) => {
@@ -13,12 +13,8 @@ export default component((node, ctx) => {
       offLoad()
       offLoad = noop
 
-      if (refs?.lqip) {
-        offEnd = on(refs.img, 'transitionend', () => {
-          offEnd()
-          offEnd = noop
-          refs.lqip.remove()
-        })
+      if (refs?.placeholder) {
+        add(refs.placeholder, 'opacity-0')
       }
 
       remove(refs.img, 'opacity-0')
