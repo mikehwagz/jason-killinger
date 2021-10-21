@@ -21,7 +21,7 @@
     </div>
   {% endif %}
   <div
-    class="absolute top-0 left-0 pointer-events-none"
+    class="hidden m:block absolute top-0 left-0 pointer-events-none"
     data-component="modalCursor"
     style="opacity: 0; visibility: hidden;"
   >
@@ -30,4 +30,9 @@
       {% include 'plusCursorIcon.njk' %}
     </div>
   </div>
+  <button class="m:hidden fixed top-10 s:top-15 right-10 s:right-15 w-30 h-30">
+    <div class="text-white w-24 h-24 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      {% include 'xIcon.njk' %}
+    </div>
+  </button>
 </div>

@@ -46,6 +46,7 @@ const state = {
   isAutoScrolling: false,
   isDropdownExpanded: false,
   isOpen: false,
+  lastScrollY: 0,
   dom: {
     html: document.documentElement,
     body: document.body,

@@ -7,6 +7,8 @@ import loadFonts from './lib/loadFonts'
 import { on, once, size, add, remove, toggle, qs, qsa } from 'martha'
 import Fade from './transitions/Fade'
 import PostGrid from './transitions/PostGrid'
+import ModalEnter from './transitions/ModalEnter'
+import ModalLeave from './transitions/ModalLeave'
 
 class Base extends Highway.Renderer {
   onLoad() {
@@ -97,6 +99,8 @@ app.router = new Highway.Core({
     default: Fade,
     contextual: {
       postGrid: PostGrid,
+      modalEnter: ModalEnter,
+      modalLeave: ModalLeave,
     },
   },
 })

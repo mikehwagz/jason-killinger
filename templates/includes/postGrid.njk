@@ -49,6 +49,9 @@
         <a
           class="block col-span-{{ item.width }} mb-75 m:mb-0 {% if cls.next() == 'odd' %}pr-[15vw] m:pr-0{% else %}pl-[15vw] m:pl-0{% endif %}"
           href="/post/{{ item.post.slug }}/"
+          {% if item.post.type == 'media' %}
+            data-transition="modalEnter"
+          {% endif %}
           style="height: fit-content; align-self: {{ item.verticalAlignment }};"
         >
           {% set media = item.post.media if item.post.type == 'media' else item.post.thumbnail %}

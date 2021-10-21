@@ -2,7 +2,7 @@ import Highway from '@dogstudio/highway'
 import gsap from 'gsap'
 import { qs } from 'martha'
 
-class Fade extends Highway.Transition {
+class PostGrid extends Highway.Transition {
   in({ from, to, done }) {
     let content = qs('[data-post-grid]', to)
 
@@ -44,4 +44,4 @@ class Fade extends Highway.Transition {
   }
 }
 
-export default Fade
+export default PostGrid
