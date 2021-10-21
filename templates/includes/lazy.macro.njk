@@ -20,7 +20,7 @@
     data-component="{{ type }}"
   >
     {% if aspectRatio %}
-      <div class="transition ease-out-cubic duration-500 js-placeholder" style="background-color: {{ asset.dominant }}; padding-top: {{ 1 / aspectRatio * 100 }}%"></div>
+      <div class="transition ease-out-cubic duration-500 js-placeholder" style="padding-top: {{ 1 / aspectRatio * 100 }}%"></div>
     {% endif %}
     {% if type == 'image' %}
       <img
