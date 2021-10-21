@@ -110,7 +110,6 @@ export default {
       name: 'collaborators',
       title: 'Collaborators',
       type: 'array',
-      validation: (Rule) => Rule.max(1),
       of: [
         {
           type: 'block',
