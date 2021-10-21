@@ -81,7 +81,7 @@ export default {
           styles: [],
           lists: [],
           marks: {
-            decorators: [],
+            decorators: [{ title: 'Italic', value: 'em' }],
             annotations: [linkAnnotation],
           },
         },
@@ -99,7 +99,7 @@ export default {
           styles: [],
           lists: [],
           marks: {
-            decorators: [],
+            decorators: [{ title: 'Italic', value: 'em' }],
             annotations: [linkAnnotation],
           },
         },
@@ -116,7 +116,7 @@ export default {
           styles: [],
           lists: [],
           marks: {
-            decorators: [],
+            decorators: [{ title: 'Italic', value: 'em' }],
             annotations: [linkAnnotation],
           },
         },
@@ -235,7 +235,7 @@ export default {
           styles: [],
           lists: [],
           marks: {
-            decorators: [],
+            decorators: [{ title: 'Italic', value: 'em' }],
             annotations: [linkAnnotation],
           },
         },

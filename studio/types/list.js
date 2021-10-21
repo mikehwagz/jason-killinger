@@ -49,7 +49,7 @@ export default {
                   styles: [],
                   lists: [],
                   marks: {
-                    decorators: [],
+                    decorators: [{ title: 'Italic', value: 'em' }],
                     annotations: [linkAnnotation],
                   },
                 },

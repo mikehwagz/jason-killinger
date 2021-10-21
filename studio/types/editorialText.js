@@ -20,7 +20,7 @@ export default {
           ],
           lists: [],
           marks: {
-            decorators: [],
+            decorators: [{ title: 'Italic', value: 'em' }],
             annotations: [linkAnnotation],
           },
         },
