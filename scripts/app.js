@@ -4,7 +4,6 @@ import { size } from 'martha'
 import image from './components/image'
 import video from './components/video'
 import header from './components/header'
-// import wave from './components/wave'
 import hero from './components/hero'
 import dropdown from './components/dropdown'
 import thumbnailCursor from './components/thumbnailCursor'
@@ -18,13 +17,11 @@ import scrollUp from './components/scrollUp'
 import eye from './components/eye'
 import funHover from './components/funHover'
 import themeToggle from './components/themeToggle'
-// import noise from './components/noise'
 
 const components = {
   image,
   video,
   header,
-  // wave,
   hero,
   dropdown,
   thumbnailCursor,
@@ -38,7 +35,6 @@ const components = {
   eye,
   funHover,
   themeToggle,
-  // noise,
 }
 
 const sizes = size()
