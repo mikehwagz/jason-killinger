@@ -1,6 +1,6 @@
 import { component } from 'picoapp'
 import choozy from 'choozy'
-import { add, remove, on, qs, qsa, rect } from 'martha'
+import { add, remove, on, qs, qsa, rect, noop } from 'martha'
 import gsap from 'gsap'
 import * as focusTrap from 'focus-trap'
 
@@ -17,6 +17,16 @@ export default component((node, ctx) => {
     nav,
   } = choozy(node, 'js:header-')
   let header = qsa('[data-scroll-padding-top]').slice(-1)[0]
+  let activeLinks = qsa('a').filter(
+    (link) => link.getAttribute('href') === window.location.pathname,
+  )
+
+  let offActiveLinks = noop
+  if (activeLinks) {
+    offActiveLinks = on(activeLinks, 'click', () => {
+      ctx.emit('header:toggle', { isOpen: false })
+    })
+  }
 
   ctx.on('resize', () => {
     header.rect = rect(header)
@@ -178,6 +188,7 @@ export default component((node, ctx) => {
 
   return () => {
     ctx.emit('header:toggle', { isOpen: false })
+    offActiveLinks()
     offClick()
     offEscape()
   }

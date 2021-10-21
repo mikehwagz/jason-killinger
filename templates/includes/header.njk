@@ -67,7 +67,9 @@
       </div>
       <nav class="absolute inset-0 flex flex-col justify-end gap-y-20 px pb-30 font-nm text-80 leading-100 js:header-nav">
         {% for link in site.navigation %}
-          <a href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}">{{ link.title }}</a>
+          <a href="/{% if not link.isHomepage %}{{ link.slug }}/{% endif %}">
+            {{ link.title }}
+          </a>
         {% endfor %}
       </nav>
     </div>
