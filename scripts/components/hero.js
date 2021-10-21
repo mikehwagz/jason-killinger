@@ -11,7 +11,7 @@ export default component((node, ctx) => {
   slides.forEach((slide, i) => {
     slide.words = Array.from(slide.children)
     if (i > 0) {
-      gsap.set(slide.words, { autoAlpha: 0 })
+      gsap.set(slide.words, { opacity: 0 })
       remove(slide.words, 'hidden')
     }
   })
@@ -25,7 +25,7 @@ export default component((node, ctx) => {
     let current = slides[i]
 
     gsap.to(previous.words, {
-      autoAlpha: 0,
+      opacity: 0,
       duration: 0,
       stagger: {
         amount: 0.7,
@@ -33,7 +33,7 @@ export default component((node, ctx) => {
     })
 
     gsap.to(current.words, {
-      autoAlpha: 1,
+      opacity: 1,
       duration: 0,
       stagger: {
         amount: 0.7,
