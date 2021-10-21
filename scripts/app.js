@@ -44,6 +44,7 @@ const state = {
   my: 0,
   isAltTheme: false,
   isAutoScrolling: false,
+  isDropdownExpanded: false,
   isOpen: false,
   dom: {
     html: document.documentElement,
