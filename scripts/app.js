@@ -47,6 +47,7 @@ const state = {
   isDropdownExpanded: false,
   isOpen: false,
   lastScrollY: 0,
+  lastPath: '/',
   dom: {
     html: document.documentElement,
     body: document.body,

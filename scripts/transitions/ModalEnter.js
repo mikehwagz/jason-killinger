@@ -15,8 +15,12 @@ class ModalEnter extends Highway.Transition {
     })
   }
 
-  out({ done }) {
-    app.hydrate({ lastScrollY: window.scrollY })
+  out({ trigger, done }) {
+    app.hydrate({
+      lastScrollY: window.scrollY,
+      lastPath: trigger.dataset.from ?? '/',
+    })
+
     done()
   }
 }
