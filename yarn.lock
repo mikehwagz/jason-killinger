@@ -7303,10 +7303,10 @@ martha@^2.2.0:
   resolved "https://registry.yarnpkg.com/martha/-/martha-2.2.0.tgz#be79198ec2d3e84d69ed19e84be2183f88cb1724"
   integrity sha512-MVD9BweCA+R5osKk3c8OOSVoMTwSqjj5CrXOrVMHF8YYvePlc/pf+dv/obl0GjG1jYxiuZyIF2wWbKVrzbg74w==
 
-martha@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/martha/-/martha-3.0.3.tgz#3506327c69db40b05cc866f8a58320e64da40005"
-  integrity sha512-QbzUQc5LD04zexyslDb3ooaE0hfTafjmWtYO3hhjRJWejJwaNJwpfqKtHclTkDIisVSBm2ugrlZDelOEvY1yIA==
+martha@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/martha/-/martha-3.0.4.tgz#ba5c97af4751cfb9c38efb6dbccbf7b9c7f8312f"
+  integrity sha512-oSesGbxcN/xVfHadRRvl3bFPTou4V7rsTYEPdklXQRDdZs8h9LltgLknOIO0VF6odzlA14vWRifUqTWEkxp4pw==
 
 maximatch@^0.1.0:
   version "0.1.0"
