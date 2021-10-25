@@ -21,14 +21,20 @@ export default component((node, ctx) => {
   node.appendChild(gl.canvas)
 
   let geometry = new Triangle(gl)
-  let background = new Image()
   let texture = new Texture(gl, {
     wrapS: gl.REPEAT,
     wrapT: gl.REPEAT,
   })
 
-  background.src = '/images/seamless-pattern-2000x2000.jpg'
-  background.onload = () => (texture.image = background)
+  let src = '/images/seamless-pattern-2048x2048.jpg'
+  let background = new Image()
+
+  background.onload = () => {
+    texture.image = background
+    texture.needsUpdate = true
+  }
+
+  background.src = src
 
   let program = new Program(gl, {
     vertex,
