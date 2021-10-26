@@ -1,17 +1,17 @@
 export default [
   {
     title: 'Title',
-    name: 'title',
+    name: 'metaTitle',
     type: 'string',
   },
   {
     title: 'Description',
-    name: 'description',
+    name: 'metaDescription',
     type: 'string',
   },
   {
     title: 'Image',
-    name: 'image',
-    type: 'img',
+    name: 'metaImage',
+    type: 'image',
   },
 ]

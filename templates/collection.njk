@@ -5,6 +5,14 @@ pagination:
   alias: p
   data: postCollections
   size: 1
+eleventyComputed:
+  seo:
+    documentTitle: "{{ p.title }} — {{ site.metaTitle }}"
+    title: "{{ p.title }} — {{ site.metaTitle }}"
+    description: "{{ site.metaDescription }}"
+    imageUrl: "{{ site.metaImage.url }}"
+    imageWidth: "{{ site.metaImage.metadata.dimensions.width }}"
+    imageHeight: "{{ site.metaImage.metadata.dimensions.height }}"
 ---
 {% from 'theme.njk' import theme %}
 

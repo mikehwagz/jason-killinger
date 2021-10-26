@@ -1,6 +1,14 @@
 ---
 layout: base.njk
 title: Home
+eleventyComputed:
+  seo:
+    documentTitle: "{{ site.metaTitle }}"
+    title: "{{ site.metaTitle }}"
+    description: "{{ site.metaDescription }}"
+    imageUrl: "{{ site.metaImage.url }}"
+    imageWidth: "{{ site.metaImage.metadata.dimensions.width }}"
+    imageHeight: "{{ site.metaImage.metadata.dimensions.height }}"
 ---
 {% from 'theme.njk' import theme %}
 
