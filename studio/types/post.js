@@ -27,6 +27,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'metaImage',
+      title: 'Share Image',
+      type: 'img',
+    },
+    {
       name: 'type',
       title: 'Type',
       type: 'string',

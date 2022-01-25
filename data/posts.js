@@ -7,6 +7,7 @@ module.exports = async function () {
     title,
     type,
     'slug': slug.current,
+    metaImage ${queries.image},
     type == 'media' => {
       media ${queries.media},
       caption[] ${queries.block},
