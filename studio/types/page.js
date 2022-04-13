@@ -19,6 +19,16 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'metaDescription',
+      title: 'Share Description',
+      type: 'string',
+    },
+    {
+      name: 'metaImage',
+      title: 'Share Image',
+      type: 'img',
+    },
+    {
       name: 'isDarkModeEnabled',
       title: 'Enable Dark Mode?',
       description: '(White text on black background)',

@@ -9,7 +9,7 @@ eleventyComputed:
   seo:
     documentTitle: "{{ p.title }} — {{ site.metaTitle }}"
     title: "{{ p.title }} — {{ site.metaTitle }}"
-    description: "{{ site.metaDescription }}"
+    description: "{{ p.metaDescription or site.metaDescription }}"
     imageUrl: "{{ p.metaImage.asset.url or site.metaImage.url }}"
     imageWidth: "{{ p.metaImage.asset.metadata.dimensions.width or site.metaImage.metadata.dimensions.width }}"
     imageHeight: "{{ p.metaImage.asset.metadata.dimensions.height or site.metaImage.metadata.dimensions.height }}"
