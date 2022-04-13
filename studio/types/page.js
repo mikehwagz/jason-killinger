@@ -53,6 +53,7 @@ export default {
         { type: 'twoUpTextAndMedia' },
         { type: 'threeUpMedia' },
         { type: 'editorialText' },
+        { type: 'vimeoEmbed' },
       ],
     },
   ],
